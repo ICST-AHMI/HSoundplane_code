@@ -4,13 +4,12 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 2,
+			"revision" : 4,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 120.0, 79.0, 840.0, 573.0 ],
-		"rect" : [ 178.0, 107.0, 932.0, 573.0 ],
+		"rect" : [ 544.0, 78.0, 932.0, 573.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -38,30 +37,6 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
-				"box" : 				{
-					"id" : "obj-5",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 498.0, 122.200012, 91.0, 22.0 ],
-					"style" : "",
-					"text" : "print nextframe"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-4",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 797.0, 91.200012, 79.0, 22.0 ],
-					"style" : "",
-					"text" : "print sending"
-				}
-
-			}
-, 			{
 				"box" : 				{
 					"id" : "obj-74",
 					"maxclass" : "newobj",
@@ -162,7 +137,7 @@
 					"id" : "obj-62",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "voice_fixedSine.maxpat",
+					"name" : "voice_audioDynSin.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -185,7 +160,7 @@
 					"id" : "obj-61",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "voice_fixedSine.maxpat",
+					"name" : "voice_audioDynSin.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -210,7 +185,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 2,
+							"revision" : 4,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -643,7 +618,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 2,
+							"revision" : 4,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -922,7 +897,7 @@
 					"id" : "obj-20",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "voice_fixedSine.maxpat",
+					"name" : "voice_audioDynSin.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -945,7 +920,7 @@
 					"id" : "obj-18",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "voice_fixedSine.maxpat",
+					"name" : "voice_audioDynSin.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -968,7 +943,7 @@
 					"id" : "obj-17",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "voice_fixedSine.maxpat",
+					"name" : "voice_audioDynSin.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -991,7 +966,7 @@
 					"id" : "obj-13",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "voice_fixedSine.maxpat",
+					"name" : "voice_audioDynSin.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -1014,7 +989,7 @@
 					"id" : "obj-11",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "voice_fixedSine.maxpat",
+					"name" : "voice_audioDynSin.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -1037,7 +1012,7 @@
 					"id" : "obj-3",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "voice_fixedSine.maxpat",
+					"name" : "voice_audioDynSin.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -1060,7 +1035,7 @@
 					"id" : "obj-43",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "voice_fixedSine.maxpat",
+					"name" : "voice_audioDynSin.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -1085,7 +1060,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 2,
+							"revision" : 4,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -1899,7 +1874,7 @@
 					"id" : "obj-32",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "voice_fixedSine.maxpat",
+					"name" : "voice_audioDynSin.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -1938,7 +1913,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 2,
+							"revision" : 4,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -1970,7 +1945,6 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"comment" : "",
@@ -2195,7 +2169,7 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 2,
+											"revision" : 4,
 											"architecture" : "x86",
 											"modernui" : 1
 										}
@@ -3457,15 +3431,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-27", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-48", 4 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -3476,15 +3441,6 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-25", 1 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-30", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-4", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-30", 0 ]
@@ -3715,57 +3671,49 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "uniqueChannel.js",
-				"bootpath" : "~/_maxstuff/HSoundPlane/javascript",
-				"patcherrelativepath" : "../../../../../_maxstuff/HSoundPlane/javascript",
+				"bootpath" : "/Users/mf/Arbeiten/02_code/MaxMSP/HSoundPlane/_package/HSoundPlane/javascript",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "piezo_filter~.maxpat",
-				"bootpath" : "~/_maxstuff/HSoundPlane/patchers",
-				"patcherrelativepath" : "../../../../../_maxstuff/HSoundPlane/patchers",
+				"bootpath" : "/Users/mf/Arbeiten/02_code/MaxMSP/HSoundPlane/_package/HSoundPlane/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "bp10~.maxpat",
-				"bootpath" : "~/_maxstuff/HSoundPlane/patchers",
-				"patcherrelativepath" : "../../../../../_maxstuff/HSoundPlane/patchers",
+				"bootpath" : "/Users/mf/Arbeiten/02_code/MaxMSP/HSoundPlane/_package/HSoundPlane/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "lowboost~.maxpat",
-				"bootpath" : "~/_maxstuff/HSoundPlane/patchers",
-				"patcherrelativepath" : "../../../../../_maxstuff/HSoundPlane/patchers",
+				"bootpath" : "/Users/mf/Arbeiten/02_code/MaxMSP/HSoundPlane/_package/HSoundPlane/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "voice_fixedSine.maxpat",
-				"bootpath" : "~/_ICSTdocs/4-code/max/HSoundplane/HS_MapV001",
-				"patcherrelativepath" : ".",
+				"name" : "voice_audioDynSin.maxpat",
+				"bootpath" : "/Users/Shared/AHMI/01_projects/HSoundPlane/code/max/HSoundplane/HS_MapV001",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mapper.maxpat",
-				"bootpath" : "~/_maxstuff/HSoundPlane/patchers",
-				"patcherrelativepath" : "../../../../../_maxstuff/HSoundPlane/patchers",
+				"bootpath" : "/Users/mf/Arbeiten/02_code/MaxMSP/HSoundPlane/_package/HSoundPlane/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mapper.js",
-				"bootpath" : "~/_maxstuff/HSoundPlane/javascript",
-				"patcherrelativepath" : "../../../../../_maxstuff/HSoundPlane/javascript",
+				"bootpath" : "/Users/mf/Arbeiten/02_code/MaxMSP/HSoundPlane/_package/HSoundPlane/javascript",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "HSoundPlane_serial.maxpat",
-				"bootpath" : "~/_maxstuff/HSoundPlane/patchers",
-				"patcherrelativepath" : "../../../../../_maxstuff/HSoundPlane/patchers",
+				"bootpath" : "/Users/mf/Arbeiten/02_code/MaxMSP/HSoundPlane/_package/HSoundPlane/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
