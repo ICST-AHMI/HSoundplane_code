@@ -1,4 +1,4 @@
-Port = usbmodem1411
+Port = usbmodem1413231
 BaudRate = 230400
 DataBits = 8
 Parity = N
@@ -44,4 +44,4 @@ TXPacketSize = 256
 ViewerMode = Plain
 AutoConnect = false
 AutoDisconnect = true
-WindowPosition = 121,100,1146,681
+WindowPosition = 1118,-1123,571,1086

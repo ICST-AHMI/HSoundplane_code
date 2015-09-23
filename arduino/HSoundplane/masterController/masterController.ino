@@ -73,7 +73,7 @@ void setup()
 		Serial.println("*************************************");
 		Serial.print("serial:\n\t- port @ "); Serial.println(SERIAL_SPEED, DEC);
 		Serial.print("i2c:\n\t- port @ "); Serial.println((i2cFastMode) ? "400 kHz" : "100 kHz");
-		Serial.print("slaves:\n\t- quantity: "); Serial.println(HS_SLAVE_NUMBER, DEC);
+		Serial.print("slaves:\n\t- expected #: "); Serial.println(HS_SLAVE_NUMBER, DEC);
 		Serial.print("piezos:\n\t- items/column: "); Serial.println((HSd.raw9) ? "9" : "5");
 		Serial.println("**************************************\n");
 	}
