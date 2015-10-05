@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ -207.0, -1144.0, 1335.0, 459.0 ],
+		"rect" : [ 52.0, -1000.0, 1335.0, 459.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -46,24 +46,23 @@
 					"mode" : 1,
 					"numinlets" : 1,
 					"numoutlets" : 2,
-					"off_down_bg_color" : [ 0.32549, 0.345098, 0.372549, 0.8 ],
+					"off_down_bg_color" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
 					"off_down_fg_color" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"off_down_textcolor" : [ 0.784314, 0.145098, 0.023529, 1.0 ],
-					"off_up_bg_color" : [ 0.65098, 0.666667, 0.662745, 0.8 ],
+					"off_up_bg_color" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
 					"off_up_fg_color" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"off_up_textcolor" : [ 0.784314, 0.145098, 0.023529, 1.0 ],
 					"offdisplaytext" : "audio",
 					"on_borderstyle" : 3,
-					"on_down_bg_color" : [ 0.32549, 0.345098, 0.372549, 0.8 ],
+					"on_down_bg_color" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
 					"on_down_fg_color" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"on_down_textcolor" : [ 0.784314, 0.145098, 0.023529, 1.0 ],
-					"on_up_bg_color" : [ 0.32549, 0.345098, 0.372549, 0.8 ],
+					"on_up_bg_color" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
 					"on_up_fg_color" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"ondisplaytext" : "audio",
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 1147.0, 221.0, 32.0, 180.0 ],
-					"presentation_rect" : [ 274.0, 264.0, 0.0, 0.0 ],
 					"textcolor" : [ 0.784314, 0.145098, 0.023529, 1.0 ],
 					"usedisplaytext" : 1
 				}
@@ -79,18 +78,18 @@
 					"mode" : 1,
 					"numinlets" : 1,
 					"numoutlets" : 2,
-					"off_down_bg_color" : [ 0.32549, 0.345098, 0.372549, 0.8 ],
+					"off_down_bg_color" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
 					"off_down_fg_color" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"off_down_textcolor" : [ 0.784314, 0.145098, 0.023529, 1.0 ],
-					"off_up_bg_color" : [ 0.65098, 0.666667, 0.662745, 0.8 ],
+					"off_up_bg_color" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
 					"off_up_fg_color" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"off_up_textcolor" : [ 0.784314, 0.145098, 0.023529, 1.0 ],
 					"offdisplaytext" : "audio",
 					"on_borderstyle" : 3,
-					"on_down_bg_color" : [ 0.32549, 0.345098, 0.372549, 0.8 ],
+					"on_down_bg_color" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
 					"on_down_fg_color" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"on_down_textcolor" : [ 0.784314, 0.145098, 0.023529, 1.0 ],
-					"on_up_bg_color" : [ 0.32549, 0.345098, 0.372549, 0.8 ],
+					"on_up_bg_color" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
 					"on_up_fg_color" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"ondisplaytext" : "audio",
 					"outlettype" : [ "", "" ],
@@ -851,8 +850,7 @@
 					"patching_rect" : [ 1208.0, 65.066711, 67.0, 47.0 ],
 					"style" : "",
 					"text" : "haptic\nsignals",
-					"textcolor" : [ 1.0, 0.0, 0.0, 1.0 ],
-					"textjustification" : 0
+					"textcolor" : [ 1.0, 0.0, 0.0, 1.0 ]
 				}
 
 			}
@@ -868,8 +866,7 @@
 					"patching_rect" : [ 1208.0, 300.5, 125.0, 47.0 ],
 					"style" : "",
 					"text" : "HSoundplane\npads",
-					"textcolor" : [ 1.0, 0.0, 0.0, 1.0 ],
-					"textjustification" : 0
+					"textcolor" : [ 1.0, 0.0, 0.0, 1.0 ]
 				}
 
 			}
@@ -1020,8 +1017,7 @@
 					"patching_rect" : [ 834.0, 426.576233, 105.0, 27.0 ],
 					"style" : "",
 					"text" : "piezo-driver",
-					"textcolor" : [ 1.0, 0.0, 0.0, 1.0 ],
-					"textjustification" : 0
+					"textcolor" : [ 1.0, 0.0, 0.0, 1.0 ]
 				}
 
 			}
@@ -1097,7 +1093,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 51.69989, -25.533386, 53.0, 22.0 ],
 					"style" : "",
-					"text" : "set 200."
+					"text" : "set 250."
 				}
 
 			}
@@ -1893,64 +1889,64 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-133::obj-21::obj-84" : [ "live.gain~[32]", "live.gain~", 0 ],
-			"obj-194::obj-129::obj-84" : [ "live.gain~[27]", "live.gain~", 0 ],
-			"obj-133::obj-130::obj-84" : [ "live.gain~[2]", "live.gain~", 0 ],
-			"obj-174::obj-21::obj-84" : [ "live.gain~[8]", "live.gain~", 0 ],
-			"obj-174::obj-131::obj-84" : [ "live.gain~[13]", "live.gain~", 0 ],
-			"obj-184::obj-130::obj-84" : [ "live.gain~[18]", "live.gain~", 0 ],
-			"obj-184::obj-134::obj-84" : [ "live.gain~[22]", "live.gain~", 0 ],
-			"obj-194::obj-132::obj-84" : [ "live.gain~[28]", "live.gain~", 0 ],
-			"obj-133::obj-128::obj-84" : [ "live.gain~[1]", "live.gain~", 0 ],
-			"obj-133::obj-129::obj-84" : [ "live.gain~[3]", "live.gain~", 0 ],
-			"obj-174::obj-128::obj-84" : [ "live.gain~[9]", "live.gain~", 0 ],
-			"obj-174::obj-134::obj-84" : [ "live.gain~[14]", "live.gain~", 0 ],
-			"obj-184::obj-129::obj-84" : [ "live.gain~[19]", "live.gain~", 0 ],
-			"obj-133::obj-133::obj-84" : [ "live.gain~[7]", "live.gain~", 0 ],
-			"obj-194::obj-21::obj-84" : [ "live.gain~[24]", "live.gain~", 0 ],
-			"obj-194::obj-131::obj-84" : [ "live.gain~[29]", "live.gain~", 0 ],
-			"obj-133::obj-131::obj-84" : [ "live.gain~[5]", "live.gain~", 0 ],
-			"obj-174::obj-129::obj-84" : [ "live.gain~[11]", "live.gain~", 0 ],
-			"obj-174::obj-133::obj-84" : [ "live.gain~[15]", "live.gain~", 0 ],
-			"obj-184::obj-132::obj-84" : [ "live.gain~[20]", "live.gain~", 0 ],
-			"obj-194::obj-128::obj-84" : [ "live.gain~[25]", "live.gain~", 0 ],
-			"obj-194::obj-134::obj-84" : [ "live.gain~[30]", "live.gain~", 0 ],
-			"obj-133::obj-132::obj-84" : [ "live.gain~[4]", "live.gain~", 0 ],
-			"obj-174::obj-130::obj-84" : [ "live.gain~[10]", "live.gain~", 0 ],
-			"obj-184::obj-21::obj-84" : [ "live.gain~[16]", "live.gain~", 0 ],
-			"obj-184::obj-131::obj-84" : [ "live.gain~[21]", "live.gain~", 0 ],
-			"obj-194::obj-130::obj-84" : [ "live.gain~[26]", "live.gain~", 0 ],
-			"obj-194::obj-133::obj-84" : [ "live.gain~[31]", "live.gain~", 0 ],
-			"obj-133::obj-134::obj-84" : [ "live.gain~[6]", "live.gain~", 0 ],
-			"obj-174::obj-132::obj-84" : [ "live.gain~[12]", "live.gain~", 0 ],
-			"obj-184::obj-128::obj-84" : [ "live.gain~[17]", "live.gain~", 0 ],
-			"obj-184::obj-133::obj-84" : [ "live.gain~[23]", "live.gain~", 0 ]
+			"obj-133::obj-21::obj-84" : [ "live.gain~[31]", "live.gain~", 0 ],
+			"obj-194::obj-132::obj-84" : [ "live.gain~[3]", "live.gain~", 0 ],
+			"obj-194::obj-21::obj-84" : [ "live.gain~[7]", "live.gain~", 0 ],
+			"obj-184::obj-134::obj-84" : [ "live.gain~[9]", "live.gain~", 0 ],
+			"obj-194::obj-133::obj-84" : [ "live.gain~[32]", "live.gain~", 0 ],
+			"obj-184::obj-128::obj-84" : [ "live.gain~[14]", "live.gain~", 0 ],
+			"obj-174::obj-132::obj-84" : [ "live.gain~[19]", "live.gain~", 0 ],
+			"obj-133::obj-133::obj-84" : [ "live.gain~[24]", "live.gain~", 0 ],
+			"obj-194::obj-130::obj-84" : [ "live.gain~[5]", "live.gain~", 0 ],
+			"obj-184::obj-132::obj-84" : [ "live.gain~[11]", "live.gain~", 0 ],
+			"obj-184::obj-21::obj-84" : [ "live.gain~[15]", "live.gain~", 0 ],
+			"obj-174::obj-129::obj-84" : [ "live.gain~[20]", "live.gain~", 0 ],
+			"obj-133::obj-134::obj-84" : [ "live.gain~[25]", "live.gain~", 0 ],
+			"obj-133::obj-130::obj-84" : [ "live.gain~[29]", "live.gain~", 0 ],
+			"obj-194::obj-129::obj-84" : [ "live.gain~[4]", "live.gain~", 0 ],
+			"obj-184::obj-131::obj-84" : [ "live.gain~[10]", "live.gain~", 0 ],
+			"obj-174::obj-133::obj-84" : [ "live.gain~[16]", "live.gain~", 0 ],
+			"obj-174::obj-130::obj-84" : [ "live.gain~[21]", "live.gain~", 0 ],
+			"obj-133::obj-131::obj-84" : [ "live.gain~[26]", "live.gain~", 0 ],
+			"obj-133::obj-128::obj-84" : [ "live.gain~[30]", "live.gain~", 0 ],
+			"obj-194::obj-131::obj-84" : [ "live.gain~[2]", "live.gain~", 0 ],
+			"obj-194::obj-128::obj-84" : [ "live.gain~[6]", "live.gain~", 0 ],
+			"obj-184::obj-129::obj-84" : [ "live.gain~[12]", "live.gain~", 0 ],
+			"obj-174::obj-134::obj-84" : [ "live.gain~[17]", "live.gain~", 0 ],
+			"obj-174::obj-21::obj-84" : [ "live.gain~[23]", "live.gain~", 0 ],
+			"obj-133::obj-132::obj-84" : [ "live.gain~[27]", "live.gain~", 0 ],
+			"obj-194::obj-134::obj-84" : [ "live.gain~[1]", "live.gain~", 0 ],
+			"obj-184::obj-133::obj-84" : [ "live.gain~[8]", "live.gain~", 0 ],
+			"obj-184::obj-130::obj-84" : [ "live.gain~[13]", "live.gain~", 0 ],
+			"obj-174::obj-131::obj-84" : [ "live.gain~[18]", "live.gain~", 0 ],
+			"obj-174::obj-128::obj-84" : [ "live.gain~[22]", "live.gain~", 0 ],
+			"obj-133::obj-129::obj-84" : [ "live.gain~[28]", "live.gain~", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
 				"name" : "Slave_channels.maxpat",
-				"bootpath" : "~/_ICSTdocs/1-research/AHMI/interfaces/HSoundplane_driver",
+				"bootpath" : "~/_ICSTdocs/1-research/AHMI/01_projects/HSoundplane/code/max/HSoundplane/HS_Driver",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "Haptic_channel.maxpat",
-				"bootpath" : "~/_ICSTdocs/1-research/AHMI/interfaces/HSoundplane_driver",
+				"bootpath" : "~/_ICSTdocs/1-research/AHMI/01_projects/HSoundplane/code/max/HSoundplane/HS_Driver",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "Touch_checkbox.maxpat",
-				"bootpath" : "~/_ICSTdocs/1-research/AHMI/interfaces/HSoundplane_driver",
+				"bootpath" : "~/_ICSTdocs/1-research/AHMI/01_projects/HSoundplane/code/max/HSoundplane/HS_Driver",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "HSpad.maxpat",
-				"bootpath" : "~/_ICSTdocs/1-research/AHMI/interfaces/HSoundplane_driver",
+				"bootpath" : "~/_ICSTdocs/1-research/AHMI/01_projects/HSoundplane/code/max/HSoundplane/HS_Driver",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -1958,7 +1954,7 @@
 , 			{
 				"name" : "HSoundPlane_serial.maxpat",
 				"bootpath" : "~/_maxstuff/HSoundPlane/patchers",
-				"patcherrelativepath" : "../../../../../_maxstuff/HSoundPlane/patchers",
+				"patcherrelativepath" : "../../../../../../../../../_maxstuff/HSoundPlane/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}

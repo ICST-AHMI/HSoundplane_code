@@ -64,8 +64,8 @@
 #define SERR_SETTINGS		3
 #define SERR_CRLF			255
 
-#define STARTUP_WAIT_MS		500			// startup waiting time to let the slaves be ready
-#define INIT_WAIT_MS		50			// initialization waiting time to SEE slave getting ready
+#define STARTUP_WAIT_MS		2000		// startup waiting time to let the slaves be ready
+#define INIT_WAIT_MS		100			// initialization waiting time to SEE slave getting ready
 
 #define SLAVE_REG_RETRIES	5
 
@@ -77,7 +77,7 @@
 /* | VARIABLES																| */
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
-bool debug = false;						// DEBUG FLAG!!
+bool debug = true;						// DEBUG FLAG!!
 
 #if(I2C_FAST_MODE > 0)					// i2c speed flag
   bool i2cFastMode = true;
@@ -86,8 +86,6 @@ bool debug = false;						// DEBUG FLAG!!
 #endif
   
 bool syncPinState;
-
-// String slicedCmd[2 * HS_COORD_MAX];		// command line sliced into integers
 
 // extern...
 extern struct HSdata HSd;
