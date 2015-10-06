@@ -96,7 +96,7 @@ function list()
 		routingCheck(1);
 	} else {
 		if(fingerLost == 0){
-			post("lost finger number: "+myid+"\n");
+			//post("lost finger number: "+myid+"\n");
 			thisrouting = [-1, -1];
  			thisrouting_val = [0., 0.];	
 			routingCheck(0);
