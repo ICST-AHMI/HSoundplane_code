@@ -6,7 +6,7 @@
 	mul = msg[3].lincurve(0, 1, 0, 0.1, -4);
 	index = msg[3].lincurve(0, 1, 0.0234, 4, 6);
 	ratio  = msg[2].lincurve(0, 1, 1, 5, 5);
-	~snd[voice].set(\note, note, \index, index, \ratio, ratio, \mul, mul)
+	~snd[voice].set(\note, note, \index, index, \ratio, ratio, \mul, mul/2.5)
 };
 
 
@@ -16,7 +16,7 @@
 	mul = msg[3].lincurve(0, 1, 0, 0.1, -4);
 	ffreq = msg[3].linlin(0, 1, note, note+36).midicps;
 	table = msg[2].linlin(0, 1, 0, 11);
-	~snd[voice].set(\freq, note.midicps, \ffreq, ffreq, \mul, mul, \table, table)
+	~snd[voice].set(\freq, note.midicps, \ffreq, ffreq, \mul, mul/2.5, \table, table)
 };
 
 
@@ -27,7 +27,7 @@
 	ffreq = msg[2].linlin(0, 1, note, note+36).midicps;
 	delay = msg[2].lincurve(0, 1, 0.00001, 0.499, 3);
 	fb = msg[2].lincurve(0, 1, 0.99, 0.999999999, 1);
-	~snd[voice].set(\note, note, \ffreq, ffreq, \mul, mul, \filterGain, -12, \fb, fb)
+	~snd[voice].set(\note, note, \ffreq, ffreq, \mul, mul/2.5, \filterGain, -12, \fb, fb)
 };
 
 
