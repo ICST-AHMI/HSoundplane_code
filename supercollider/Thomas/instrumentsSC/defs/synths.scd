@@ -26,7 +26,7 @@ SynthDef(\sawFB_2, {
 	env = EnvGen.kr(Env.asr(attack, 1, 5, 'sine'), gate, doneAction:2);
 	snd = SawFB.ar(freq, LFNoise1.kr(1.2!2).range(1, 12), fb, [delay, delay * Rand(0.001, 1.11)], 1, 2);
 	filter = LPF.ar(snd, ffreq, filterGain)*0.3;
-	Out.ar(out, filter * env * mul.lag2ud(0.001, lag))
+	Out.ar(out, filter * env * mul.lag2ud(0.001, lag));
 }, [nil, 0.1, 5, 1, 0, 0, 10, 0.2, nil]).add;
 
 SynthDef(\voscSynth, { // wavetable synth mit 12 tables

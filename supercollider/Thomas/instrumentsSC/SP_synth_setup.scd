@@ -1,13 +1,13 @@
 
 o = Server.local.options;
-o.device_("Soundflower (2ch)"); Ê Ê // use a specific soundcard
+// o.device_("Soundflower (2ch)");  // use a specific soundcard
 
 
 s.waitForBoot({
-	
+
 	var groups, bus, win, rButton, text, text2, menu;
 
-	
+
 
 	~snd = nil!10; // 10 Stimmen
 	~dir = PathName(thisProcess.nowExecutingPath).pathOnly;
@@ -17,9 +17,9 @@ s.waitForBoot({
 	s.sync;
 
 	~synthList = [
-		[\wvtPlayer, ~wvtPlayer],
-		[\sawfbPlayer, ~sawfbPlayer],
-		[\fmPlayer, ~fmPlayer]
+		[\wvtPlayer, ~wvtPlayer, \voscSynth],
+		[\sawfbPlayer, ~sawfbPlayer, \sawFB_2],
+		[\fmPlayer, ~fmPlayer, \fm2]
 	];
 
 
@@ -35,8 +35,8 @@ s.waitForBoot({
 
 	~voscBuffer = Buffer.readChannel(s, ~dir++"Samples/dman5", channels: 0);
 	// ~voscBuffer = Buffer.readChannel(s, ~dir++"Samples/gendNoise2.aif", channels: 0);
-	~voscBufs = Buffer.allocConsecutive(12, s, 512, 1); // Buffers fŸr den Wavetable Oscillator
-	~vwBufs = Buffer.allocConsecutive(12, s, 1024, 1); // Buffers fŸr den waveshaper Oscillator
+	~voscBufs = Buffer.allocConsecutive(12, s, 512, 1); // Buffers fï¿½r den Wavetable Oscillator
+	~vwBufs = Buffer.allocConsecutive(12, s, 1024, 1); // Buffers fï¿½r den waveshaper Oscillator
 
 	s.sync;
 
@@ -62,8 +62,9 @@ s.waitForBoot({
 	menu = PopUpMenu(win, Rect(30, 30, 240, 40)).font_(Font("Helvetica", 18, true));
 	menu.items = ~synthList.collect{|i| i[0]};
 	menu.action_({arg menu;
-		~group.release(0.1);
+		~group.release(0.05);
 		~snd = nil!10;
+		~snd = 10.collect({|i|Synth(~synthList[menu.value][2].asSymbol, [\mul, 0], ~group)}); // evaluate Synths
 		~synth = ~synthList[menu.value][1];
 	});
 
@@ -85,7 +86,19 @@ s.waitForBoot({
 
 	//// OSC
 
-	10.do({|i| OSCFunc( { | msg, time, addr, recvPort| ~synth.(msg, i); msg.postln}, '/t3d/tch'++i.asSymbol, recvPort: 3124)});
+	10.do({|i| OSCFunc( { | msg, time, addr, recvPort|
+		var check;
+		~synth.(msg, i);
+		// msg.postln;
+		}, '/t3d/tch'++i.asSymbol, recvPort: 3190)
+	});
+
+	/*	10.do({|i| OSCFunc( { | msg, time, addr, recvPort|
+	~synth.(msg, i); msg.postln})
+	}, '/t3d/tch'++i.asSymbol, recvPort: 3124)});*/
+
+	s.meter;
+	s.makeGui;
 
 })
 

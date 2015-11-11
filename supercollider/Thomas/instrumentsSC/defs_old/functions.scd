@@ -6,7 +6,7 @@
 	mul = msg[3].lincurve(0, 1, 0, 0.1, -4);
 	index = msg[3].lincurve(0, 1, 0.0234, 4, 6);
 	ratio  = msg[2].lincurve(0, 1, 1, 5, 5);
-	if (msg[3] == 0 and: ~snd[voice].notNil, {~snd[voice].release; ~snd[voice] = nil},
+	if (msg[3] == 0, {if (~snd[voice].notNil, {~snd[voice].release; ~snd[voice] = nil})},
 		{if (~snd[voice] == nil, {~snd[voice] = Synth(\fm2, [\note, note, \index, index, \ratio, ratio, \mul, mul], ~group)},
 			{~snd[voice].set(\note, note, \index, index, \ratio, ratio, \mul, mul)})
 	});
