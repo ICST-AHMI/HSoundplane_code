@@ -24,7 +24,7 @@ SerialPort.devices
 
 
 
-	~port = SerialPort("/dev/tty.usbmodem1d11411", baudrate: 230400, crtscts:true);
+	~port = SerialPort("/dev/tty.usbmodem1a12411", baudrate: 230400, crtscts:true);
 	~piezoCoord = Array.fill(20, 0);
 	~piezoSound = Array.fill(10, nil);
 

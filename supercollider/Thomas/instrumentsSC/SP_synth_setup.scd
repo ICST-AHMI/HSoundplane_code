@@ -1,7 +1,7 @@
 
 o = Server.local.options;
 // o.device_("Soundflower (2ch)");  // use a specific soundcard
-
+o.sampleRate = 44100;
 
 s.waitForBoot({
 
