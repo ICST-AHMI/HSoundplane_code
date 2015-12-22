@@ -70,16 +70,32 @@ SynthDef(\partial,  {
 // collecting freq data:
 // 3 close freqs, in 3 different ranges; like the example ~drumResData. For all presets different freqs
 //
+// set basic freqs
 ~lowFreqs = (~spots.size).collect({|i| a = rrand(90, 119); 3.collect({3.5.rand + a})});
 ~midFreqs = (~spots.size).collect({|i| a = rrand(870, 999); 3.collect({3.5.rand + a})});
 ~highFreqs = (~spots.size).collect({|i| a = rrand(1270, 1499); 3.collect({3.5.rand + a})});
+~freqs = (~lowFreqs++~midFreqs++~highFreqs).flat;
+
+~setVol = {|preset = 0, mul = 0, voice = 0|
+	3.do({|i| ~snd[voice][(preset*3)+i].set(\mul, mul)}); // lowfreqs
+	3.do({|i| ~snd[voice][(~spots.size*3)+(preset*3)+i].set(\mul, mul/2)}); // midfreqs
+	3.do({|i| ~snd[voice][(2*(~spots.size*3))+(preset*3)+i].set(\mul, mul/4)}); // highfreqs
+};
+
+
+/*
+// add additional default data: mul, deviation; multiplicate the dataset by the number of presets (~spots)
 ~lowFreqs =  ((~spots.size).collect({|i| ~lowFreqs[i].do({|q, index| ~lowFreqs[i][index] = [q, 0, 1]})})!(~spots.size)).flat.clump(3);
+// set the preset data
 (~spots.size).do({|i| a = 3.do({|q| ~lowFreqs[q + (i*((~spots.size)*3 + 3))][1] = 0.1})});
+// separate the presets (3 freqs per preset)
+~lowFreqs = ~lowFreqs.clump(3);
 ~midFreqs =  ((~spots.size).collect({|i| ~midFreqs[i].do({|q, index| ~midFreqs[i][index] = [q, 0, 1]})})!(~spots.size)).flat.clump(3);
 (~spots.size).do({|i| a = 3.do({|q| ~midFreqs[q + (i*((~spots.size)*3 + 3))][1] = 0.1})});
+~midFreqs = ~midFreqs.clump(3);
 ~highFreqs =  ((~spots.size).collect({|i| ~highFreqs[i].do({|q, index| ~highFreqs[i][index] = [q, 0, 1]})})!(~spots.size)).flat.clump(3);
 (~spots.size).do({|i| a = 3.do({|q| ~highFreqs[q + (i*((~spots.size)*3 + 3))][1] = 0.1})});
+~midFreqs = ~highFreqs.clump(3);
+*/
 
-~freqs = ~lowFreqs++~midFreqs++~highFreqs;
 
-~drumResData.do({|i| Synth(\partial, [\freq, i[0], \deviation, 0, \mul, i[1]])});
