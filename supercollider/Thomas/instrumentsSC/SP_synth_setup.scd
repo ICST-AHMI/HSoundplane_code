@@ -89,7 +89,7 @@ s.waitForBoot({
 	10.do({|i| OSCFunc( { | msg, time, addr, recvPort|
 		var check;
 		~synth.(msg, i);
-		// msg.postln;
+		msg.postln;
 		}, '/t3d/tch'++i.asSymbol, recvPort: 3190)
 	});
 
