@@ -11,12 +11,12 @@ SynthDef(\partial,  {
 SynthDef(\partial2,  {
 	arg out = 0, freq = 100, scale = 0, deviation = 10, sFaktor = 30, parMul = 1, mul = 1, mulMod = 1, modFreq = 3, pan = 0, gate = 1;
 	var snd, env, mod, amp;
-	amp = Lag2UD.kr(mul, 0.1, 2.3);
-	env = EnvGen.kr(Env.asr(0.1, 1, 2, [-2, -4]), gate, doneAction: 2);
+	amp = Lag2UD.kr(mul, 0.7, 2.3);
+	env = EnvGen.kr(Env.asr(0.6, 1, 2, [-2, -4]), gate, doneAction: 2);
 	mod = LFDNoise3.kr(modFreq) * deviation;
 	snd = SinOsc.ar(freq + (scale*sFaktor) + mod, 0, (parMul).clip(0, 1.0));
 	Out.ar(out, Pan2.ar(snd, pan) * amp * env)
-}, [nil, 0.1, 0.3, 0.1, 0.5, nil, 0.5]).add;
+}, [nil, 0.1, 0.3, 0.1, 0.5, 0.5, nil]).add;
 
 SynthDef(\sfplayer3, {
 	arg out = 0, buf1, buf2, buf3, mul = 0, pressure = 0, gate = 1;
@@ -84,6 +84,21 @@ SynthDef(\t_sfplay, {
 	});
 };
 
+~setPartialVol2 = {|msg, voice = 0|
+	var cx, cy, values, partialBalance;
+	cx = msg[1];
+	cy = msg[2];
+
+	if (msg[3] > 0, {
+		values = ~spots.collect({|array, index|
+			var distance;
+			distance = ((([cx, cy]-array).abs**2).sum).sqrt; // phytagoras
+			(1-distance).clip(0.0, 1.0)**12;
+		});
+		values.do({|mul, preset| ~setVol2.(preset, mul, voice)}); // set volumes
+	});
+};
+
 ~coordx = 0!10;
 ~coordy = 0!10;
 
@@ -95,7 +110,7 @@ SynthDef(\t_sfplay, {
 	delta = xDelta + yDelta;
 	// [delta, msg[3]].postln;
 	if (delta.abs > thresh, {
-		~sfplayer[voice].set(\mul, msg[3], \pressure, (delta-thresh).linlin(0, (1-thresh), 0, 2))},
+		~sfplayer[voice].set(\mul, msg[3]*0.1, \pressure, (delta-thresh).linlin(0, (1-thresh), 0, 2))},
 		{~sfplayer[voice].set(\mul, 0)}
 	);
 };
@@ -159,12 +174,24 @@ SynthDef(\t_sfplay, {
 ~highFreqs = (~spots.size).collect({|i| a = rrand(1870, 2999); 3.collect({3.5.rand + a})});
 ~freqs = (~lowFreqs++~midFreqs++~highFreqs).flat;
 
-// set basic freqs2
-~freqs2 = 3.collect({|f|(~spots.size).collect({|i| a = rrand(410, 499); 3.collect({|v| (a*f) + (v*0.52)})})}).flat;
+// set basic freqs2 (file: drum_resonance4)
+~freqs2 = 3.collect({|f|(~spots.size).collect({|i| a = rrand(210, 299); 3.collect({|v| (a*(f+1)) + (v*0.52)})})}).flat;
+
+// set basic freqs3 (file: drum_resonance5)
+~freqs3 = 3.collect({|f|(~spots.size).collect({|i| a = rrand(80.0, 260.0)})}).flat;
+~freqs3beatings = ~freqs3.collect({|freq, index| if (index > 0, {(~freqs3[index] - ~freqs3[index-1]).abs}, {5})});
+~freqs3 = ~freqs3 ++ 3.collect({|f|(~spots.size).collect({|i| a = rrand(1860.0, 2820.0)})}).flat;
 
 
-~setVol = {|preset = 0, mul = 0, voice = 0|
+
+~setVol = {|preset = 0, mul = 0, voice = 0| // (file: drum_resonance4)
 	3.do({|i| ~snd[voice][(preset*3)+i].set(\parMul, mul)}); // lowfreqs
 	3.do({|i| ~snd[voice][(~spots.size*3)+(preset*3)+i].set(\parMul, mul/2)}); // midfreqs
 	3.do({|i| ~snd[voice][(2*(~spots.size*3))+(preset*3)+i].set(\parMul, mul/4)}); // highfreqs
+};
+
+~setVol2 = {|preset = 0, mul = 0, voice = 0| // (file: drum_resonance5)
+	3.do({|i| ~snd[voice][(preset*3)+i].set(\parMul, mul)}); // set speaker freqs
+	3.do({|i| ~snd[voice][(~spots.size*3)+(preset*3)+i].set(\parMul, mul/20)}); // midfreqs
+	3.do({|i| ~sndHS[voice][(preset*3)+i].set(\parMul, mul)}); // set hsoundplane freqs
 };

@@ -5,13 +5,13 @@
 DRUM RESONANCE
 3 akustische (Re-)Aktionen:
 - kurzes Anschlagen: lösz ein Trommelschlag aus
-- Druck an verschiedenen Positionen: verschieden gestimmte Resonanzfrequenzen hörbar. Nachdruck moduliert leicht die Frequenzen.
+- Druck an verschiedenen Positionen: 3 verschieden gestimmte Resonanzfrequenzen hörbar. Nachdruck moduliert leicht die Frequenzen.
 - Mit Druck über die Oberflache gleiten: neben den Resonanzfrequenzen ist auch ein Kontaktgeräusch hörbar
+- NEU: Audiofeedback auf HSoundplane spielt die Differenztöne
 
-to do
-- Hit - Resonanz Verhalten definieren: Hit löst Resonance aus, die (sofern kein weiterer Druck da ist) langsam aus-faded.
-- sprunghafte Lautstärken-Regelung --> keine überlappende Stimmen...
-
+to do:
+Druck in der Mitte sollte die Frequenzen stärker als am Rand modulieren
+noch flascher Ausgangskanal für das HSoundplane Audio-Feedback...
 */
 
 
@@ -35,6 +35,7 @@ s.waitForBoot({
 	~group = Array.fill(10, {Group.new}); // 10 Stimmen
 	~kbus = Array.fill(10, {Bus.control(s, 1)});
 	~snd = nil!10;
+	~sndHS = nil!10;
 	~trigFunc = nil!10;
 
 	"defs/*".loadRelative;
@@ -48,17 +49,18 @@ s.waitForBoot({
 	// ~mtrx = Array.fill(7, {0.0!~dim[0]!~dim[1]}); // Matrix;
 	~spots = [[0.1, 0.5], [0.3, 0.15], [0.3, 0.75], [0.6, 0.15], [0.6, 0.75], [0.9, 0.5], [0.5, 0.5]]; // Koordinaten presets
 
-	5.do({|v| ~snd[v] = ~freqs2.collect({|i| Synth(\partial2, [\freq, i, \mul, 0, \deviation, 0, \sFaktor, rrand(5, 20)], ~group[v])})}); // 5 voices
+	5.do({|v| ~snd[v] = ~freqs3.collect({|i| Synth(\partial2, [\freq, i, \mul, 0, \deviation, 0, \sFaktor, rrand(5, 20)], ~group[v])})}); // 5 voices
+	5.do({|v| ~sndHS[v] = ~freqs3beatings.collect({|i| Synth(\partial2, [\freq, i, \mul, 0, \deviation, 0, \sFaktor, rrand(5, 20)], ~group[v])})}); // 5 voices
 	~sfplayer = 5.collect({|v| Synth(\sfplayer3, [\buf1, ~surfacebufs[0], \buf2, ~surfacebufs[1],  \buf3, ~surfacebufs[2]])});
 
 	// OSC CONNECTIONS  --> datenfluss minimieren: wenn druck == 0 oder keine Bewegung
 	10.do({|i|
 		OSCFunc( { | msg, time, addr, recvPort|
 			~kbus[i].set(msg[3]); // amp bus zur onset detection
-			~setPartialVol.(msg, i);
-			~group[i].set(\mul, msg[3]**2 * 1.3); // pressure --> amp global
+			~setPartialVol2.(msg, i);
+			~group[i].set(\mul, msg[3]**2); // pressure --> amp global
 			~moveSnd.(msg, i);
-			if (msg[3] > 0.1, {var scale = msg[3] - 0.1; ~group[i].set(\scale, scale.lincurve(0, 0.9, 0, 1, 3))}); // druck --> pitch bend
+			if (msg[3] > 0.1, {var scale = msg[3] - 0.1; ~group[i].set(\scale, scale.lincurve(0, 0.9, 0, 2, 3))}); // druck --> pitch bend
 			// msg.postln
 		}, '/t3d/tch'++i.asSymbol, recvPort: 3190)
 	});
@@ -80,7 +82,7 @@ s.waitForBoot({
 
 )
 
-s.meter
+s.meter;
 
 //// CLEANUP
 
