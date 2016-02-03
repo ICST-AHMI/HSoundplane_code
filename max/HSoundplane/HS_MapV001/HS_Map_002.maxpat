@@ -3,13 +3,13 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 0,
-			"revision" : 4,
+			"minor" : 1,
+			"revision" : 0,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 49.0, 212.0, 1039.0, 573.0 ],
+		"rect" : [ 353.0, 169.0, 1039.0, 573.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -46,7 +46,6 @@
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 793.5, 495.0, 50.0, 22.0 ],
-					"presentation_rect" : [ 793.5, 495.0, 0.0, 0.0 ],
 					"style" : ""
 				}
 
@@ -202,7 +201,7 @@
 					"id" : "obj-62",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "voice_audioMix.maxpat",
+					"name" : "voice_fixedSine.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -225,7 +224,7 @@
 					"id" : "obj-61",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "voice_audioMix.maxpat",
+					"name" : "voice_fixedSine.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -249,8 +248,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 7,
-							"minor" : 0,
-							"revision" : 4,
+							"minor" : 1,
+							"revision" : 0,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -650,8 +649,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 7,
-							"minor" : 0,
-							"revision" : 4,
+							"minor" : 1,
+							"revision" : 0,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -930,7 +929,7 @@
 					"id" : "obj-20",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "voice_audioMix.maxpat",
+					"name" : "voice_fixedSine.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -953,7 +952,7 @@
 					"id" : "obj-18",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "voice_audioMix.maxpat",
+					"name" : "voice_fixedSine.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -976,7 +975,7 @@
 					"id" : "obj-17",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "voice_audioMix.maxpat",
+					"name" : "voice_fixedSine.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -999,7 +998,7 @@
 					"id" : "obj-13",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "voice_audioMix.maxpat",
+					"name" : "voice_fixedSine.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -1022,7 +1021,7 @@
 					"id" : "obj-11",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "voice_audioMix.maxpat",
+					"name" : "voice_fixedSine.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -1045,7 +1044,7 @@
 					"id" : "obj-3",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "voice_audioMix.maxpat",
+					"name" : "voice_fixedSine.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -1068,7 +1067,7 @@
 					"id" : "obj-43",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "voice_audioMix.maxpat",
+					"name" : "voice_fixedSine.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -1092,8 +1091,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 7,
-							"minor" : 0,
-							"revision" : 4,
+							"minor" : 1,
+							"revision" : 0,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -1753,7 +1752,7 @@
 					"id" : "obj-32",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "voice_audioMix.maxpat",
+					"name" : "voice_fixedSine.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -1791,8 +1790,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 7,
-							"minor" : 0,
-							"revision" : 4,
+							"minor" : 1,
+							"revision" : 0,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -2047,8 +2046,8 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 7,
-											"minor" : 0,
-											"revision" : 4,
+											"minor" : 1,
+											"revision" : 0,
 											"architecture" : "x86",
 											"modernui" : 1
 										}
@@ -3636,7 +3635,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "voice_audioMix.maxpat",
+				"name" : "voice_fixedSine.maxpat",
 				"bootpath" : "/Users/Shared/AHMI/01_projects/HSoundPlane/code/max/HSoundplane/HS_MapV001",
 				"type" : "JSON",
 				"implicit" : 1
@@ -3664,7 +3663,7 @@
 				"type" : "iLaX"
 			}
  ],
-		"embedsnapshot" : 0,
+		"autosave" : 0,
 		"styles" : [ 			{
 				"name" : "STYLE1",
 				"parentstyle" : "",
