@@ -57,12 +57,22 @@
 #define SCMD_DON_ALL		139			// switch on all drivers (byte 2: slave#)
 #define SCMD_DEBUG			200			// toggle debug mode (byte 2: 0 -> off, >0 -> on)
 #define SCMD_RESET			250			// master software reset (byte 2: unused)
-//-- ERROR MESSAGES --
+
+//-- ERROR MESSAGES -- 
+// errormessages always come back as a pair, first the error number, second the SERR_CRLF
 #define SERR_NOERROR		0			// no error
 #define SERR_MISMATCH		1			// mismatch between entered and calculated length
 #define SERR_COORD			2
 #define SERR_SETTINGS		3
 #define SERR_CRLF			255
+
+//-- INFO MESSAGES --
+// info messages come in different kind of size, but always end with SINF_CRLF
+#define SINF_I2C_SLAVE1   1    // followed by 9 values indicating the status of the I2C devices (0/1)
+#define SINF_I2C_SLAVE2   2    // followed by 9 values indicating the status of the I2C devices (0/1)
+#define SINF_I2C_SLAVE3   3    // followed by 9 values indicating the status of the I2C devices (0/1)
+#define SINF_I2C_SLAVE4   4    // followed by 9 values indicating the status of the I2C devices (0/1)
+#define SINF_CRLF       254
 
 #define STARTUP_WAIT_MS		2000		// startup waiting time to let the slaves be ready
 #define INIT_WAIT_MS		100			// initialization waiting time to SEE slave getting ready
