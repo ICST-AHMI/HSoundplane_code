@@ -71,6 +71,9 @@ void setup()
   Wire.begin(); // Start i2c using the SCL and SDA pins
   if (i2cFastMode) Wire.setClock(400000); //fast mode should be default
 
+  // register slaves if they are unregistered and initilze their drivers
+  initializeSlaves();
+
   // Welcome & information message...
   if (debug) {
     Serial.println("\nStarting up master controller...");
@@ -82,43 +85,11 @@ void setup()
     Serial.println("**************************************\n");
   }
 
-  // Register slaves and list the avaiable ones
-  registerSlave();
-
-  // Perform initialization for each available slave
-  for (uint8_t i = 0; i < HS_SLAVE_NUMBER; i++) {
-    delay(INIT_WAIT_MS);	// wait some ms between each slave to avoid collisions
-
-    bool reset = true;
-    bool on = true;
-    uint8_t gain = 3;
-    uint8_t drvMask = 0xFF;
-    if (HSd.i2cSlaveAvailable[i]) {
-      if (debug) {
-        Serial.print("\nSetting up slave @ 0x"); Serial.print(HSd.i2cSlaveAddress[i], HEX);
-        Serial.println("\n----------------------------------------");
-      }
-      // Set up the drv2667 and notify if succeeded
-      HSd.i2cSlaveSetup[i] = setupSlaveDrv(HSd.i2cSwitchAddress[i], drvMask, reset, on, gain);
-      bool notify = ((HSd.i2cSlaveSetup[i] & drvMask) == drvMask) ? true : false;
-      if (debug) {
-        Serial.print("Slave#"); Serial.print(i, DEC); Serial.println(" set up...");
-        Serial.print("Sent: "); Serial.print(drvMask, BIN);
-        Serial.print(", returned: "); Serial.println(HSd.i2cSlaveSetup[i], BIN);
-        Serial.print("Notification: "); Serial.println(notify, DEC);
-      }
-      notifySlave(HSd.i2cSlaveAddress[i], notify);
-
-      // Toggle sync pin for time measurement
-      syncPinState = !syncPinState;
-      digitalWrite(SYNC_PIN_1, syncPinState);
-
-      // Switch off all relays of selected slave
-      sendToSlave(HSd.i2cSlaveAddress[i], NULL, 0);
-    }
-  }
+  // all the debugging information inside the setup are sent anyway, because 
+  // it is not possible to set the debug flag to true from the outside while
+  // the loop hasn't started yet.
+  debug = false;
 }
-
 
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
@@ -136,6 +107,7 @@ void loop()
   //     -> <command length> is the number of <command byte pair>
   //     -> <command byte pair> are always two bytes
   // Then process the received command line
+
   if (Serial.available()) {
     b = Serial.read();
 
@@ -282,152 +254,92 @@ void loop()
     }
   }
 
-  if(millis() + INTERRUPT_SLAVE_CHK > interruptSlvChk){
-    interruptSlvChk = millis() + INTERRUPT_SLAVE_CHK;
-    
-  }
+//  if(millis() > interruptSlvChk + INTERRUPT_SLAVE_CHK){
+//    interruptSlvChk = millis() + INTERRUPT_SLAVE_CHK;
+//    // register slaves if they are unregistered and initilze their drivers
+//    Serial.println("initializeSlaves...");
+//    initializeSlaves();
+//  }
+
 }
 
 
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
-/* | executeCommands															                          | */
+/* | initializeSlaves                                                       | */
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
-void executeCommands(void)
+void initializeSlaves(void)
 {
-  int8_t addr = 0;
-  uint8_t drvMask = 0;
-  uint8_t gain = 0;
-  bool reset = false;
-  bool on = false;
-  // Command parser, resp. coordinate forwarder
+  uint8_t receivedAddr;
+  bool reset = true;
+  bool on = true;
+  uint8_t gain = 3;
+  uint8_t drvMask = 0xFF;
+
+  // Registering each slave...
   for (uint8_t i = 0; i < HS_SLAVE_NUMBER; i++) {
-    // if(HSd.i2cSlaveAvailable[i]) {
-    // ...switch off all piezos (relay)
-    if (HSd.piezoOffAll[i]) {
-      if (debug) {
-        Serial.print("\nSwitching off piezos on slave#");
-        Serial.println(i, DEC);
+           
+    // If registration doesn't succeed, retry several times to be sure
+    for (uint8_t j = 0; j < SLAVE_REG_RETRIES; j++) {
+      Wire.requestFrom(HSd.i2cSlaveAddress[i], 1);
+      while (Wire.available()) {
+        receivedAddr = Wire.read();
+        if (receivedAddr == HSd.i2cSlaveAddress[i]) {
+          HSd.i2cSlaveAvailable[i] = true;
+          j = SLAVE_REG_RETRIES;
+        } else {
+          HSd.i2cSlaveAvailable[i] = false;
+        }
       }
-      addr = HSd.i2cSwitchAddress[i];
-      drvMask = 0xFF;
-      reset = false;
-      on = false;
-      gain = 3;
-      // setupSlaveDrv(addr, drvMask, reset, on, gain);
-
-      sendToSlave(HSd.i2cSlaveAddress[i], NULL, 0);
-
-      HSd.piezoOffAll[i] = false;
     }
-    // ...swich off all drivers
-    else if (HSd.drvOffAll[i]) {
-      if (debug) {
-        Serial.print("\nSwitching off all drivers on slave#");
-        Serial.println(i, DEC);
-      }
-      addr = HSd.i2cSwitchAddress[i];
-      drvMask = 0xFF;
-      reset = false;
-      on = false;
-      gain = 0;
-      // setupSlaveDrv(addr, drvMask, reset, on, gain);
-
-      HSd.drvOffAll[i] = false;
+     
+    if (debug) {
+      Serial.println("----------------------------------------");
+      Serial.print("Slave @ address 0x"); Serial.print(HSd.i2cSlaveAddress[i], HEX);
+      Serial.println((HSd.i2cSlaveAvailable[i]) ? " available" : " NOT available");
     }
-    // ...switch on all drivers
-    else if (HSd.drvOnAll[i]) {
+
+    // Perform initialization for available slaves
+    if (HSd.i2cSlaveAvailable[i]) {
+      // this switches the slaves notification led OFF
+      notifySlave(HSd.i2cSlaveAddress[i], false);
+
+      delay(INIT_WAIT_MS);  // wait some ms between each slave to avoid collisions
       if (debug) {
-        Serial.print("\nSwitching on all drivers on slave#");
-        Serial.println(i, DEC);
+        Serial.print("\nSetting up slave @ 0x"); Serial.println(HSd.i2cSlaveAddress[i], HEX);
+        Serial.println("\n----------------------------------------");
       }
-      addr = HSd.i2cSwitchAddress[i];
-      drvMask = 0xFF;
-      reset = false;
-      on = true;
-      gain = 3;
-      // setupSlaveDrv(addr, drvMask, reset, on, gain);
-
-      HSd.drvOnAll[i] = false;
-    }
-    // ...switch off selected drivers
-    else if (HSd.drvOff[i] > 0) {
+      // Set up the drv2667 and notify if succeeded
+      HSd.i2cSlaveSetup[i] = setupSlaveDrv(HSd.i2cSwitchAddress[i], drvMask, reset, on, gain);
+      bool notify = ((HSd.i2cSlaveSetup[i] & drvMask) == drvMask) ? true : false;
       if (debug) {
-        Serial.print("\nSwitching off drivers "); Serial.print(HSd.drvOff[i], BIN);
-        Serial.print(" on slave#"); Serial.println(i, DEC);
+        Serial.print("Slave#"); Serial.print(i, DEC); Serial.println(" set up...");
+        Serial.print("Sent: "); Serial.print(drvMask, BIN);
+        Serial.print(", returned: "); Serial.println(HSd.i2cSlaveSetup[i], BIN);
+        Serial.print("Notification: "); Serial.println(notify, DEC);
       }
-      addr = HSd.i2cSwitchAddress[i];
-      drvMask = HSd.drvOff[i];
-      reset = false;
-      on = false;
-      gain = 0;
-      // setupSlaveDrv(addr, drvMask, reset, on, gain);
+      notifySlave(HSd.i2cSlaveAddress[i], notify);
 
-      HSd.drvOff[i] = 0;
-    }
-    // ...switch on selected drivers
-    else if (HSd.drvOn[i] > 0) {
-      if (debug) {
-        Serial.print("\nSwitching on drivers "); Serial.print(HSd.drvOn[i], BIN);
-        Serial.print(" on slave#"); Serial.println(i, DEC);
-      }
-      addr = HSd.i2cSwitchAddress[i];
-      drvMask = HSd.drvOff[i];
-      reset = false;
-      on = true;
-      gain = 3;
-      // setupSlaveDrv(addr, drvMask, reset, on, gain);
+      // Toggle sync pin for time measurement
+      syncPinState = !syncPinState;
+      digitalWrite(SYNC_PIN_1, syncPinState);
 
-      HSd.drvOn[i] = 0;
-    }
-    // ...send coordinate values
-    else if (HSd.indexCnt[i] > 0) {
-      if (debug) {
-        Serial.print("\nSending piezo settings to slave #"); Serial.println(i, DEC);
-      }
-
-      addr = HSd.i2cSwitchAddress[i];
-      drvMask = ~HSd.drvBm[i] & HSd.drvOldBm[i];
-      reset = false;
-      on = false;
-      gain = 0;
-      // setupSlaveDrv(addr, drvMask, reset, on, gain);
-
-      drvMask = HSd.drvBm[i];
-      on = true;
-      gain = 3;
-      // setupSlaveDrv(addr, drvMask, reset, on, gain);
-
-      sendToSlave(HSd.i2cSlaveAddress[i], HSd.outputIndex[i], HSd.indexCnt[i]);
-
-      HSd.indexCnt[i] = 0;
-      HSd.drvOldBm[i] = HSd.drvBm[i];
-      HSd.drvBm[i] = 0;
-    }
-    // ...no coordinate received, switch off piezos & drivers
-    else if (HSd.indexCnt[i] == 0) {
-      if (debug) {
-        Serial.print("No coordinate received for slave#"); Serial.print(i, DEC);
-        Serial.println(". Closing relays & switching off drivers.");
-      }
-      addr = HSd.i2cSwitchAddress[i];
-      drvMask = 0xFF;
-      reset = false;
-      on = false;
-      gain = 0;
-      // setupSlaveDrv(addr, drvMask, reset, on, gain);
-
+      // Switch off all relays of selected slave
       sendToSlave(HSd.i2cSlaveAddress[i], NULL, 0);
     }
-    // }
+
+  }
+
+  if (debug) {
+    Serial.println("");
   }
 }
 
 
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
-/* | registerSlave															| */
+/* | registerSlave          OBSOLET - TO BE DELETED                         | */
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 void registerSlave(void)
@@ -473,7 +385,7 @@ void registerSlave(void)
 
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
-/* | setupSlaveDrv															                            | */
+/* | setupSlaveDrv                                                          | */
 /*    this will connect to all the slaves drivers and sets them up.         | */
 /*    the slaves drivers are the audio amplifiers that need to be address   | */
 /*    through the slaves I2C switch chip, and because the addressing of the | */
@@ -726,6 +638,143 @@ void notifySlave(int8_t addr, bool notification)
   }
 }
 
+
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* | executeCommands															                          | */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+void executeCommands(void)
+{
+  int8_t addr = 0;
+  uint8_t drvMask = 0;
+  uint8_t gain = 0;
+  bool reset = false;
+  bool on = false;
+  // Command parser, resp. coordinate forwarder
+  for (uint8_t i = 0; i < HS_SLAVE_NUMBER; i++) {
+    // if(HSd.i2cSlaveAvailable[i]) {
+    // ...switch off all piezos (relay)
+    if (HSd.piezoOffAll[i]) {
+      if (debug) {
+        Serial.print("\nSwitching off piezos on slave#");
+        Serial.println(i, DEC);
+      }
+      addr = HSd.i2cSwitchAddress[i];
+      drvMask = 0xFF;
+      reset = false;
+      on = false;
+      gain = 3;
+      // setupSlaveDrv(addr, drvMask, reset, on, gain);
+
+      sendToSlave(HSd.i2cSlaveAddress[i], NULL, 0);
+
+      HSd.piezoOffAll[i] = false;
+    }
+    // ...swich off all drivers
+    else if (HSd.drvOffAll[i]) {
+      if (debug) {
+        Serial.print("\nSwitching off all drivers on slave#");
+        Serial.println(i, DEC);
+      }
+      addr = HSd.i2cSwitchAddress[i];
+      drvMask = 0xFF;
+      reset = false;
+      on = false;
+      gain = 0;
+      setupSlaveDrv(addr, drvMask, reset, on, gain);
+
+      HSd.drvOffAll[i] = false;
+    }
+    // ...switch on all drivers
+    else if (HSd.drvOnAll[i]) {
+      if (debug) {
+        Serial.print("\nSwitching on all drivers on slave#");
+        Serial.println(i, DEC);
+      }
+      addr = HSd.i2cSwitchAddress[i];
+      drvMask = 0xFF;
+      reset = false;
+      on = true;
+      gain = 3;
+      setupSlaveDrv(addr, drvMask, reset, on, gain);
+
+      HSd.drvOnAll[i] = false;
+    }
+    // ...switch off selected drivers
+    else if (HSd.drvOff[i] > 0) {
+      if (debug) {
+        Serial.print("\nSwitching off drivers "); Serial.print(HSd.drvOff[i], BIN);
+        Serial.print(" on slave#"); Serial.println(i, DEC);
+      }
+      addr = HSd.i2cSwitchAddress[i];
+      drvMask = HSd.drvOff[i];
+      reset = false;
+      on = false;
+      gain = 0;
+      // setupSlaveDrv(addr, drvMask, reset, on, gain);
+
+      HSd.drvOff[i] = 0;
+    }
+    // ...switch on selected drivers
+    else if (HSd.drvOn[i] > 0) {
+      if (debug) {
+        Serial.print("\nSwitching on drivers "); Serial.print(HSd.drvOn[i], BIN);
+        Serial.print(" on slave#"); Serial.println(i, DEC);
+      }
+      addr = HSd.i2cSwitchAddress[i];
+      drvMask = HSd.drvOff[i];
+      reset = false;
+      on = true;
+      gain = 3;
+      // setupSlaveDrv(addr, drvMask, reset, on, gain);
+
+      HSd.drvOn[i] = 0;
+    }
+    // ...send coordinate values
+    else if (HSd.indexCnt[i] > 0) {
+      if (debug) {
+        Serial.print("\nSending piezo settings to slave #"); Serial.println(i, DEC);
+      }
+
+      addr = HSd.i2cSwitchAddress[i];
+      drvMask = ~HSd.drvBm[i] & HSd.drvOldBm[i];
+      reset = false;
+      on = false;
+      gain = 0;
+      // setupSlaveDrv(addr, drvMask, reset, on, gain);
+
+      drvMask = HSd.drvBm[i];
+      on = true;
+      gain = 3;
+      // setupSlaveDrv(addr, drvMask, reset, on, gain);
+
+      sendToSlave(HSd.i2cSlaveAddress[i], HSd.outputIndex[i], HSd.indexCnt[i]);
+
+      HSd.indexCnt[i] = 0;
+      HSd.drvOldBm[i] = HSd.drvBm[i];
+      HSd.drvBm[i] = 0;
+    }
+    // ...no coordinate received, switch off piezos & drivers
+    else if (HSd.indexCnt[i] == 0) {
+      if (debug) {
+        Serial.print("No coordinate received for slave#"); Serial.print(i, DEC);
+        Serial.println(". Closing relays & switching off drivers.");
+      }
+      addr = HSd.i2cSwitchAddress[i];
+      drvMask = 0xFF;
+      reset = false;
+      on = false;
+      gain = 0;
+      // setupSlaveDrv(addr, drvMask, reset, on, gain);
+
+      sendToSlave(HSd.i2cSlaveAddress[i], NULL, 0);
+    }
+    // }
+  }
+}
+
+
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 /* | distributeCoordinates													| */
@@ -775,7 +824,7 @@ void distributeCoordinates(uint8_t len, uint8_t in[HS_COORD_MAX][2], uint8_t out
           break;
         // Switch off all drivers of slave# given in orig[i][1]
         case SCMD_DOFF_ALL:
-          if (in[i][i] < HS_SLAVE_NUMBER) HSd.drvOffAll[in[i][1]] = true;
+          if (in[i][1] < HS_SLAVE_NUMBER) HSd.drvOffAll[in[i][1]] = true;
           else cmdErr = true;
           break;
         // Switch on drivers of slave1 according to the bitmask in orig[i][1]
@@ -802,6 +851,12 @@ void distributeCoordinates(uint8_t len, uint8_t in[HS_COORD_MAX][2], uint8_t out
         // Switch on/off debug mode
         case SCMD_DEBUG:
           debug = (in[i][1] > 0) ? true : false;
+          break;
+        // execute new slave registry and initialization
+        case SCMD_FORCE_SETUP:
+          if(in[i][1] > 0){
+            initializeSlaves();
+          }
           break;
         case SCMD_RESET:
           asm volatile ("   jmp 0");

@@ -37,7 +37,7 @@
 /* -------------------------------------------------------------------------- */
 // HSoundplane characteristics
 #define HS_SLAVE_NUMBER		4			// number of slaves to drive (1 - 4)
-#define HS_COORD_MAX		16			// maximal amount of simultaneous coordinate pairs
+#define HS_COORD_MAX		64			// maximal amount of simultaneous coordinate pairs
 #define HS_CPS				8			// number of columns per slave (usually 8)
 #define HS_DPS				8			// number of drv2667 per slave (usually 8)
 #define HS_PIEZO_MAX		72			// absolute maximum available piezos on a slave
