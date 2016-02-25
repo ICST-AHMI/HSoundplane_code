@@ -37,6 +37,8 @@ bool cmdZeroLen = false;
 int8_t cmdLength;
 int8_t cmdIndexCnt;
 
+long interruptSlvChk = 0;
+
 
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
@@ -220,13 +222,15 @@ void loop()
         syncPinState = !syncPinState;
         digitalWrite(SYNC_PIN_1, syncPinState);
 
+        //rearrange the coordinates for the individual slaves
         distributeCoordinates((cmdLength / 2), HSd.inputCoord, HSd.outputIndex);
 
         // Toggle sync pin for time measurement
         syncPinState = !syncPinState;
         digitalWrite(SYNC_PIN_1, syncPinState);
 
-        parseCommand();
+        //execute commands
+        executeCommands();
 
         // Toggle sync pin for time measurement
         syncPinState = !syncPinState;
@@ -277,15 +281,20 @@ void loop()
       }
     }
   }
+
+  if(millis() + INTERRUPT_SLAVE_CHK > interruptSlvChk){
+    interruptSlvChk = millis() + INTERRUPT_SLAVE_CHK;
+    
+  }
 }
 
 
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
-/* | parseCommand															| */
+/* | executeCommands															                          | */
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
-void parseCommand(void)
+void executeCommands(void)
 {
   int8_t addr = 0;
   uint8_t drvMask = 0;

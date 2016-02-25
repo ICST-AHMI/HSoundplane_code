@@ -75,11 +75,13 @@
 #define SINF_CRLF       254
 
 #define STARTUP_WAIT_MS		2000		// startup waiting time to let the slaves be ready
-#define INIT_WAIT_MS		100			// initialization waiting time to SEE slave getting ready
+#define INIT_WAIT_MS		100			  // initialization waiting time to SEE slave getting ready
 
 #define SLAVE_REG_RETRIES	5
 
-#define SYNC_PIN_1			2			// pin used to measure time between events
+#define SYNC_PIN_1			2			      // pin used to measure time between events
+
+#define INTERRUPT_SLAVE_CHK 1000    // interrupt where the master checks the slave connection
 
 
 /* -------------------------------------------------------------------------- */
