@@ -26,13 +26,14 @@
 //  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <SPI.h>
 #include <Wire.h>
-#include "HSoundplane.h"
+#include "hsoundplane.h"
 
 
 struct HSdata HSd;
 
 // Initialize all HSoundplane data...
 void HSInit(void) {
+	// for each slave (4)
 	for(uint8_t i = 0; i < HS_SLAVE_NUMBER; i++) {
 		// Flags & bit masks for relays and drivers
 		HSd.piezoOffAll[i] = false;

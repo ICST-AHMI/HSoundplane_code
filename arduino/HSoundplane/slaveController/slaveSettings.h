@@ -49,6 +49,7 @@
 
 #define SYNC_PIN_1			A0			// pin used to measure time between events
 
+// Setting the I2C Addresses depending on the slave ID
 #if(SLAVE_ID == 1)
 #define I2C_SLAVE_ADDRESS	I2C_SLAVE_ADDR1
 #define I2C_SWITCH_ADDRESS	I2C_SWITCH_ADDR1
