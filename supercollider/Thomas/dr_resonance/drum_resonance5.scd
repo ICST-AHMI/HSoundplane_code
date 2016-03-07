@@ -60,7 +60,7 @@ s.waitForBoot({
 			~setPartialVol2.(msg, i);
 			~group[i].set(\mul, msg[3]**2); // pressure --> amp global
 			~moveSnd.(msg, i);
-			if (msg[3] > 0.1, {var scale = msg[3] - 0.1; ~group[i].set(\scale, scale.lincurve(0, 0.9, 0, 2, 3))}); // druck --> pitch bend
+			if (msg[3] > 0.1, {var scale = msg[3] - 0.1; ~group[i].set(\scale, scale.lincurve(0, 0.9, 0, 1, 3))}); // druck --> pitch bend
 			// msg.postln
 		}, '/t3d/tch'++i.asSymbol, recvPort: 3190)
 	});

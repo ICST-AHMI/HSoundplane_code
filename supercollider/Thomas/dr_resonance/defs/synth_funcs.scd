@@ -175,12 +175,12 @@ SynthDef(\t_sfplay, {
 ~freqs = (~lowFreqs++~midFreqs++~highFreqs).flat;
 
 // set basic freqs2 (file: drum_resonance4)
-~freqs2 = 3.collect({|f|(~spots.size).collect({|i| a = rrand(210, 299); 3.collect({|v| (a*(f+1)) + (v*0.52)})})}).flat;
+~freqs2 = 3.collect({|f|(~spots.size).collect({|i| a = rrand(60, 299); 3.collect({|v| (a*(f+1)) + (v*0.52)})})}).flat;
 
 // set basic freqs3 (file: drum_resonance5)
-~freqs3 = 3.collect({|f|(~spots.size).collect({|i| a = rrand(80.0, 260.0)})}).flat;
+~freqs3 = 3.collect({|f|(~spots.size).collect({|i| a = rrand(60.0, 360.0)})}).flat;
 ~freqs3beatings = ~freqs3.collect({|freq, index| if (index > 0, {(~freqs3[index] - ~freqs3[index-1]).abs}, {5})});
-~freqs3 = ~freqs3 ++ 3.collect({|f|(~spots.size).collect({|i| a = rrand(1860.0, 2820.0)})}).flat;
+// ~freqs3 = ~freqs3 ++ 3.collect({|f|(~spots.size).collect({|i| a = rrand(4860.0, 5820.0)})}).flat;
 
 
 

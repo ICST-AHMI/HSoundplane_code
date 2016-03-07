@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 353.0, 169.0, 1039.0, 573.0 ],
+		"rect" : [ 43.0, 78.0, 1312.0, 809.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -38,6 +38,35 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-26",
+					"maxclass" : "newobj",
+					"numinlets" : 4,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 1022.71814, 97.799988, 182.0, 22.0 ],
+					"style" : "",
+					"text" : "route /ampFB /routeFB /mainVol"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontface" : 0,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-9",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1022.71814, 67.0, 99.0, 22.0 ],
+					"style" : "",
+					"text" : "udpreceive 7771"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"format" : 6,
 					"id" : "obj-8",
 					"maxclass" : "flonum",
@@ -45,7 +74,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 793.5, 495.0, 50.0, 22.0 ],
+					"patching_rect" : [ 1022.71814, 545.0, 50.0, 22.0 ],
 					"style" : ""
 				}
 
@@ -201,7 +230,7 @@
 					"id" : "obj-62",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "voice_fixedSine.maxpat",
+					"name" : "voice_audioMix.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -224,7 +253,7 @@
 					"id" : "obj-61",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "voice_fixedSine.maxpat",
+					"name" : "voice_audioMix.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -532,7 +561,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "signal", "signal", "", "float", "list" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 902.75, 284.200012, 56.0, 169.0 ],
+					"patching_rect" : [ 912.0, 292.200012, 56.0, 169.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 796.75, 103.0, 56.0, 169.0 ],
 					"saved_attribute_attributes" : 					{
@@ -929,7 +958,7 @@
 					"id" : "obj-20",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "voice_fixedSine.maxpat",
+					"name" : "voice_audioMix.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -952,7 +981,7 @@
 					"id" : "obj-18",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "voice_fixedSine.maxpat",
+					"name" : "voice_audioMix.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -975,7 +1004,7 @@
 					"id" : "obj-17",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "voice_fixedSine.maxpat",
+					"name" : "voice_audioMix.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -998,7 +1027,7 @@
 					"id" : "obj-13",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "voice_fixedSine.maxpat",
+					"name" : "voice_audioMix.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -1021,7 +1050,7 @@
 					"id" : "obj-11",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "voice_fixedSine.maxpat",
+					"name" : "voice_audioMix.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -1044,7 +1073,7 @@
 					"id" : "obj-3",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "voice_fixedSine.maxpat",
+					"name" : "voice_audioMix.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -1067,7 +1096,7 @@
 					"id" : "obj-43",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "voice_fixedSine.maxpat",
+					"name" : "voice_audioMix.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -1752,7 +1781,7 @@
 					"id" : "obj-32",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "voice_fixedSine.maxpat",
+					"name" : "voice_audioMix.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -3300,6 +3329,35 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-22", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 1086.551514, 143.0, 916.0, 143.0, 916.0, 14.0, 329.224945, 14.0 ],
+					"source" : [ "obj-26", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-41", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 1140.884766, 276.0, 921.5, 276.0 ],
+					"source" : [ "obj-26", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-26", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-25", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -3605,6 +3663,15 @@
 				}
 
 			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-26", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-9", 0 ]
+				}
+
+			}
  ],
 		"parameters" : 		{
 			"obj-41" : [ "live.gain~[1]", "live.gain~[1]", 0 ]
@@ -3635,7 +3702,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "voice_fixedSine.maxpat",
+				"name" : "voice_audioMix.maxpat",
 				"bootpath" : "/Users/Shared/AHMI/01_projects/HSoundPlane/code/max/HSoundplane/HS_MapV001",
 				"type" : "JSON",
 				"implicit" : 1
