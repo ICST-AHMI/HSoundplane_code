@@ -39,7 +39,6 @@ int8_t cmdIndexCnt;
 
 long interruptSlvChk = 0;
 
-
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 /* | setup																	| */
@@ -55,9 +54,9 @@ void setup()
   digitalWrite(SYNC_PIN_1, syncPinState);
 
   // Toggle sync pin on and off to notify startup
-  syncPinState = !syncPinState;
+  syncPinState = true;
   digitalWrite(SYNC_PIN_1, syncPinState);
-  syncPinState = !syncPinState;
+  syncPinState = false;
   digitalWrite(SYNC_PIN_1, syncPinState);
 
   // Initialize HSoundplane variables...
@@ -120,6 +119,10 @@ void loop()
       }
       cmdIndexCnt = 0;
       cmdByteOne = true;
+
+      // Toggle sync pin for time measurement
+      syncPinState = false;
+      digitalWrite(SYNC_PIN_1, syncPinState);
     }
 
     // When stop character received...
@@ -191,21 +194,21 @@ void loop()
         }
 
         // Toggle sync pin for time measurement
-        syncPinState = !syncPinState;
+        syncPinState = true;
         digitalWrite(SYNC_PIN_1, syncPinState);
 
         //rearrange the coordinates for the individual slaves
         distributeCoordinates((cmdLength / 2), HSd.inputCoord, HSd.outputIndex);
 
         // Toggle sync pin for time measurement
-        syncPinState = !syncPinState;
+        syncPinState = false;
         digitalWrite(SYNC_PIN_1, syncPinState);
 
         //execute commands
         executeCommands();
 
         // Toggle sync pin for time measurement
-        syncPinState = !syncPinState;
+        syncPinState = true;
         digitalWrite(SYNC_PIN_1, syncPinState);
 
       }
@@ -225,8 +228,16 @@ void loop()
     // When cmdByteOne flag is active, this byte should be <command length>
     // ---------------------------------
     else if (cmdByteOne) {
+		// Toggle sync pin for time measurement
+		// syncPinState = true;
+		// digitalWrite(SYNC_PIN_1, syncPinState);
+		
       cmdLength = (2 * b);
       cmdByteOne = false;
+	  
+      // Toggle sync pin for time measurement
+      // syncPinState = false;
+      // digitalWrite(SYNC_PIN_1, syncPinState);
     }
 
     // Storing currently entered input...
@@ -236,6 +247,10 @@ void loop()
         Serial.print("cmdIndexCnt = "); Serial.print(cmdIndexCnt, DEC);
         Serial.print(", cmdLength = "); Serial.println(cmdLength, DEC);
       }
+	  
+      // Toggle sync pin for time measurement
+      // syncPinState = true;
+      // digitalWrite(SYNC_PIN_1, syncPinState);
 
       // cmdIndexCnt is indexed for each byte, while the inputCoord table saves coordinate
       // pairs of half length
@@ -251,6 +266,9 @@ void loop()
 
         cmdIndexCnt += 1;
       }
+      // Toggle sync pin for time measurement
+      // syncPinState = false;
+      // digitalWrite(SYNC_PIN_1, syncPinState);
     }
   }
 
@@ -667,7 +685,13 @@ void executeCommands(void)
       gain = 3;
       // setupSlaveDrv(addr, drvMask, reset, on, gain);
 
+      // Toggle sync pin for time measurement
+      // syncPinState = !syncPinState;
+      // digitalWrite(SYNC_PIN_1, syncPinState);
       sendToSlave(HSd.i2cSlaveAddress[i], NULL, 0);
+      // Toggle sync pin for time measurement
+      // syncPinState = !syncPinState;
+      // digitalWrite(SYNC_PIN_1, syncPinState);
 
       HSd.piezoOffAll[i] = false;
     }
@@ -682,7 +706,14 @@ void executeCommands(void)
       reset = false;
       on = false;
       gain = 0;
+
+      // Toggle sync pin for time measurement
+      // syncPinState = !syncPinState;
+      // digitalWrite(SYNC_PIN_1, syncPinState);
       setupSlaveDrv(addr, drvMask, reset, on, gain);
+      // Toggle sync pin for time measurement
+      // syncPinState = !syncPinState;
+      // digitalWrite(SYNC_PIN_1, syncPinState);
 
       HSd.drvOffAll[i] = false;
     }
@@ -697,7 +728,14 @@ void executeCommands(void)
       reset = false;
       on = true;
       gain = 3;
+
+      // Toggle sync pin for time measurement
+      // syncPinState = !syncPinState;
+      // digitalWrite(SYNC_PIN_1, syncPinState);
       setupSlaveDrv(addr, drvMask, reset, on, gain);
+      // Toggle sync pin for time measurement
+      // syncPinState = !syncPinState;
+      // digitalWrite(SYNC_PIN_1, syncPinState);
 
       HSd.drvOnAll[i] = false;
     }
@@ -749,7 +787,13 @@ void executeCommands(void)
       gain = 3;
       // setupSlaveDrv(addr, drvMask, reset, on, gain);
 
+      // Toggle sync pin for time measurement
+      // syncPinState = !syncPinState;
+   //   digitalWrite(SYNC_PIN_1, syncPinState);
       sendToSlave(HSd.i2cSlaveAddress[i], HSd.outputIndex[i], HSd.indexCnt[i]);
+      // Toggle sync pin for time measurement
+      // syncPinState = !syncPinState;
+ // digitalWrite(SYNC_PIN_1, syncPinState);
 
       HSd.indexCnt[i] = 0;
       HSd.drvOldBm[i] = HSd.drvBm[i];
@@ -768,7 +812,13 @@ void executeCommands(void)
       gain = 0;
       // setupSlaveDrv(addr, drvMask, reset, on, gain);
 
+      // Toggle sync pin for time measurement
+      // syncPinState = !syncPinState;
+    //    digitalWrite(SYNC_PIN_1, syncPinState);
       sendToSlave(HSd.i2cSlaveAddress[i], NULL, 0);
+      // Toggle sync pin for time measurement
+      // syncPinState = !syncPinState;
+    //    digitalWrite(SYNC_PIN_1, syncPinState);
     }
     // }
   }
