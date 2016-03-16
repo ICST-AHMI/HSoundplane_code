@@ -1,0 +1,33 @@
+feedback_generator: calculate new feedback level, output new feedback level by smoothly ramping from the current one
+
+inlet: 
+1: current "grain" level for rolling feedback
+2: current "depth" level for rolling feedback
+3: new error (0 to 4)
+4: bang on key position change
+outlet: 
+1: ramp value for "grain" level
+2: ramp value for "depth" level
+3: "velocity level" (CURRENTLY UNCHANGED)
+
+Controls: ramp time (currently 250 ms), triplets for each feedback level
+
+-----------------------------------------------
+
+chrono: start/stop clock for a single trial, output timestamps on key position change
+
+inlet:
+1: pointer down/up ( -> start/stop clocker)
+2: key position change ( -> output current timestamp + reset clocker)
+3: reset command ( -> reset clocker and currently stored value)
+outlet:
+1: timestamp
+
+-----------------------------------------------
+
+feedback_modes: generate a list of integers, to be used to select a feedback modality
+currently 4 modalities: A, H, A+H, V  and 12 trials (3 for each)
+problems: 
+1 - where to locate V trials?
+2 - how to ensure two consecutive trials have not the same modality (check and correct createtrials.js)
+

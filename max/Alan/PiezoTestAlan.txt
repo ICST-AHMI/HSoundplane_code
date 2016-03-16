@@ -1,0 +1,46 @@
+
+Piezo sounds masked with pink noise in headphones.   
+
+key = (column, row) left to right, top to bottom
+
+
+I - frequency 100 Hz, amplitude 1.0x
+
+column 1 definitely less powerful than the others
+(1,2) sensibly less powerful than the rest of column 1
+(6,1) almost unperceivable, very low response, sometimes stuttering
+(6,2) audible vibration is at higher freq than the other keys, no difference in haptics
+(6,4) stronger than (6,3) and (6,5)
+(8,1) < (8,2) < the rest of column 8
+column 10 slightly less powerful than columns 9 and 11 (maybe same reason of 15 and 16)
+columns 15 and 16 make white noise on pressing, even without feedback. With feedback, vibration is less deep (i.e. as it was driven by higher frequencies)
+(20,5) less powerful than the rest of column 20
+(24,2) less powerful than the rest of column 24
+(27,3) less powerful than the rest of column 27
+(28,4) less powerful than the rest of column 28
+
+
+II - frequency 100 Hz, amplitude 2.0x
+
+same as I; (6,1) the most problematic
+
+
+III - frequency 230 Hz, amplitude 1.5x
+
+column 1 same as trial I
+(3,2) less powerful than the rest of column 3
+column 6 same as trial I
+(7,5) less powerful than the rest of column 7
+column 8 same as trial I
+column 10 same as trial I; sometimes (9,1) and (11,1) can trigger (10,1)
+columns 15 and 16 same as trial I
+(20,5) less powerful than the rest of column 20
+(24,2) less powerful than the rest of column 24
+(26,3) less powerful than the rest of column 26
+(27,3) less powerful than the rest of column 27
+(28,4) less powerful than the rest of column 28
+
+
+
+
+
