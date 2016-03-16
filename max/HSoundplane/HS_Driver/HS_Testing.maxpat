@@ -3,13 +3,13 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 0,
-			"revision" : 3,
+			"minor" : 1,
+			"revision" : 0,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 42.0, 116.0, 1235.0, 618.0 ],
+		"rect" : [ 42.0, 116.0, 1438.0, 727.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,14 +38,21 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-8",
-					"maxclass" : "message",
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"id" : "obj-1",
+					"lockeddragscroll" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "HSoundPlane_serial.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 1,
+					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 795.0, 499.0, 34.0, 22.0 ],
-					"style" : "",
-					"text" : "10 0"
+					"patching_rect" : [ 391.0, 560.0, 318.0, 25.200012 ],
+					"viewvisibility" : 1
 				}
 
 			}
@@ -56,9 +63,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 894.0, 513.0, 50.0, 22.0 ],
+					"patching_rect" : [ 1049.0, 505.0, 50.0, 22.0 ],
 					"style" : "",
-					"text" : "110 1"
+					"text" : "110 0"
 				}
 
 			}
@@ -86,10 +93,9 @@
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
 					"name" : "HSoundPlane_serial.maxpat",
-					"numinlets" : 2,
-					"numoutlets" : 1,
+					"numinlets" : 0,
+					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "" ],
 					"patching_rect" : [ 846.0, 550.200012, 322.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 501.0, 24.200012, 322.0, 22.0 ],
@@ -1348,20 +1354,6 @@
 				}
 
 			}
-, 			{
-				"box" : 				{
-					"id" : "obj-2",
-					"items" : [ 0, "/dev/tty.Bluetooth-Incoming-Port", ",", 2, "/dev/tty.usbmodem1d11411" ],
-					"maxclass" : "umenu",
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "int", "", "" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 16.69989, 315.200012, 175.800003, 22.0 ],
-					"style" : ""
-				}
-
-			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
@@ -1537,7 +1529,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-21", 1 ],
+					"destination" : [ "obj-1", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-24", 1 ]
@@ -1546,7 +1538,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-21", 0 ],
+					"destination" : [ "obj-1", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-24", 0 ]
@@ -1843,24 +1835,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-24", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-62", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-24", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-8", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-133", 1 ],
 					"disabled" : 0,
 					"hidden" : 1,
@@ -1933,72 +1907,67 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-133::obj-132::obj-84" : [ "live.gain~[4]", "live.gain~", 0 ],
-			"obj-133::obj-133::obj-84" : [ "live.gain~[7]", "live.gain~", 0 ],
-			"obj-174::obj-130::obj-84" : [ "live.gain~[10]", "live.gain~", 0 ],
-			"obj-184::obj-21::obj-84" : [ "live.gain~[16]", "live.gain~", 0 ],
-			"obj-184::obj-131::obj-84" : [ "live.gain~[21]", "live.gain~", 0 ],
-			"obj-194::obj-129::obj-84" : [ "live.gain~[27]", "live.gain~", 0 ],
-			"obj-133::obj-130::obj-84" : [ "live.gain~[2]", "live.gain~", 0 ],
 			"obj-133::obj-134::obj-84" : [ "live.gain~[6]", "live.gain~", 0 ],
 			"obj-174::obj-132::obj-84" : [ "live.gain~[12]", "live.gain~", 0 ],
 			"obj-184::obj-128::obj-84" : [ "live.gain~[17]", "live.gain~", 0 ],
-			"obj-184::obj-133::obj-84" : [ "live.gain~[23]", "live.gain~", 0 ],
-			"obj-194::obj-132::obj-84" : [ "live.gain~[28]", "live.gain~", 0 ],
-			"obj-133::obj-128::obj-84" : [ "live.gain~[1]", "live.gain~", 0 ],
+			"obj-184::obj-134::obj-84" : [ "live.gain~[22]", "live.gain~", 0 ],
+			"obj-194::obj-129::obj-84" : [ "live.gain~[27]", "live.gain~", 0 ],
+			"obj-133::obj-129::obj-84" : [ "live.gain~[3]", "live.gain~", 0 ],
 			"obj-174::obj-21::obj-84" : [ "live.gain~[8]", "live.gain~", 0 ],
-			"obj-133::obj-21::obj-84" : [ "live.gain~[32]", "live.gain~", 0 ],
 			"obj-174::obj-131::obj-84" : [ "live.gain~[13]", "live.gain~", 0 ],
 			"obj-184::obj-130::obj-84" : [ "live.gain~[18]", "live.gain~", 0 ],
-			"obj-184::obj-134::obj-84" : [ "live.gain~[22]", "live.gain~", 0 ],
-			"obj-194::obj-131::obj-84" : [ "live.gain~[29]", "live.gain~", 0 ],
-			"obj-133::obj-129::obj-84" : [ "live.gain~[3]", "live.gain~", 0 ],
+			"obj-184::obj-133::obj-84" : [ "live.gain~[23]", "live.gain~", 0 ],
+			"obj-194::obj-132::obj-84" : [ "live.gain~[28]", "live.gain~", 0 ],
+			"obj-133::obj-132::obj-84" : [ "live.gain~[4]", "live.gain~", 0 ],
+			"obj-133::obj-133::obj-84" : [ "live.gain~[7]", "live.gain~", 0 ],
 			"obj-174::obj-128::obj-84" : [ "live.gain~[9]", "live.gain~", 0 ],
 			"obj-174::obj-134::obj-84" : [ "live.gain~[14]", "live.gain~", 0 ],
 			"obj-184::obj-129::obj-84" : [ "live.gain~[19]", "live.gain~", 0 ],
 			"obj-194::obj-21::obj-84" : [ "live.gain~[24]", "live.gain~", 0 ],
-			"obj-194::obj-134::obj-84" : [ "live.gain~[30]", "live.gain~", 0 ],
+			"obj-194::obj-131::obj-84" : [ "live.gain~[29]", "live.gain~", 0 ],
 			"obj-133::obj-131::obj-84" : [ "live.gain~[5]", "live.gain~", 0 ],
-			"obj-174::obj-129::obj-84" : [ "live.gain~[11]", "live.gain~", 0 ],
+			"obj-133::obj-21::obj-84" : [ "live.gain~[32]", "live.gain~", 0 ],
+			"obj-174::obj-130::obj-84" : [ "live.gain~[10]", "live.gain~", 0 ],
 			"obj-174::obj-133::obj-84" : [ "live.gain~[15]", "live.gain~", 0 ],
 			"obj-184::obj-132::obj-84" : [ "live.gain~[20]", "live.gain~", 0 ],
 			"obj-194::obj-128::obj-84" : [ "live.gain~[25]", "live.gain~", 0 ],
+			"obj-194::obj-134::obj-84" : [ "live.gain~[30]", "live.gain~", 0 ],
+			"obj-133::obj-128::obj-84" : [ "live.gain~[1]", "live.gain~", 0 ],
+			"obj-174::obj-129::obj-84" : [ "live.gain~[11]", "live.gain~", 0 ],
+			"obj-184::obj-21::obj-84" : [ "live.gain~[16]", "live.gain~", 0 ],
+			"obj-184::obj-131::obj-84" : [ "live.gain~[21]", "live.gain~", 0 ],
 			"obj-194::obj-130::obj-84" : [ "live.gain~[26]", "live.gain~", 0 ],
-			"obj-194::obj-133::obj-84" : [ "live.gain~[31]", "live.gain~", 0 ]
+			"obj-194::obj-133::obj-84" : [ "live.gain~[31]", "live.gain~", 0 ],
+			"obj-133::obj-130::obj-84" : [ "live.gain~[2]", "live.gain~", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
 				"name" : "Slave_channels.maxpat",
-				"bootpath" : "~/Arbeiten/02_code/MaxMSP/HSoundPlane/HS_Driver",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/_ICSTdocs/1-research/AHMI/01_projects/HSoundplane/code/max/HSoundplane/HS_Driver",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "Haptic_channel.maxpat",
-				"bootpath" : "~/Arbeiten/02_code/MaxMSP/HSoundPlane/HS_Driver",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/_ICSTdocs/1-research/AHMI/01_projects/HSoundplane/code/max/HSoundplane/HS_Driver",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "Touch_checkbox.maxpat",
-				"bootpath" : "~/Arbeiten/02_code/MaxMSP/HSoundPlane/HS_Driver",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/_ICSTdocs/1-research/AHMI/01_projects/HSoundplane/code/max/HSoundplane/HS_Driver",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "HSpad.maxpat",
-				"bootpath" : "~/Arbeiten/02_code/MaxMSP/HSoundPlane/HS_Driver",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/_ICSTdocs/1-research/AHMI/01_projects/HSoundplane/code/max/HSoundplane/HS_Driver",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "HSoundPlane_serial.maxpat",
-				"bootpath" : "~/Arbeiten/02_code/MaxMSP/HSoundPlane/_package/HSoundPlane/patchers",
-				"patcherrelativepath" : "../_package/HSoundPlane/patchers",
+				"bootpath" : "~/_ICSTdocs/1-research/AHMI/01_projects/HSoundplane/code/max/HSoundplane/_package/HSoundPlane/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -2007,7 +1976,7 @@
 				"type" : "iLaX"
 			}
  ],
-		"embedsnapshot" : 0,
+		"autosave" : 0,
 		"styles" : [ 			{
 				"name" : "STYLE1",
 				"parentstyle" : "",
