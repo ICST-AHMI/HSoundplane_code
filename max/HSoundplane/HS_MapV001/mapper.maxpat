@@ -3,8 +3,8 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 0,
-			"revision" : 6,
+			"minor" : 1,
+			"revision" : 0,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
@@ -73,8 +73,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 7,
-							"minor" : 0,
-							"revision" : 6,
+							"minor" : 1,
+							"revision" : 0,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -128,7 +128,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 575.0, 173.0, 61.0, 22.0 ],
 									"style" : "",
-									"text" : "0.497467"
+									"text" : "0.0001"
 								}
 
 							}
@@ -206,7 +206,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 422.0, 173.0, 61.0, 22.0 ],
 									"style" : "",
-									"text" : "0.002928"
+									"text" : "0.000569"
 								}
 
 							}
@@ -297,7 +297,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 269.0, 173.0, 61.0, 22.0 ],
 									"style" : "",
-									"text" : "0.003265"
+									"text" : "0.0001"
 								}
 
 							}
@@ -369,14 +369,13 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-70",
-									"linecount" : 2,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 122.0, 173.0, 54.0, 22.0 ],
 									"style" : "",
-									"text" : "0.003906"
+									"text" : "nan"
 								}
 
 							}
@@ -978,8 +977,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 7,
-							"minor" : 0,
-							"revision" : 6,
+							"minor" : 1,
+							"revision" : 0,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -1034,7 +1033,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 594.0, 173.0, 50.0, 22.0 ],
 									"style" : "",
-									"text" : "0.346513"
+									"text" : "0.98848"
 								}
 
 							}
@@ -1113,7 +1112,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 444.0, 173.0, 50.0, 22.0 ],
 									"style" : "",
-									"text" : "0.825747"
+									"text" : "0.611688"
 								}
 
 							}
@@ -1192,7 +1191,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 294.0, 173.0, 50.0, 22.0 ],
 									"style" : "",
-									"text" : "0.552025"
+									"text" : "0.98345"
 								}
 
 							}
@@ -1271,7 +1270,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 122.0, 173.0, 50.0, 22.0 ],
 									"style" : "",
-									"text" : "0.653487"
+									"text" : "0.652539"
 								}
 
 							}

@@ -1,4 +1,4 @@
-autowatch = 1;
+autowatch = 0;
 
 var myid=0;
 
@@ -22,6 +22,9 @@ var thisrouting = [-1, -1];
 var thisrouting_val = [0., 0.];
 
 var fingerLost = 0;
+
+var keyFactorArray = createArray(30, 5);
+
 
 function list()
 {
@@ -52,42 +55,69 @@ function list()
 		var y_next = ((y - y_int) > 0.5)? y_int + 1: y_int -1;
 
 		//	post("v = " + y + " key " + y_int +" -> next " + y_next + " | " + y_grad + "\n");
+
+		var mainKeyFactor = 1;
+		var mainKey2ndFactor = 1;
+		var minorKeyFactor = 1;
+		var minorKey2ndFactor = 1;
 	
 		// open the main key
 		outlet(3, x_int, y_int);
+		
+		/**
+		var mainKeyFactor = keyFactorArray[x_int][y_int];
+		var mainKey2ndFactor = keyFactorArray[x_int][y_int];
+		var minorKeyFactor = 0;
+		var minorKey2ndFactor = 0;
+		**/
 
 		if(x_grad < THRESHOLD_X && y_grad < THRESHOLD_Y && ( x_next > 0 && x_next < 29 ) && ( y_next > 0 && y_next < 4 )){
 		// open the diagonal key
 			outlet(3, x_next, y_next);
+			minorKeyFactor = keyFactorArray[x_next][y_next];
+			minorKey2ndFactor = minorKeyFactor;
 		} 
 		if(x_grad < THRESHOLD_X && ( x_next > 0 && x_next < 29 )) {
 			// open the left / right key
 			outlet(3, x_next, y_int);
+			minorKey2ndFactor = keyFactorArray[x_next][y_int];
+			if(minorKeyFactor == 0){
+				minorKeyFactor = minorKey2ndFactor;
+			}
 		} 
 		if(y_grad < THRESHOLD_Y && ( y_next > 0 && y_next < 4 )) {
 	//		post("key " + x_int +" -> next " + y_next + " | " + y_grad + "\n");
 			// open the upper / lower key
 			outlet(3, x_int, y_next);
+			mainKey2ndFactor = keyFactorArray[x_int][y_next];
 		}
-
+		
+		
+		mainKeyFactor = (mainKeyFactor * (1.0 + (1.0 - y_grad)*0.5) + mainKey2ndFactor * (1 - (1 + (1 - y_grad)*0.5)))/2.0;
+		minorKeyFactor = (minorKeyFactor * (1 + (1.0 - y_grad)*0.5) + minorKey2ndFactor * (1 - (1 + (1 - y_grad)*0.5)))/2.0;
+	
 
 		thisrouting = [-1, -1];
 		thisrouting_val = [0., 0.];	
 	
 		// open the main channel
 		if(newRoutingCheck(x_int)){
+//			outlet(1, myid, x_int, z * mainKeyFactor);
 			outlet(1, myid, x_int, z);
 		} else {
-			outlet(0, myid, x_int, z);
+//			outlet(0, myid, x_int, z * mainKeyFactor);
+			outlet(1, myid, x_int, z);
 		}
 		thisrouting[0] = x_int;
 		thisrouting_val[0] = x_grad;
 		if(x_grad < THRESHOLD_X && ( x_next >= 0 && x_next < 30 )) {
 			// open the left / right channel
 			if(newRoutingCheck(x_next)){
+//				outlet(1, myid, x_next, z * .9 * minorKeyFactor);
 				outlet(1, myid, x_next, z * .9);
 			} else {
-				outlet(0, myid, x_next, z *.9);
+//				outlet(0, myid, x_next, z *.9 * minorKeyFactor);
+				outlet(1, myid, x_next, z *.9);
 			}
 			thisrouting[1] = x_next;
 			thisrouting_val[1] = (1. - x_grad);
@@ -123,3 +153,17 @@ function newRoutingCheck(val){
 	}
 	return true;
 }
+
+
+function createArray(length) {
+    var arr = new Array(length || 0),
+        i = length;
+
+    if (arguments.length > 1) {
+        var args = Array.prototype.slice.call(arguments, 1);
+        while(i--) arr[length-1 - i] = createArray.apply(this, args);
+    }
+
+    return arr;
+}
+
