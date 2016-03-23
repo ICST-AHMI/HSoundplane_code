@@ -31,7 +31,7 @@ function list()
 	var a = arrayfromargs(messagename, arguments);
 	
 	var x = a[0] / 0.0333;
-	var y = (1. - a[1]) / 0.2;
+	var y = (1 - a[1])/0.2;
 	var z = a[2];
 
 	if(z > 0.){
@@ -71,13 +71,13 @@ function list()
 		var minorKey2ndFactor = 0;
 		**/
 
-		if(x_grad < THRESHOLD_X && y_grad < THRESHOLD_Y && ( x_next > 0 && x_next < 29 ) && ( y_next > 0 && y_next < 4 )){
+		if(x_grad < THRESHOLD_X && y_grad < THRESHOLD_Y && ( x_next >= 0 && x_next <= 29 ) && ( y_next >= 0 && y_next <= 4 )){
 		// open the diagonal key
 			outlet(3, x_next, y_next);
 			minorKeyFactor = keyFactorArray[x_next][y_next];
 			minorKey2ndFactor = minorKeyFactor;
 		} 
-		if(x_grad < THRESHOLD_X && ( x_next > 0 && x_next < 29 )) {
+		if(x_grad < THRESHOLD_X && ( x_next >= 0 && x_next <= 29 )) {
 			// open the left / right key
 			outlet(3, x_next, y_int);
 			minorKey2ndFactor = keyFactorArray[x_next][y_int];
@@ -85,7 +85,7 @@ function list()
 				minorKeyFactor = minorKey2ndFactor;
 			}
 		} 
-		if(y_grad < THRESHOLD_Y && ( y_next > 0 && y_next < 4 )) {
+		if(y_grad < THRESHOLD_Y && ( y_next >= 0 && y_next <= 4 )) {
 	//		post("key " + x_int +" -> next " + y_next + " | " + y_grad + "\n");
 			// open the upper / lower key
 			outlet(3, x_int, y_next);
