@@ -29,7 +29,7 @@ function list()
 	var z = a[2];
 
 	if(z > 0.){
-		outlet(4, "data", x, y, a[0], a[1], a[2], a[3]);
+		outlet(4, z);
 	
 		// chops of the fractions
 		var x_int = parseInt(x);
