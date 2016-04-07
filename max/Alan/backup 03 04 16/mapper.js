@@ -1,4 +1,4 @@
-autowatch = 1;
+autowatch = 0;
 
 var myid=0;
 
@@ -29,36 +29,10 @@ var keyFactorArray = createArray(30, 5);
 function list()
 {
 	var a = arrayfromargs(messagename, arguments);
-	var x = 0;
-	var y = 0;
-	var z = 0;
-	var keyMultipliers = [0,0,0,0,0];
-	var columnToAlter = 0;
 	
-	if (a[0] != null) {
-		x = a[0] / 0.0333;
-		y = (1. - a[1]) / 0.2;
-		z = a[2];
-		keyMultipliers = [a[4], a[5], a[6], a[7], a[8]];
-		columnToAlter = a[9];
-		for(var i=0; i<keyMultipliers.length; i++) {
-    		keyFactorArray[columnToAlter,i] = keyMultipliers[i];
-		}
-	}
-	
-	/**
 	var x = a[0] / 0.0333;
 	var y = (1. - a[1]) / 0.2;
 	var z = a[2];
-	// store multipliers
-	var keyMultipliers = [a[4], a[5], a[6], a[7], a[8]];
-	var columnToAlter = a[9];
-	// load multipliers as a column of the factor matrix
-	for(var i=0; i<keyMultipliers.length; i++) {
-    	keyFactorArray[columnToAlter,i] = keyMultipliers[i];
-		}
-	**/
-	
 
 	if(z > 0.){
 		if(fingerLost == 1){
@@ -82,27 +56,25 @@ function list()
 
 		//	post("v = " + y + " key " + y_int +" -> next " + y_next + " | " + y_grad + "\n");
 
-		/**
 		var mainKeyFactor = 1;
 		var mainKey2ndFactor = 1;
 		var minorKeyFactor = 1;
 		var minorKey2ndFactor = 1;
-        **/	
 	
 		// open the main key
 		outlet(3, x_int, y_int);
 		
-		
+		/**
 		var mainKeyFactor = keyFactorArray[x_int][y_int];
 		var mainKey2ndFactor = keyFactorArray[x_int][y_int];
 		var minorKeyFactor = 0;
 		var minorKey2ndFactor = 0;
-		
+		**/
 
 		if(x_grad < THRESHOLD_X && y_grad < THRESHOLD_Y && ( x_next > 0 && x_next < 29 ) && ( y_next > 0 && y_next < 4 )){
 		// open the diagonal key
 			outlet(3, x_next, y_next);
-			minorKeyFactor = keyFactorArray[x_next + 1][y_next + 1];
+			minorKeyFactor = keyFactorArray[x_next][y_next];
 			minorKey2ndFactor = minorKeyFactor;
 		} 
 		if(x_grad < THRESHOLD_X && ( x_next > 0 && x_next < 29 )) {
@@ -130,18 +102,22 @@ function list()
 	
 		// open the main channel
 		if(newRoutingCheck(x_int)){
-			outlet(1, myid, x_int, z) * mainKeyFactor;
+//			outlet(1, myid, x_int, z * mainKeyFactor);
+			outlet(1, myid, x_int, z);
 		} else {
-			outlet(0, myid, x_int, z * mainKeyFactor);
+//			outlet(0, myid, x_int, z * mainKeyFactor);
+			outlet(1, myid, x_int, z);
 		}
 		thisrouting[0] = x_int;
 		thisrouting_val[0] = x_grad;
 		if(x_grad < THRESHOLD_X && ( x_next >= 0 && x_next < 30 )) {
 			// open the left / right channel
 			if(newRoutingCheck(x_next)){
-				outlet(1, myid, x_next, z * .9 * minorKeyFactor);
+//				outlet(1, myid, x_next, z * .9 * minorKeyFactor);
+				outlet(1, myid, x_next, z * .9);
 			} else {
-				outlet(0, myid, x_next, z *.9 * minorKeyFactor);
+//				outlet(0, myid, x_next, z *.9 * minorKeyFactor);
+				outlet(1, myid, x_next, z *.9);
 			}
 			thisrouting[1] = x_next;
 			thisrouting_val[1] = (1. - x_grad);
@@ -178,17 +154,16 @@ function newRoutingCheck(val){
 	return true;
 }
 
-// creates a matrix (keyFactorArray) for the amplitude multipliers to be stored in
-// initialize everything at 1 
-function createArray(columns, rows) {
-var matrix = [];
-for(var i=0; i<columns; i++) {
-    matrix[i] = [];
-    for(var j=0; j<rows; j++) {
-        matrix[i][j] = 1;
-    }
-}
 
-    return matrix;
+function createArray(length) {
+    var arr = new Array(length || 0),
+        i = length;
+
+    if (arguments.length > 1) {
+        var args = Array.prototype.slice.call(arguments, 1);
+        while(i--) arr[length-1 - i] = createArray.apply(this, args);
+    }
+
+    return arr;
 }
 

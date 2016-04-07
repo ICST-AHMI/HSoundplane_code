@@ -43,7 +43,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 692.0, 587.0, 30.0, 22.0 ],
+					"patching_rect" : [ 597.0, 608.0, 30.0, 22.0 ],
 					"style" : "",
 					"text" : "t b l"
 				}
@@ -135,7 +135,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 453.0, 460.576233, 253.0, 22.0 ],
-					"presentation_rect" : [ 455.0, 459.576233, 0.0, 0.0 ],
 					"style" : "",
 					"text" : "110 1"
 				}
@@ -1410,7 +1409,25 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-69", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-10", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-59", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-11", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-69", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-11", 0 ]
@@ -1564,6 +1581,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-69", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-205", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-205", 0 ],
 					"disabled" : 0,
 					"hidden" : 1,
@@ -1682,6 +1708,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-60", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-69", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-4", 0 ]
@@ -1915,15 +1950,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-69", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-66", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-1", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -2014,67 +2040,67 @@
 			}
  ],
 		"parameters" : 		{
+			"obj-184::obj-21::obj-84" : [ "live.gain~[16]", "live.gain~", 0 ],
+			"obj-184::obj-131::obj-84" : [ "live.gain~[21]", "live.gain~", 0 ],
+			"obj-194::obj-130::obj-84" : [ "live.gain~[26]", "live.gain~", 0 ],
+			"obj-194::obj-133::obj-84" : [ "live.gain~[31]", "live.gain~", 0 ],
+			"obj-133::obj-128::obj-84" : [ "live.gain~[1]", "live.gain~", 0 ],
 			"obj-133::obj-134::obj-84" : [ "live.gain~[6]", "live.gain~", 0 ],
 			"obj-174::obj-132::obj-84" : [ "live.gain~[12]", "live.gain~", 0 ],
 			"obj-184::obj-128::obj-84" : [ "live.gain~[17]", "live.gain~", 0 ],
 			"obj-184::obj-134::obj-84" : [ "live.gain~[22]", "live.gain~", 0 ],
 			"obj-194::obj-129::obj-84" : [ "live.gain~[27]", "live.gain~", 0 ],
-			"obj-133::obj-129::obj-84" : [ "live.gain~[3]", "live.gain~", 0 ],
+			"obj-133::obj-130::obj-84" : [ "live.gain~[2]", "live.gain~", 0 ],
 			"obj-174::obj-21::obj-84" : [ "live.gain~[8]", "live.gain~", 0 ],
 			"obj-174::obj-131::obj-84" : [ "live.gain~[13]", "live.gain~", 0 ],
 			"obj-184::obj-130::obj-84" : [ "live.gain~[18]", "live.gain~", 0 ],
 			"obj-184::obj-133::obj-84" : [ "live.gain~[23]", "live.gain~", 0 ],
 			"obj-194::obj-132::obj-84" : [ "live.gain~[28]", "live.gain~", 0 ],
-			"obj-133::obj-132::obj-84" : [ "live.gain~[4]", "live.gain~", 0 ],
 			"obj-133::obj-133::obj-84" : [ "live.gain~[7]", "live.gain~", 0 ],
+			"obj-133::obj-129::obj-84" : [ "live.gain~[3]", "live.gain~", 0 ],
 			"obj-174::obj-128::obj-84" : [ "live.gain~[9]", "live.gain~", 0 ],
 			"obj-174::obj-134::obj-84" : [ "live.gain~[14]", "live.gain~", 0 ],
 			"obj-184::obj-129::obj-84" : [ "live.gain~[19]", "live.gain~", 0 ],
 			"obj-194::obj-21::obj-84" : [ "live.gain~[24]", "live.gain~", 0 ],
 			"obj-194::obj-131::obj-84" : [ "live.gain~[29]", "live.gain~", 0 ],
-			"obj-133::obj-131::obj-84" : [ "live.gain~[5]", "live.gain~", 0 ],
 			"obj-133::obj-21::obj-84" : [ "live.gain~[32]", "live.gain~", 0 ],
+			"obj-133::obj-132::obj-84" : [ "live.gain~[4]", "live.gain~", 0 ],
 			"obj-174::obj-130::obj-84" : [ "live.gain~[10]", "live.gain~", 0 ],
 			"obj-174::obj-133::obj-84" : [ "live.gain~[15]", "live.gain~", 0 ],
 			"obj-184::obj-132::obj-84" : [ "live.gain~[20]", "live.gain~", 0 ],
 			"obj-194::obj-128::obj-84" : [ "live.gain~[25]", "live.gain~", 0 ],
 			"obj-194::obj-134::obj-84" : [ "live.gain~[30]", "live.gain~", 0 ],
-			"obj-133::obj-128::obj-84" : [ "live.gain~[1]", "live.gain~", 0 ],
-			"obj-174::obj-129::obj-84" : [ "live.gain~[11]", "live.gain~", 0 ],
-			"obj-184::obj-21::obj-84" : [ "live.gain~[16]", "live.gain~", 0 ],
-			"obj-184::obj-131::obj-84" : [ "live.gain~[21]", "live.gain~", 0 ],
-			"obj-194::obj-130::obj-84" : [ "live.gain~[26]", "live.gain~", 0 ],
-			"obj-194::obj-133::obj-84" : [ "live.gain~[31]", "live.gain~", 0 ],
-			"obj-133::obj-130::obj-84" : [ "live.gain~[2]", "live.gain~", 0 ]
+			"obj-133::obj-131::obj-84" : [ "live.gain~[5]", "live.gain~", 0 ],
+			"obj-174::obj-129::obj-84" : [ "live.gain~[11]", "live.gain~", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
 				"name" : "Slave_channels.maxpat",
-				"bootpath" : "~/_ICSTdocs/1-research/AHMI/01_projects/HSoundplane/code/max/HSoundplane/HS_Driver",
+				"bootpath" : "/Users/Shared/AHMI/01_projects/HSoundPlane/code/max/HSoundplane/HS_Driver",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "Haptic_channel.maxpat",
-				"bootpath" : "~/_ICSTdocs/1-research/AHMI/01_projects/HSoundplane/code/max/HSoundplane/HS_Driver",
+				"bootpath" : "/Users/Shared/AHMI/01_projects/HSoundPlane/code/max/HSoundplane/HS_Driver",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "Touch_checkbox.maxpat",
-				"bootpath" : "~/_ICSTdocs/1-research/AHMI/01_projects/HSoundplane/code/max/HSoundplane/HS_Driver",
+				"bootpath" : "/Users/Shared/AHMI/01_projects/HSoundPlane/code/max/HSoundplane/HS_Driver",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "HSpad.maxpat",
-				"bootpath" : "~/_ICSTdocs/1-research/AHMI/01_projects/HSoundplane/code/max/HSoundplane/HS_Driver",
+				"bootpath" : "/Users/Shared/AHMI/01_projects/HSoundPlane/code/max/HSoundplane/HS_Driver",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "HSoundPlane_serial.maxpat",
-				"bootpath" : "~/_ICSTdocs/1-research/AHMI/01_projects/HSoundplane/code/max/HSoundplane/_package/HSoundPlane/patchers",
+				"bootpath" : "/Users/Shared/AHMI/01_projects/HSoundPlane/code/max/HSoundplane/_package/HSoundPlane/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
