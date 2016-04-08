@@ -114,7 +114,7 @@
 					"outlettype" : [ "signal" ],
 					"patching_rect" : [ 55.0, 148.0, 91.0, 22.0 ],
 					"style" : "",
-					"text" : "bp10~ 40. 400."
+					"text" : "bp10~ 80. 250."
 				}
 
 			}
