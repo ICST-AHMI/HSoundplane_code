@@ -1,0 +1,5 @@
+Versions
+
+Soundplane_Alan_03.maxpat + track_detection_sp2.maxpat = on/off rolling sound
+
+Soundplane_Alan_04.maxpat + track_detection_sp.maxpat = 5 level rolling sound

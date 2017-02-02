@@ -9,7 +9,11 @@
 			"modernui" : 1
 		}
 ,
+<<<<<<< HEAD
 		"rect" : [ 37.0, 79.0, 1413.0, 727.0 ],
+=======
+		"rect" : [ 38.0, 79.0, 1413.0, 727.0 ],
+>>>>>>> 63459a2224464a20631f9134563ab7572a3c50de
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -134,7 +138,15 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
+<<<<<<< HEAD
 					"patching_rect" : [ 692.0, 624.0, 30.0, 22.0 ],
+=======
+<<<<<<< HEAD
+					"patching_rect" : [ 597.0, 608.0, 30.0, 22.0 ],
+=======
+					"patching_rect" : [ 590.0, 611.0, 30.0, 22.0 ],
+>>>>>>> d340b9ea1d8c72fbac523b61b7270273bda27c65
+>>>>>>> 63459a2224464a20631f9134563ab7572a3c50de
 					"style" : "",
 					"text" : "t b l"
 				}
@@ -225,7 +237,11 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
+<<<<<<< HEAD
 					"patching_rect" : [ 453.0, 489.576233, 253.0, 22.0 ],
+=======
+					"patching_rect" : [ 453.0, 460.576233, 253.0, 22.0 ],
+>>>>>>> 63459a2224464a20631f9134563ab7572a3c50de
 					"style" : "",
 					"text" : "110 1"
 				}
@@ -1500,7 +1516,20 @@
 			}
 , 			{
 				"patchline" : 				{
+<<<<<<< HEAD
 					"destination" : [ "obj-8", 0 ],
+=======
+					"destination" : [ "obj-69", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-10", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-59", 1 ],
+>>>>>>> 63459a2224464a20631f9134563ab7572a3c50de
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-11", 0 ]
@@ -1509,6 +1538,7 @@
 			}
 , 			{
 				"patchline" : 				{
+<<<<<<< HEAD
 					"destination" : [ "obj-60", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -1522,6 +1552,12 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-13", 0 ]
+=======
+					"destination" : [ "obj-69", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-11", 0 ]
+>>>>>>> 63459a2224464a20631f9134563ab7572a3c50de
 				}
 
 			}
@@ -1762,6 +1798,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-69", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-205", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-205", 0 ],
 					"disabled" : 0,
 					"hidden" : 1,
@@ -1880,6 +1925,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-13", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-69", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-4", 0 ]
@@ -2113,15 +2167,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-69", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-66", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-1", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -2230,13 +2275,33 @@
 			}
  ],
 		"parameters" : 		{
+<<<<<<< HEAD
 			"obj-174::obj-133::obj-84" : [ "live.gain~[15]", "live.gain~", 0 ],
 			"obj-133::obj-133::obj-84" : [ "live.gain~[7]", "live.gain~", 0 ],
+=======
+<<<<<<< HEAD
+			"obj-184::obj-21::obj-84" : [ "live.gain~[16]", "live.gain~", 0 ],
+			"obj-184::obj-131::obj-84" : [ "live.gain~[21]", "live.gain~", 0 ],
+			"obj-194::obj-130::obj-84" : [ "live.gain~[26]", "live.gain~", 0 ],
+			"obj-194::obj-133::obj-84" : [ "live.gain~[31]", "live.gain~", 0 ],
+			"obj-133::obj-128::obj-84" : [ "live.gain~[1]", "live.gain~", 0 ],
+			"obj-133::obj-134::obj-84" : [ "live.gain~[6]", "live.gain~", 0 ],
+			"obj-174::obj-132::obj-84" : [ "live.gain~[12]", "live.gain~", 0 ],
+			"obj-184::obj-128::obj-84" : [ "live.gain~[17]", "live.gain~", 0 ],
+			"obj-184::obj-134::obj-84" : [ "live.gain~[22]", "live.gain~", 0 ],
+			"obj-194::obj-129::obj-84" : [ "live.gain~[27]", "live.gain~", 0 ],
+=======
+>>>>>>> d340b9ea1d8c72fbac523b61b7270273bda27c65
+			"obj-133::obj-130::obj-84" : [ "live.gain~[2]", "live.gain~", 0 ],
+			"obj-174::obj-21::obj-84" : [ "live.gain~[8]", "live.gain~", 0 ],
+			"obj-174::obj-131::obj-84" : [ "live.gain~[13]", "live.gain~", 0 ],
+>>>>>>> 63459a2224464a20631f9134563ab7572a3c50de
 			"obj-184::obj-130::obj-84" : [ "live.gain~[18]", "live.gain~", 0 ],
 			"obj-133::obj-130::obj-84" : [ "live.gain~[2]", "live.gain~", 0 ],
 			"obj-184::obj-133::obj-84" : [ "live.gain~[23]", "live.gain~", 0 ],
 			"obj-174::obj-21::obj-84" : [ "live.gain~[8]", "live.gain~", 0 ],
 			"obj-194::obj-132::obj-84" : [ "live.gain~[28]", "live.gain~", 0 ],
+<<<<<<< HEAD
 			"obj-174::obj-131::obj-84" : [ "live.gain~[13]", "live.gain~", 0 ],
 			"obj-184::obj-21::obj-84" : [ "live.gain~[16]", "live.gain~", 0 ],
 			"obj-184::obj-131::obj-84" : [ "live.gain~[21]", "live.gain~", 0 ],
@@ -2245,11 +2310,22 @@
 			"obj-174::obj-129::obj-84" : [ "live.gain~[11]", "live.gain~", 0 ],
 			"obj-194::obj-133::obj-84" : [ "live.gain~[31]", "live.gain~", 0 ],
 			"obj-133::obj-21::obj-84" : [ "live.gain~[32]", "live.gain~", 0 ],
+=======
+<<<<<<< HEAD
+			"obj-133::obj-133::obj-84" : [ "live.gain~[7]", "live.gain~", 0 ],
+=======
+			"obj-133::obj-21::obj-84" : [ "live.gain~[32]", "live.gain~", 0 ],
+>>>>>>> d340b9ea1d8c72fbac523b61b7270273bda27c65
+			"obj-133::obj-129::obj-84" : [ "live.gain~[3]", "live.gain~", 0 ],
+			"obj-174::obj-128::obj-84" : [ "live.gain~[9]", "live.gain~", 0 ],
+			"obj-174::obj-134::obj-84" : [ "live.gain~[14]", "live.gain~", 0 ],
+>>>>>>> 63459a2224464a20631f9134563ab7572a3c50de
 			"obj-184::obj-129::obj-84" : [ "live.gain~[19]", "live.gain~", 0 ],
 			"obj-133::obj-129::obj-84" : [ "live.gain~[3]", "live.gain~", 0 ],
 			"obj-194::obj-21::obj-84" : [ "live.gain~[24]", "live.gain~", 0 ],
 			"obj-174::obj-128::obj-84" : [ "live.gain~[9]", "live.gain~", 0 ],
 			"obj-194::obj-131::obj-84" : [ "live.gain~[29]", "live.gain~", 0 ],
+<<<<<<< HEAD
 			"obj-174::obj-134::obj-84" : [ "live.gain~[14]", "live.gain~", 0 ],
 			"obj-184::obj-128::obj-84" : [ "live.gain~[17]", "live.gain~", 0 ],
 			"obj-133::obj-128::obj-84" : [ "live.gain~[1]", "live.gain~", 0 ],
@@ -2257,40 +2333,115 @@
 			"obj-133::obj-134::obj-84" : [ "live.gain~[6]", "live.gain~", 0 ],
 			"obj-194::obj-129::obj-84" : [ "live.gain~[27]", "live.gain~", 0 ],
 			"obj-174::obj-132::obj-84" : [ "live.gain~[12]", "live.gain~", 0 ],
+=======
+<<<<<<< HEAD
+			"obj-133::obj-21::obj-84" : [ "live.gain~[32]", "live.gain~", 0 ],
+=======
+>>>>>>> d340b9ea1d8c72fbac523b61b7270273bda27c65
+			"obj-133::obj-132::obj-84" : [ "live.gain~[4]", "live.gain~", 0 ],
+			"obj-174::obj-130::obj-84" : [ "live.gain~[10]", "live.gain~", 0 ],
+			"obj-174::obj-133::obj-84" : [ "live.gain~[15]", "live.gain~", 0 ],
+>>>>>>> 63459a2224464a20631f9134563ab7572a3c50de
 			"obj-184::obj-132::obj-84" : [ "live.gain~[20]", "live.gain~", 0 ],
 			"obj-133::obj-132::obj-84" : [ "live.gain~[4]", "live.gain~", 0 ],
 			"obj-194::obj-128::obj-84" : [ "live.gain~[25]", "live.gain~", 0 ],
+<<<<<<< HEAD
 			"obj-174::obj-130::obj-84" : [ "live.gain~[10]", "live.gain~", 0 ],
 			"obj-194::obj-134::obj-84" : [ "live.gain~[30]", "live.gain~", 0 ]
+=======
+			"obj-194::obj-134::obj-84" : [ "live.gain~[30]", "live.gain~", 0 ],
+			"obj-133::obj-131::obj-84" : [ "live.gain~[5]", "live.gain~", 0 ],
+<<<<<<< HEAD
+			"obj-174::obj-129::obj-84" : [ "live.gain~[11]", "live.gain~", 0 ]
+=======
+			"obj-174::obj-129::obj-84" : [ "live.gain~[11]", "live.gain~", 0 ],
+			"obj-184::obj-21::obj-84" : [ "live.gain~[16]", "live.gain~", 0 ],
+			"obj-184::obj-131::obj-84" : [ "live.gain~[21]", "live.gain~", 0 ],
+			"obj-194::obj-130::obj-84" : [ "live.gain~[26]", "live.gain~", 0 ],
+			"obj-194::obj-133::obj-84" : [ "live.gain~[31]", "live.gain~", 0 ],
+			"obj-133::obj-128::obj-84" : [ "live.gain~[1]", "live.gain~", 0 ],
+			"obj-133::obj-134::obj-84" : [ "live.gain~[6]", "live.gain~", 0 ],
+			"obj-174::obj-132::obj-84" : [ "live.gain~[12]", "live.gain~", 0 ],
+			"obj-184::obj-128::obj-84" : [ "live.gain~[17]", "live.gain~", 0 ],
+			"obj-184::obj-134::obj-84" : [ "live.gain~[22]", "live.gain~", 0 ],
+			"obj-194::obj-129::obj-84" : [ "live.gain~[27]", "live.gain~", 0 ],
+			"obj-133::obj-133::obj-84" : [ "live.gain~[7]", "live.gain~", 0 ]
+>>>>>>> d340b9ea1d8c72fbac523b61b7270273bda27c65
+>>>>>>> 63459a2224464a20631f9134563ab7572a3c50de
 		}
 ,
 		"dependency_cache" : [ 			{
 				"name" : "Slave_channels.maxpat",
+<<<<<<< HEAD
 				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/HS_Driver",
+=======
+<<<<<<< HEAD
+				"bootpath" : "/Users/Shared/AHMI/01_projects/HSoundPlane/code/max/HSoundplane/HS_Driver",
+=======
+				"bootpath" : "~/_ICSTdocs/1-research/AHMI/01_projects/HSoundplane/code/max/HSoundplane/HS_Driver",
+				"patcherrelativepath" : "../../../../../../../../../../Users/sschies1/_ICSTdocs/1-research/AHMI/01_projects/HSoundplane/code/max/HSoundplane/HS_Driver",
+>>>>>>> d340b9ea1d8c72fbac523b61b7270273bda27c65
+>>>>>>> 63459a2224464a20631f9134563ab7572a3c50de
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "Haptic_channel.maxpat",
+<<<<<<< HEAD
 				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/HS_Driver",
+=======
+<<<<<<< HEAD
+				"bootpath" : "/Users/Shared/AHMI/01_projects/HSoundPlane/code/max/HSoundplane/HS_Driver",
+=======
+				"bootpath" : "~/_ICSTdocs/1-research/AHMI/01_projects/HSoundplane/code/max/HSoundplane/HS_Driver",
+				"patcherrelativepath" : "../../../../../../../../../../Users/sschies1/_ICSTdocs/1-research/AHMI/01_projects/HSoundplane/code/max/HSoundplane/HS_Driver",
+>>>>>>> d340b9ea1d8c72fbac523b61b7270273bda27c65
+>>>>>>> 63459a2224464a20631f9134563ab7572a3c50de
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "Touch_checkbox.maxpat",
+<<<<<<< HEAD
 				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/HS_Driver",
+=======
+<<<<<<< HEAD
+				"bootpath" : "/Users/Shared/AHMI/01_projects/HSoundPlane/code/max/HSoundplane/HS_Driver",
+=======
+				"bootpath" : "~/_ICSTdocs/1-research/AHMI/01_projects/HSoundplane/code/max/HSoundplane/HS_Driver",
+				"patcherrelativepath" : "../../../../../../../../../../Users/sschies1/_ICSTdocs/1-research/AHMI/01_projects/HSoundplane/code/max/HSoundplane/HS_Driver",
+>>>>>>> d340b9ea1d8c72fbac523b61b7270273bda27c65
+>>>>>>> 63459a2224464a20631f9134563ab7572a3c50de
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "HSpad.maxpat",
+<<<<<<< HEAD
 				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/HS_Driver",
+=======
+<<<<<<< HEAD
+				"bootpath" : "/Users/Shared/AHMI/01_projects/HSoundPlane/code/max/HSoundplane/HS_Driver",
+=======
+				"bootpath" : "~/_ICSTdocs/1-research/AHMI/01_projects/HSoundplane/code/max/HSoundplane/HS_Driver",
+				"patcherrelativepath" : "../../../../../../../../../../Users/sschies1/_ICSTdocs/1-research/AHMI/01_projects/HSoundplane/code/max/HSoundplane/HS_Driver",
+>>>>>>> d340b9ea1d8c72fbac523b61b7270273bda27c65
+>>>>>>> 63459a2224464a20631f9134563ab7572a3c50de
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "HSoundPlane_serial.maxpat",
+<<<<<<< HEAD
 				"bootpath" : "~/Documents/Max 7/Packages/HSoundPlane/patchers",
+=======
+<<<<<<< HEAD
+				"bootpath" : "/Users/Shared/AHMI/01_projects/HSoundPlane/code/max/HSoundplane/_package/HSoundPlane/patchers",
+=======
+				"bootpath" : "~/_ICSTdocs/1-research/AHMI/01_projects/HSoundplane/code/max/HSoundplane/_package/HSoundPlane/patchers",
+				"patcherrelativepath" : "../../../../../../../../../../Users/sschies1/_ICSTdocs/1-research/AHMI/01_projects/HSoundplane/code/max/HSoundplane/_package/HSoundPlane/patchers",
+>>>>>>> d340b9ea1d8c72fbac523b61b7270273bda27c65
+>>>>>>> 63459a2224464a20631f9134563ab7572a3c50de
 				"type" : "JSON",
 				"implicit" : 1
 			}
