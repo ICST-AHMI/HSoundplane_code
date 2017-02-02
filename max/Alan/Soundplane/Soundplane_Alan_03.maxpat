@@ -38,6 +38,22 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-132",
+					"linecount" : 4,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 54.0, 472.0, 150.0, 60.0 ],
+					"presentation" : 1,
+					"presentation_linecount" : 2,
+					"presentation_rect" : [ 338.5, 427.0, 271.0, 33.0 ],
+					"style" : "",
+					"text" : "Soundplane setup: touches = 1, thresh = 0.005, z-scale = 0.52, z-curve = 0.20, lopass 101"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-123",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -185,7 +201,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 1217.0, 36.0, 42.0, 22.0 ],
+					"patching_rect" : [ 1252.75, 29.0, 42.0, 22.0 ],
 					"style" : "",
 					"text" : "*~ 0.2"
 				}
@@ -198,7 +214,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 1215.0, 5.0, 46.0, 22.0 ],
+					"patching_rect" : [ 1252.75, 2.0, 46.0, 22.0 ],
 					"style" : "",
 					"text" : "noise~"
 				}
@@ -211,12 +227,12 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 39.0, 457.0, 150.0, 60.0 ],
+					"patching_rect" : [ 39.0, 457.0, 150.0, 74.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
-					"presentation_rect" : [ 43.5, 427.0, 271.0, 33.0 ],
+					"presentation_rect" : [ 43.5, 427.0, 271.0, 47.0 ],
 					"style" : "",
-					"text" : "setup values: AUDIO: noise -24 dB, SDT 3.1 dB\nHAPTICS: SDT -1.1 dB, 30x multiplier\n"
+					"text" : "setup values: AUDIO: noise -21 dB, SDT 3.1 dB\nHAPTICS: SDT -8.0 dB, 30x multiplier\n"
 				}
 
 			}
@@ -255,7 +271,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 1165.0, 60.0, 84.0, 22.0 ],
+					"patching_rect" : [ 1165.0, 53.0, 84.0, 22.0 ],
 					"style" : "",
 					"text" : "onepole~ 300"
 				}
@@ -281,7 +297,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 824.0, 263.0, 152.0, 33.0 ],
+					"patching_rect" : [ 657.5, 257.0, 152.0, 33.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
 					"presentation_rect" : [ 105.0, 351.0, 185.724976, 33.0 ],
@@ -353,7 +369,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 776.0, 256.0, 150.0, 33.0 ],
+					"patching_rect" : [ 609.5, 250.0, 150.0, 33.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 80.0, 306.0, 157.0, 20.0 ],
 					"style" : "",
@@ -368,7 +384,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 824.0, 169.0, 150.0, 47.0 ],
+					"patching_rect" : [ 657.5, 163.0, 150.0, 47.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
 					"presentation_rect" : [ 778.25, 148.5, 164.0, 33.0 ],
@@ -384,7 +400,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 792.0, 117.0, 150.0, 47.0 ],
+					"patching_rect" : [ 625.5, 111.0, 150.0, 47.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
 					"presentation_rect" : [ 778.25, 105.0, 164.0, 33.0 ],
@@ -413,10 +429,10 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 787.0, 71.799988, 150.0, 221.0 ],
+					"patching_rect" : [ 620.5, 65.799988, 150.0, 208.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 15,
-					"presentation_rect" : [ 1106.5, 62.0, 182.0, 221.0 ],
+					"presentation_rect" : [ 1106.5, 62.0, 182.0, 208.0 ],
 					"style" : "",
 					"text" : "0 - Turn on audio status, set levels\n\n1 - Turn on metro\n\n2 - Set subject id\n\n3 - For (total trials) do:\n\n   3a - set trial number\n\n   3b - after trial, save trial\n\n4 - reset trials\n\n"
 				}
@@ -430,7 +446,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 776.0, 135.200012, 220.0, 24.0 ],
+					"patching_rect" : [ 609.5, 129.200012, 220.0, 24.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 1106.5, 30.799988, 108.0, 24.0 ],
 					"style" : "",
@@ -446,7 +462,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 776.0, 197.0, 217.0, 24.0 ],
+					"patching_rect" : [ 609.5, 191.0, 217.0, 24.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 291.724976, 22.0, 57.313721, 24.0 ],
 					"style" : "",
@@ -462,7 +478,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 776.0, 230.0, 217.0, 24.0 ],
+					"patching_rect" : [ 609.5, 224.0, 217.0, 24.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 431.0, 30.0, 120.0, 24.0 ],
 					"style" : "",
@@ -478,7 +494,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 776.0, 165.5, 217.0, 24.0 ],
+					"patching_rect" : [ 609.5, 159.5, 217.0, 24.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 684.68634, 35.0, 120.0, 24.0 ],
 					"style" : "",
@@ -2150,7 +2166,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 1165.0, 32.0, 40.0, 22.0 ],
+					"patching_rect" : [ 1165.0, 15.0, 40.0, 22.0 ],
 					"style" : "",
 					"text" : "pink~"
 				}
@@ -2235,7 +2251,7 @@
 					"mode" : 0,
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 776.0, 81.0, 128.0, 128.0 ],
+					"patching_rect" : [ 609.5, 75.0, 128.0, 128.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 10.5, 15.0, 358.0, 384.0 ],
 					"proportion" : 0.39,
@@ -2252,7 +2268,7 @@
 					"mode" : 0,
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 809.0, 114.0, 128.0, 128.0 ],
+					"patching_rect" : [ 642.5, 108.0, 128.0, 128.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 678.25, 15.0, 283.0, 358.0 ],
 					"proportion" : 0.39,
@@ -2286,7 +2302,7 @@
 					"mode" : 0,
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 787.0, 94.0, 128.0, 128.0 ],
+					"patching_rect" : [ 620.5, 88.0, 128.0, 128.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 1095.5, 18.799988, 193.0, 248.200012 ],
 					"proportion" : 0.39,
@@ -3630,8 +3646,8 @@
 , 			{
 				"name" : "newobjYellow-1",
 				"default" : 				{
-					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ],
-					"fontsize" : [ 12.059008 ]
+					"fontsize" : [ 12.059008 ],
+					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
