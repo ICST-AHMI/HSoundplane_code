@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 37.0, 79.0, 1267.0, 718.0 ],
+		"rect" : [ 316.0, 113.0, 1267.0, 718.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -496,9 +496,9 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "bang" ],
-													"patching_rect" : [ 135.0, 268.0, 69.0, 22.0 ],
+													"patching_rect" : [ 135.0, 268.0, 49.0, 22.0 ],
 													"style" : "",
-													"text" : "delay 4000"
+													"text" : "delay 1"
 												}
 
 											}
@@ -794,9 +794,9 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 349.0, 687.0, 169.0, 89.0 ],
+									"patching_rect" : [ 349.0, 687.0, 171.0, 89.0 ],
 									"style" : "",
-									"text" : "open /Users/Shared/AHMI/01_projects/HSoundPlane/switchDrive/characterization/170214/row20/_104/104_swipe_0db.wav wave"
+									"text" : "open /Users/Shared/AHMI/01_projects/HSoundPlane/switchDrive/characterization/170214/row20/_104/104_swipe_-60db.wav wave"
 								}
 
 							}
@@ -2380,14 +2380,14 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-39",
-									"linecount" : 6,
+									"linecount" : 3,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 349.0, 687.0, 169.0, 89.0 ],
 									"style" : "",
-									"text" : "open /Users/Shared/AHMI/01_projects/HSoundPlane/switchDrive/characterization/170214/row20/_104/104_0hz_0db.wav wave"
+									"text" : "open folder104_440hz_0db.wav wave"
 								}
 
 							}
@@ -5806,9 +5806,9 @@
  ],
 		"parameters" : 		{
 			"obj-79::obj-34" : [ "live.gain~[2]", "level", 0 ],
-			"obj-21::obj-10" : [ "flonum", "flonum", 0 ],
+			"obj-79::obj-12" : [ "live.gain~[1]", "level", 0 ],
 			"obj-21::obj-12" : [ "live.gain~", "level", 0 ],
-			"obj-79::obj-12" : [ "live.gain~[1]", "level", 0 ]
+			"obj-21::obj-10" : [ "flonum", "flonum", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
