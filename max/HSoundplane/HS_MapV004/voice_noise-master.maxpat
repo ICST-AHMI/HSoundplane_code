@@ -104,14 +104,15 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-14",
+					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 5.0, 200.0, 77.0, 20.0 ],
+					"patching_rect" : [ 5.0, 200.0, 77.0, 33.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 3.0, 59.0, 77.0, 20.0 ],
+					"presentation_rect" : [ 3.0, 59.0, 101.0, 20.0 ],
 					"style" : "",
-					"text" : "amplification"
+					"text" : "amplification [db]"
 				}
 
 			}

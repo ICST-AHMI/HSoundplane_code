@@ -322,9 +322,9 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 5.0, 35.0, 368.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 3.0, 29.0, 328.0, 20.0 ],
+					"presentation_rect" : [ 3.0, 29.0, 349.0, 20.0 ],
 					"style" : "",
-					"text" : "takes the audio input and make a pitch shift along the x axis"
+					"text" : "takes the audio input and make a frequncy shift along the x axis"
 				}
 
 			}

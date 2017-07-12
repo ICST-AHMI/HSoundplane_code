@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 83.0, 261.0, 1024.0, 769.0 ],
+		"rect" : [ 304.0, 409.0, 415.0, 769.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -326,20 +326,23 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 86.800003, 309.0, 50.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 4.800003, 6.0, 50.0, 22.0 ],
+					"presentation_rect" : [ 5.0, 23.0, 50.0, 22.0 ],
 					"style" : ""
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"fontsize" : 10.0,
 					"id" : "obj-2",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 294.0, 296.0, 150.0, 20.0 ],
+					"patching_rect" : [ 294.0, 296.0, 79.0, 18.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 3.0, 3.0, 58.0, 18.0 ],
 					"style" : "",
-					"text" : "2 V peak to peak"
+					"text" : "frequency"
 				}
 
 			}
