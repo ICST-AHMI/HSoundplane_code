@@ -18,14 +18,13 @@ menu.action_({arg m;
 	case
 	{m.value == 0} {~win.close;
 		~oscFunc.do(_.clear);
-		oscToMax.sendMsg("/ampFB", 0.7); //
 		oscToMax.sendMsg("/routeFB", 0);
 		oscToMax.sendMsg("/mainVol", 0);
 		(~mdir ++ "SP_synth_setup.scd").load
 	}
 	{m.value == 1} {~win.close;
 		~oscFunc.do(_.clear);
-		oscToMax.sendMsg("/ampFB", 32);
+		oscToMax.sendMsg("/maxAmpFB", 32);
 		oscToMax.sendMsg("/routeFB", 3);
 		oscToMax.sendMsg("/mainVol", -12);
 		(~mdir ++ "drum_resonance6.scd").load
