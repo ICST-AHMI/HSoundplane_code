@@ -1,0 +1,8 @@
+Sound plane client settings
+
+v1.4
+thresh 0.015
+z scale 0.73
+z curve 0.5
+lopass ?
+rotate ON
