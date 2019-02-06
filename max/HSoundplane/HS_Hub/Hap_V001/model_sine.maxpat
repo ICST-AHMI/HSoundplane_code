@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 0,
-			"revision" : 4,
+			"revision" : 2,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -39,6 +39,31 @@
 		"subpatcher_template" : "",
 		"globalpatchername" : "u627011926[24][24][6][5][2][7][14][10][10]",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-28",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "bang", "float" ],
+					"patching_rect" : [ 463.33331298828125, 264.0, 29.5, 22.0 ],
+					"text" : "t b f"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"format" : 6,
+					"id" : "obj-18",
+					"maxclass" : "flonum",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 463.33331298828125, 229.0, 50.0, 22.0 ]
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-21",
 					"maxclass" : "toggle",
@@ -89,7 +114,7 @@
 					}
 ,
 					"text" : "pattr @bindto ::skin_sine::bandPassEnable",
-					"varname" : "u225009271"
+					"varname" : "u530000283"
 				}
 
 			}
@@ -114,7 +139,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 463.333328247070312, 222.0, 170.0, 22.0 ],
+					"patching_rect" : [ 463.33331298828125, 198.0, 170.0, 22.0 ],
 					"restore" : [ 0.0 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
@@ -122,7 +147,7 @@
 					}
 ,
 					"text" : "pattr @bindto ::skin_sine::gain",
-					"varname" : "u460008785"
+					"varname" : "u848000285"
 				}
 
 			}
@@ -153,7 +178,7 @@
 					}
 ,
 					"text" : "pattr @bindto ::skin_sine::pitchTrackEnable",
-					"varname" : "u138008768"
+					"varname" : "u551000289"
 				}
 
 			}
@@ -186,7 +211,7 @@
 					}
 ,
 					"text" : "pattr @bindto ::skin_sine::fixedFreq",
-					"varname" : "u850008623"
+					"varname" : "u470000291"
 				}
 
 			}
@@ -294,7 +319,7 @@
 					}
 ,
 					"text" : "pattr @bindto ::skin_sine::transpose",
-					"varname" : "u281008787"
+					"varname" : "u250000295"
 				}
 
 			}
@@ -366,7 +391,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 441.333328247070312, 274.0, 41.0, 22.0 ],
+					"patching_rect" : [ 441.33331298828125, 302.0, 41.0, 22.0 ],
 					"text" : "* 0.11"
 				}
 
@@ -424,7 +449,7 @@
 					}
 ,
 					"text" : "pattr @bindto ::skin_sine::highFreq",
-					"varname" : "u189008789"
+					"varname" : "u614000297"
 				}
 
 			}
@@ -443,7 +468,7 @@
 					}
 ,
 					"text" : "pattr @bindto ::skin_sine::lowFreq",
-					"varname" : "u851008794"
+					"varname" : "u939000299"
 				}
 
 			}
@@ -575,7 +600,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 0,
-							"revision" : 4,
+							"revision" : 2,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -745,6 +770,10 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 236.666668000000016, 604.0, 42.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"attr_comment" : ""
+					}
+,
 					"text" : "out~ 1"
 				}
 
@@ -757,6 +786,10 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 269.666675999999995, 11.0, 28.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"attr_comment" : ""
+					}
+,
 					"text" : "in 1"
 				}
 
@@ -827,6 +860,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-28", 0 ],
+					"source" : [ "obj-18", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-16", 0 ],
 					"source" : [ "obj-20", 0 ]
 				}
@@ -844,6 +884,21 @@
 					"destination" : [ "obj-43", 0 ],
 					"midpoints" : [ 669.5, 412.0, 669.5, 412.0 ],
 					"source" : [ "obj-24", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-15", 1 ],
+					"source" : [ "obj-28", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-15", 0 ],
+					"midpoints" : [ 450.0, 301.0 ],
+					"source" : [ "obj-28", 0 ]
 				}
 
 			}
@@ -998,7 +1053,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-15", 1 ],
+					"destination" : [ "obj-18", 0 ],
 					"source" : [ "obj-59", 0 ]
 				}
 
@@ -1041,15 +1096,15 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "bp10~.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/HSoundPlane/patchers",
-				"patcherrelativepath" : "../../../../../../../../../../Documents/Max 8/Packages/HSoundPlane/patchers",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/_package/HSoundPlane/patchers",
+				"patcherrelativepath" : "../../_package/HSoundPlane/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "lowboost~.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/HSoundPlane/patchers",
-				"patcherrelativepath" : "../../../../../../../../../../Documents/Max 8/Packages/HSoundPlane/patchers",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/_package/HSoundPlane/patchers",
+				"patcherrelativepath" : "../../_package/HSoundPlane/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}

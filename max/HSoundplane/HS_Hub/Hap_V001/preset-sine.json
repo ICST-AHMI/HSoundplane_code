@@ -1,0 +1,41 @@
+{
+	"pattrstorage" : 	{
+		"name" : "preset-sine",
+		"slots" : 		{
+			"1" : 			{
+				"id" : 1,
+				"data" : 				{
+					"bandPassEnable" : [ 1.0 ],
+					"fixedFreq" : [ 0 ],
+					"gain" : [ 0.070866141732284 ],
+					"highFreq" : [ 400.0 ],
+					"lowFreq" : [ 40.0 ],
+					"mod_depth" : [ 0.503937005996704 ],
+					"moddepth_func" : [ 1000.0, 0.0, 1.0, 0.0, 0.0, 0, 271.551724137931046, 0.5, 0, 603.448275999999964, 0.82, 0, 1000.0, 1.0, 0, "linear" ],
+					"pitchTrackEnable" : [ 0.0 ],
+					"transpose" : [ 0 ]
+				}
+
+			}
+,
+			"2" : 			{
+				"id" : 2,
+				"data" : 				{
+					"bandPassEnable" : [ 1.0 ],
+					"fixedFreq" : [ 0 ],
+					"gain" : [ 0.070866141732284 ],
+					"highFreq" : [ 400.0 ],
+					"lowFreq" : [ 40.0 ],
+					"mod_depth" : [ 0.503937005996704 ],
+					"moddepth_func" : [ 1000.0, 0.0, 1.0, 0.0, 0.0, 0, 271.551724137931046, 0.5, 0, 603.448275999999964, 0.82, 0, 1000.0, 1.0, 0, "linear" ],
+					"pitchTrackEnable" : [ 1.0 ],
+					"transpose" : [ -13 ]
+				}
+
+			}
+
+		}
+
+	}
+
+}

@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 0,
-			"revision" : 4,
+			"revision" : 2,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 44.0, 82.0, 1210.0, 692.0 ],
+		"rect" : [ 111.0, 153.0, 1210.0, 692.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -37,7 +37,7 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
-		"globalpatchername" : "skin[1][1][1][1]",
+		"globalpatchername" : "skin[1][1][1][1][1]",
 		"boxes" : [ 			{
 				"box" : 				{
 					"bgmode" : 0,
@@ -161,6 +161,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-17", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-17", 0 ],
 					"source" : [ "obj-3", 0 ]
 				}
@@ -168,12 +175,12 @@
 			}
  ],
 		"parameters" : 		{
+			"obj-2::obj-13" : [ "mod_depth", "mod_depth", 0 ],
+			"obj-2::obj-4" : [ "highFreq", "high", 0 ],
 			"obj-2::obj-60" : [ "env_1", "live.text", 0 ],
 			"obj-2::obj-12" : [ "lowFreq", "low", 0 ],
-			"obj-2::obj-13" : [ "mod_depth", "mod_depth", 0 ],
-			"obj-2::obj-16" : [ "gain", "gain", 0 ],
-			"obj-2::obj-4" : [ "highFreq", "high", 0 ],
 			"obj-2::obj-2" : [ "pitchTrackEnable", "pitchTrackEnable", 0 ],
+			"obj-2::obj-16" : [ "gain", "gain", 0 ],
 			"parameterbanks" : 			{
 
 			}
@@ -182,7 +189,14 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "skin_sine.maxpat",
-				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hap_V001",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hap_V001",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "preset-sine.json",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hap_V001",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
@@ -218,7 +232,7 @@
 				"multi" : 0
 			}
  ],
-		"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
+		"bgcolor" : [ 0.074509803921569, 0.074509803921569, 0.074509803921569, 1.0 ]
 	}
 
 }

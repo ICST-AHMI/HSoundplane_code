@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 0,
-			"revision" : 4,
+			"revision" : 2,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -40,6 +40,42 @@
 		"globalpatchername" : "skin_sine",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-23",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 596.0, 100.0, 63.0, 22.0 ],
+					"text" : "closebang"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-26",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 596.0, 132.0, 103.0, 22.0 ],
+					"text" : "store1, writeagain"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-24",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 543.0, 136.0, 34.0, 22.0 ],
+					"text" : "write"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-19",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -50,7 +86,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 0,
-							"revision" : 4,
+							"revision" : 2,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -283,7 +319,7 @@
 					"patching_rect" : [ 182.0, 661.0, 73.0, 47.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
-					"presentation_rect" : [ 189.0, 367.839836120605469, 104.0, 27.0 ],
+					"presentation_rect" : [ 189.0, 367.83984375, 104.0, 27.0 ],
 					"text" : "click-shift = store\nclick-alt-shift = delete",
 					"textcolor" : [ 0.847058832645416, 0.847058832645416, 0.847058832645416, 1.0 ],
 					"textjustification" : 2
@@ -304,7 +340,7 @@
 					"presentation_rect" : [ 7.0, 68.0, 48.0, 20.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_mmax" : 1,
+							"parameter_mmax" : 1.0,
 							"parameter_shortname" : "pitchTrackEnable",
 							"parameter_enum" : [ "val1", "val2" ],
 							"parameter_type" : 2,
@@ -331,7 +367,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 0,
-							"revision" : 4,
+							"revision" : 2,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -559,7 +595,7 @@
 					"id" : "obj-30",
 					"maxclass" : "number",
 					"maximum" : 24,
-					"minimum" : 0,
+					"minimum" : -24,
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
@@ -749,6 +785,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "preset", "int", "preset", "int" ],
 					"patching_rect" : [ 93.0, 674.0, 90.0, 16.0 ],
+					"pattrstorage" : "preset-sine",
 					"presentation" : 1,
 					"presentation_rect" : [ 62.5, 373.33984375, 113.0, 16.0 ],
 					"stored1" : [ 0.870588, 0.415686, 0.062745, 1.0 ]
@@ -765,10 +802,10 @@
 					"patching_rect" : [ 491.0, 231.0, 56.0, 22.0 ],
 					"restore" : 					{
 						"bandPassEnable" : [ 0.0 ],
-						"fixedFreq" : [ 0 ],
+						"fixedFreq" : [ 100 ],
 						"gain" : [ 0.0 ],
-						"highFreq" : [ 0.0 ],
-						"lowFreq" : [ 0.0 ],
+						"highFreq" : [ 400.0 ],
+						"lowFreq" : [ 40.0 ],
 						"mod_depth" : [ 0.503937005996704 ],
 						"moddepth_func" : [ 1000.0, 0.0, 1.0, 0.0, 0.0, 0, 271.551724137931046, 0.5, 0, 603.448275999999964, 0.82, 0, 1000.0, 1.0, 0, "linear" ],
 						"pitchTrackEnable" : [ 0.0 ],
@@ -776,27 +813,28 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u531002600"
+					"varname" : "u736024793"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"autorestore" : "preset-sine.json",
 					"id" : "obj-1",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 491.0, 168.0, 203.0, 22.0 ],
+					"patching_rect" : [ 491.0, 168.0, 278.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"client_rect" : [ 4, 44, 358, 172 ],
+						"client_rect" : [ 4, 45, 358, 173 ],
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0,
 						"storage_rect" : [ 583, 69, 1034, 197 ]
 					}
 ,
-					"text" : "pattrstorage hap-sine @savemode 3",
-					"varname" : "hap-sine"
+					"text" : "pattrstorage preset-sine @savemode 3 @greedy 1",
+					"varname" : "preset-sine"
 				}
 
 			}
@@ -868,7 +906,7 @@
 					"presentation_rect" : [ 7.0, 333.0, 48.0, 20.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_mmax" : 1,
+							"parameter_mmax" : 1.0,
 							"parameter_shortname" : "live.text",
 							"parameter_enum" : [ "val1", "val2" ],
 							"parameter_type" : 2,
@@ -986,7 +1024,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 8.0, 7.0, 188.0, 22.0 ],
 					"text" : "Haptics Sine",
-					"textcolor" : [ 0.317647, 0.654902, 0.976471, 1.0 ]
+					"textcolor" : [ 0.317647010087967, 0.65490198135376, 0.97647100687027, 1.0 ]
 				}
 
 			}
@@ -1238,9 +1276,30 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-26", 0 ],
+					"source" : [ "obj-23", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-24", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
 					"midpoints" : [ 500.5, 160.5, 500.5, 160.5 ],
 					"source" : [ "obj-25", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-26", 0 ]
 				}
 
 			}
@@ -1299,19 +1358,26 @@
 			}
  ],
 		"parameters" : 		{
+			"obj-13" : [ "mod_depth", "mod_depth", 0 ],
+			"obj-4" : [ "highFreq", "high", 0 ],
 			"obj-60" : [ "env_1", "live.text", 0 ],
 			"obj-12" : [ "lowFreq", "low", 0 ],
-			"obj-13" : [ "mod_depth", "mod_depth", 0 ],
-			"obj-16" : [ "gain", "gain", 0 ],
-			"obj-4" : [ "highFreq", "high", 0 ],
 			"obj-2" : [ "pitchTrackEnable", "pitchTrackEnable", 0 ],
+			"obj-16" : [ "gain", "gain", 0 ],
 			"parameterbanks" : 			{
 
 			}
 
 		}
 ,
-		"dependency_cache" : [  ],
+		"dependency_cache" : [ 			{
+				"name" : "preset-sine.json",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hap_V001",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+ ],
 		"autosave" : 0,
 		"styles" : [ 			{
 				"name" : "AudioStatus_Menu",
@@ -1338,6 +1404,15 @@
 			}
 , 			{
 				"name" : "jpatcher001",
+				"parentstyle" : "",
+				"multi" : 0
+			}
+, 			{
+				"name" : "tap",
+				"default" : 				{
+					"fontname" : [ "Lato Light" ]
+				}
+,
 				"parentstyle" : "",
 				"multi" : 0
 			}

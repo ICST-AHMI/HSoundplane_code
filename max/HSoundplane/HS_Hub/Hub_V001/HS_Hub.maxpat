@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 0,
-			"revision" : 4,
+			"revision" : 2,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -57,7 +57,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 0,
-							"revision" : 4,
+							"revision" : 2,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -109,7 +109,7 @@
 										"appversion" : 										{
 											"major" : 8,
 											"minor" : 0,
-											"revision" : 4,
+											"revision" : 2,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -292,7 +292,7 @@
 ,
 									"patching_rect" : [ 72.0, 288.125792999999987, 165.0, 28.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 0.0, 0.125792999999987, 161.0, 26.0 ],
+									"presentation_rect" : [ 0.0, 0.125792995095253, 161.0, 26.0 ],
 									"viewvisibility" : 1
 								}
 
@@ -476,7 +476,7 @@
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 898.0, 478.42578125, 72.0, 22.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 0.0, 170.888888888888886, 160.0, 17.0 ],
+									"presentation_rect" : [ 0.0, 170.888885498046875, 160.0, 17.0 ],
 									"viewvisibility" : 1
 								}
 
@@ -499,7 +499,7 @@
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 792.0, 478.42578125, 72.0, 22.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 0.0, 152.777777777777771, 160.0, 17.0 ],
+									"presentation_rect" : [ 0.0, 152.77777099609375, 160.0, 17.0 ],
 									"viewvisibility" : 1
 								}
 
@@ -522,7 +522,7 @@
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 686.0, 478.42578125, 68.0, 17.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 0.0, 134.666666666666657, 160.0, 17.0 ],
+									"presentation_rect" : [ 0.0, 134.666671752929688, 160.0, 17.0 ],
 									"viewvisibility" : 1
 								}
 
@@ -545,7 +545,7 @@
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 580.0, 478.42578125, 68.0, 17.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 0.0, 116.555555555555543, 160.0, 17.0 ],
+									"presentation_rect" : [ 0.0, 116.555557250976562, 160.0, 17.0 ],
 									"viewvisibility" : 1
 								}
 
@@ -568,7 +568,7 @@
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 474.0, 478.42578125, 72.0, 22.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 0.0, 99.444444444444429, 160.0, 17.0 ],
+									"presentation_rect" : [ 0.0, 99.444442749023438, 160.0, 17.0 ],
 									"viewvisibility" : 1
 								}
 
@@ -591,7 +591,7 @@
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 368.0, 478.42578125, 72.0, 17.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 0.0, 81.333333333333314, 160.0, 17.0 ],
+									"presentation_rect" : [ 0.0, 81.333335876464844, 160.0, 17.0 ],
 									"viewvisibility" : 1
 								}
 
@@ -614,7 +614,7 @@
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 262.0, 478.42578125, 72.0, 17.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 0.0, 63.222222222222214, 160.0, 17.0 ],
+									"presentation_rect" : [ 0.0, 63.222221374511719, 160.0, 17.0 ],
 									"viewvisibility" : 1
 								}
 
@@ -637,7 +637,7 @@
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 156.0, 478.42578125, 72.0, 22.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 0.0, 45.111111111111107, 160.0, 17.0 ],
+									"presentation_rect" : [ 0.0, 45.111110687255859, 160.0, 17.0 ],
 									"viewvisibility" : 1
 								}
 
@@ -692,7 +692,7 @@
 										"appversion" : 										{
 											"major" : 8,
 											"minor" : 0,
-											"revision" : 4,
+											"revision" : 2,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -925,7 +925,7 @@
 										"appversion" : 										{
 											"major" : 8,
 											"minor" : 0,
-											"revision" : 4,
+											"revision" : 2,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -1624,7 +1624,7 @@
 ,
 					"patching_rect" : [ 81.718163000000004, 155.074218999999999, 163.0, 208.999999999999972 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 4.718163000000004, 31.0, 317.0, 208.999999999999972 ],
+					"presentation_rect" : [ 4.718163013458252, 31.0, 317.0, 209.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -1647,7 +1647,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 517.893254833333458, 319.200012000000015, 267.000000000000057, 33.0 ],
+					"patching_rect" : [ 517.893254833333458, 319.200012000000015, 270.0, 33.0 ],
 					"text" : "A plugin sends 10 multichannel finger audio data via a [mc.send~] object to address 'fingeraudio': "
 				}
 
@@ -1683,7 +1683,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 260.724944999999934, 265.700012000000015, 335.0, 47.0 ],
+					"patching_rect" : [ 260.724944999999934, 265.700012000000015, 338.0, 47.0 ],
 					"text" : "In order to have haptic feedback you need to open a haptic plugin that reads the hubs finger data and sends finger audio. If you want to implement your own haptic plugin"
 				}
 
@@ -1695,7 +1695,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "multichannelsignal" ],
-					"patching_rect" : [ 145.168309833333467, 384.700012000000015, 136.0, 22.0 ],
+					"patching_rect" : [ 145.168304443359375, 368.70001220703125, 136.0, 22.0 ],
 					"text" : "mc.receive~ fingeraudio"
 				}
 
@@ -1790,7 +1790,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 501.817124000000149, 107.700012000000001, 322.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 4.718163000000004, 7.0, 317.0, 22.0 ],
+					"presentation_rect" : [ 4.718163013458252, 7.0, 317.0, 22.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -1807,7 +1807,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 0,
-							"revision" : 4,
+							"revision" : 2,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -2148,7 +2148,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 0,
-							"revision" : 4,
+							"revision" : 2,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -2259,7 +2259,7 @@
 										"appversion" : 										{
 											"major" : 8,
 											"minor" : 0,
-											"revision" : 4,
+											"revision" : 2,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -3244,7 +3244,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 20.75, 24.200012000000001, 40.0, 23.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 261.002507831380399, 298.0, 40.0, 23.0 ],
+					"presentation_rect" : [ 261.00250244140625, 298.0, 40.0, 23.0 ],
 					"text" : "open"
 				}
 
@@ -3277,7 +3277,7 @@
 					"outlettype" : [ "float" ],
 					"patching_rect" : [ 835.817124000000035, 265.700012000000015, 18.0, 140.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 132.431961978515915, 245.0, 26.286201021484089, 208.624999999999972 ]
+					"presentation_rect" : [ 132.431961059570312, 245.0, 26.286201477050781, 208.625 ]
 				}
 
 			}
@@ -3459,44 +3459,37 @@
 
 			}
  ],
-		"parameters" : 		{
-			"parameterbanks" : 			{
-
-			}
-
-		}
-,
 		"dependency_cache" : [ 			{
 				"name" : "uniqueChannel.js",
-				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "HSoundPlane_serial.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/HSoundPlane/patchers",
-				"patcherrelativepath" : "../../../../../../../../../../Documents/Max 8/Packages/HSoundPlane/patchers",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/_package/HSoundPlane/patchers",
+				"patcherrelativepath" : "../../_package/HSoundPlane/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "weight.mapper.js",
-				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mapper.maxpat",
-				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mapper.js",
-				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
