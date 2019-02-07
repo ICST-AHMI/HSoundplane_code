@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 0,
-			"revision" : 4,
+			"revision" : 2,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 575.0, 156.0, 302.0, 373.0 ],
+		"rect" : [ 575.0, 156.0, 426.0, 373.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -102,6 +102,7 @@
 					"bgoncolor" : [ 0.317647, 0.654902, 0.976471, 1.0 ],
 					"fontsize" : 10.0,
 					"id" : "obj-16",
+					"ignoreclick" : 1,
 					"maxclass" : "textbutton",
 					"mode" : 1,
 					"numinlets" : 1,
@@ -110,7 +111,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 508.0, 201.0, 67.0, 16.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 0.0, 160.0, 17.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 315.0, 17.0 ],
 					"text" : "-",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"texton" : "finger_#1",
@@ -167,7 +168,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 0,
-							"revision" : 4,
+							"revision" : 2,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -952,7 +953,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 0,
-							"revision" : 4,
+							"revision" : 2,
 							"architecture" : "x64",
 							"modernui" : 1
 						}

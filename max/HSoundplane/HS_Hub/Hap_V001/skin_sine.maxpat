@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 0,
-			"revision" : 2,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -37,7 +37,7 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
-		"globalpatchername" : "skin_sine",
+		"globalpatchername" : "skin_sine[1]",
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-23",
@@ -86,7 +86,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 0,
-							"revision" : 2,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -340,11 +340,11 @@
 					"presentation_rect" : [ 7.0, 68.0, 48.0, 20.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_mmax" : 1.0,
-							"parameter_shortname" : "pitchTrackEnable",
 							"parameter_enum" : [ "val1", "val2" ],
 							"parameter_type" : 2,
-							"parameter_longname" : "pitchTrackEnable"
+							"parameter_longname" : "pitchTrackEnable",
+							"parameter_mmax" : 1,
+							"parameter_shortname" : "pitchTrackEnable"
 						}
 
 					}
@@ -367,7 +367,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 0,
-							"revision" : 2,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -659,13 +659,13 @@
 					"presentation_rect" : [ 5.0, 246.5, 50.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_mmax" : 1.0,
-							"parameter_steps" : 1,
-							"parameter_shortname" : "gain",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 1,
 							"parameter_linknames" : 1,
-							"parameter_longname" : "gain"
+							"parameter_longname" : "gain",
+							"parameter_mmax" : 0.2,
+							"parameter_steps" : 1,
+							"parameter_shortname" : "gain"
 						}
 
 					}
@@ -813,7 +813,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u736024793"
+					"varname" : "u637007468"
 				}
 
 			}
@@ -906,11 +906,11 @@
 					"presentation_rect" : [ 7.0, 333.0, 48.0, 20.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_mmax" : 1.0,
-							"parameter_shortname" : "live.text",
 							"parameter_enum" : [ "val1", "val2" ],
 							"parameter_type" : 2,
-							"parameter_longname" : "env_1"
+							"parameter_longname" : "env_1",
+							"parameter_mmax" : 1,
+							"parameter_shortname" : "live.text"
 						}
 
 					}
@@ -937,12 +937,12 @@
 					"presentation_rect" : [ 62.5, 311.0, 40.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_mmax" : 2000.0,
-							"parameter_shortname" : "low",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 3,
 							"parameter_linknames" : 1,
-							"parameter_longname" : "lowFreq"
+							"parameter_longname" : "lowFreq",
+							"parameter_mmax" : 2000.0,
+							"parameter_shortname" : "low"
 						}
 
 					}
@@ -968,12 +968,12 @@
 					"presentation_rect" : [ 108.0, 311.0, 41.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_mmax" : 2000.0,
-							"parameter_shortname" : "high",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 3,
 							"parameter_linknames" : 1,
-							"parameter_longname" : "highFreq"
+							"parameter_longname" : "highFreq",
+							"parameter_mmax" : 2000.0,
+							"parameter_shortname" : "high"
 						}
 
 					}
@@ -997,12 +997,12 @@
 					"patching_rect" : [ 332.0, 570.0, 50.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_mmax" : 1.0,
-							"parameter_shortname" : "mod_depth",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 1,
 							"parameter_linknames" : 1,
-							"parameter_longname" : "mod_depth"
+							"parameter_longname" : "mod_depth",
+							"parameter_mmax" : 1.0,
+							"parameter_shortname" : "mod_depth"
 						}
 
 					}
@@ -1358,12 +1358,12 @@
 			}
  ],
 		"parameters" : 		{
+			"obj-2" : [ "pitchTrackEnable", "pitchTrackEnable", 0 ],
 			"obj-13" : [ "mod_depth", "mod_depth", 0 ],
+			"obj-16" : [ "gain", "gain", 0 ],
 			"obj-4" : [ "highFreq", "high", 0 ],
 			"obj-60" : [ "env_1", "live.text", 0 ],
 			"obj-12" : [ "lowFreq", "low", 0 ],
-			"obj-2" : [ "pitchTrackEnable", "pitchTrackEnable", 0 ],
-			"obj-16" : [ "gain", "gain", 0 ],
 			"parameterbanks" : 			{
 
 			}
@@ -1372,7 +1372,7 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "preset-sine.json",
-				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hap_V001",
+				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hap_V001",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
