@@ -40,26 +40,35 @@
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-31",
+					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 65.0, 26.20001220703125, 83.0, 20.0 ],
+					"patching_rect" : [ 65.0, 26.20001220703125, 83.0, 33.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 195.0, 333.0, 83.0, 20.0 ],
-					"text" : "AudioSettings"
+					"presentation_linecount" : 2,
+					"presentation_rect" : [ 268.0, 273.0, 52.0, 33.0 ],
+					"text" : "Audio\nSettings",
+					"textjustification" : 2
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"dbperled" : 5,
 					"id" : "obj-10",
 					"maxclass" : "meter~",
+					"nhotleds" : 1,
+					"ntepidleds" : 5,
 					"numinlets" : 1,
+					"numleds" : 10,
 					"numoutlets" : 1,
+					"nwarmleds" : 5,
+					"orientation" : 2,
 					"outlettype" : [ "float" ],
 					"patching_rect" : [ 20.75, 444.0, 56.0, 87.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 5.0, 243.0, 315.0, 84.0 ]
+					"presentation_rect" : [ 5.0, 243.0, 264.0, 84.0 ]
 				}
 
 			}
@@ -952,7 +961,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 20.75, 24.200012000000001, 40.0, 23.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 280.0, 331.0, 40.0, 23.0 ],
+					"presentation_rect" : [ 280.0, 306.0, 40.0, 23.0 ],
 					"text" : "open"
 				}
 
@@ -2643,35 +2652,35 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "weight.mapper.js",
-				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mapper.maxpat",
-				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mapper.js",
-				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "uniqueChannel.js",
-				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "HSoundPlane_serial.maxpat",
-				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/_package/HSoundPlane/patchers",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/_package/HSoundPlane/patchers",
 				"patcherrelativepath" : "../../_package/HSoundPlane/patchers",
 				"type" : "JSON",
 				"implicit" : 1

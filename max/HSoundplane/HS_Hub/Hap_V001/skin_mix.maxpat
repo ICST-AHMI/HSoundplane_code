@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 292.0, 89.0, 841.0, 738.0 ],
+		"rect" : [ 446.0, 94.0, 769.0, 738.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -37,8 +37,25 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
-		"globalpatchername" : "skin_sine[1]",
+		"globalpatchername" : "skin_hapmix",
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontface" : 1,
+					"fontsize" : 8.0,
+					"hidden" : 1,
+					"id" : "obj-27",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 102.5, 173.0, 215.0, 15.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 67.5, 85.0, 215.0, 15.0 ],
+					"text" : "formula: frequency shift = shift + notenumber * spread",
+					"textcolor" : [ 0.847058832645416, 0.847058832645416, 0.847058832645416, 1.0 ]
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-23",
 					"maxclass" : "newobj",
@@ -341,17 +358,17 @@
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_type" : 2,
-							"parameter_longname" : "pitchTrackEnable",
+							"parameter_longname" : "freqShiftEnable",
 							"parameter_mmax" : 1.0,
-							"parameter_shortname" : "pitchTrackEnable",
+							"parameter_shortname" : "freqShiftEnable",
 							"parameter_enum" : [ "val1", "val2" ]
 						}
 
 					}
 ,
-					"text" : "fixed",
-					"texton" : "auto",
-					"varname" : "pitchTrackEnable"
+					"text" : "off",
+					"texton" : "enabled",
+					"varname" : "freqShiftEnable"
 				}
 
 			}
@@ -576,7 +593,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 102.5, 67.0, 90.0, 22.0 ],
+					"patching_rect" : [ 102.5, 53.0, 90.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -594,17 +611,17 @@
 					"hidden" : 1,
 					"id" : "obj-30",
 					"maxclass" : "number",
-					"maximum" : 24,
-					"minimum" : -24,
+					"maximum" : 500,
+					"minimum" : -500,
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 182.0, 136.0, 80.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 162.5, 66.0, 80.0, 22.0 ],
+					"presentation_rect" : [ 162.5, 63.0, 80.0, 22.0 ],
 					"tricolor" : [ 0.317647, 0.654902, 0.976471, 1.0 ],
-					"varname" : "transpose"
+					"varname" : "freqShift"
 				}
 
 			}
@@ -618,8 +635,8 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 30.5, 103.0, 53.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 13.75, 40.5, 32.0, 18.0 ],
-					"text" : "pitch",
+					"presentation_rect" : [ 5.75, 40.5, 50.0, 18.0 ],
+					"text" : "freqShift",
 					"textcolor" : [ 0.847058832645416, 0.847058832645416, 0.847058832645416, 1.0 ]
 				}
 
@@ -627,10 +644,11 @@
 , 			{
 				"box" : 				{
 					"bgcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
+					"hidden" : 1,
 					"id" : "obj-20",
 					"maxclass" : "number",
-					"maximum" : 1000,
-					"minimum" : 0,
+					"maximum" : 500,
+					"minimum" : -500,
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
@@ -639,7 +657,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 162.5, 38.5, 80.0, 22.0 ],
 					"tricolor" : [ 0.317647, 0.654902, 0.976471, 1.0 ],
-					"varname" : "fixedFreq"
+					"varname" : "pitchSpread"
 				}
 
 			}
@@ -663,7 +681,7 @@
 							"parameter_unitstyle" : 1,
 							"parameter_linknames" : 1,
 							"parameter_longname" : "gain",
-							"parameter_mmax" : 0.2,
+							"parameter_mmax" : 0.5,
 							"parameter_steps" : 1,
 							"parameter_shortname" : "gain"
 						}
@@ -742,8 +760,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 491.0, 200.0, 123.0, 22.0 ],
-					"text" : "pattrmarker skin_sine"
+					"patching_rect" : [ 491.0, 200.0, 140.0, 22.0 ],
+					"text" : "pattrmarker skin_hapmix"
 				}
 
 			}
@@ -785,7 +803,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "preset", "int", "preset", "int" ],
 					"patching_rect" : [ 93.0, 674.0, 90.0, 16.0 ],
-					"pattrstorage" : "preset-sine",
+					"pattrstorage" : "preset-mix",
 					"presentation" : 1,
 					"presentation_rect" : [ 62.5, 373.33984375, 113.0, 16.0 ],
 					"stored1" : [ 0.870588, 0.415686, 0.062745, 1.0 ]
@@ -802,30 +820,30 @@
 					"patching_rect" : [ 491.0, 231.0, 56.0, 22.0 ],
 					"restore" : 					{
 						"bandPassEnable" : [ 0.0 ],
-						"fixedFreq" : [ 100 ],
+						"freqShift" : [ 0 ],
+						"freqShiftEnable" : [ 0.0 ],
 						"gain" : [ 0.0 ],
 						"highFreq" : [ 400.0 ],
 						"lowFreq" : [ 40.0 ],
 						"mod_depth" : [ 0.503937005996704 ],
 						"moddepth_func" : [ 1000.0, 0.0, 1.0, 0.0, 0.0, 0, 271.551724137931046, 0.5, 0, 603.448275999999964, 0.82, 0, 1000.0, 1.0, 0, "linear" ],
-						"pitchTrackEnable" : [ 0.0 ],
-						"transpose" : [ 0 ]
+						"pitchSpread" : [ 20 ]
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u223006485"
+					"varname" : "u521003606"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"autorestore" : "preset-sine.json",
+					"autorestore" : "preset-mix.json",
 					"id" : "obj-1",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 491.0, 168.0, 278.0, 22.0 ],
+					"patching_rect" : [ 491.0, 168.0, 275.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"client_rect" : [ 4, 45, 358, 173 ],
 						"parameter_enable" : 0,
@@ -833,8 +851,8 @@
 						"storage_rect" : [ 583, 69, 1034, 197 ]
 					}
 ,
-					"text" : "pattrstorage preset-sine @savemode 3 @greedy 1",
-					"varname" : "preset-sine"
+					"text" : "pattrstorage preset-mix @savemode 3 @greedy 1",
+					"varname" : "preset-mix"
 				}
 
 			}
@@ -1023,7 +1041,7 @@
 					"patching_rect" : [ 93.0, 22.0, 188.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 8.0, 7.0, 188.0, 22.0 ],
-					"text" : "Haptics Sine",
+					"text" : "Haptics AudioMix",
 					"textcolor" : [ 0.317647010087967, 0.65490198135376, 0.97647100687027, 1.0 ]
 				}
 
@@ -1032,6 +1050,7 @@
 				"box" : 				{
 					"fontface" : 1,
 					"fontsize" : 10.0,
+					"hidden" : 1,
 					"id" : "obj-37",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -1039,7 +1058,7 @@
 					"patching_rect" : [ 93.0, 109.0, 86.0, 18.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 67.5, 40.5, 86.0, 18.0 ],
-					"text" : "fixed frequency",
+					"text" : "spread",
 					"textcolor" : [ 0.847058832645416, 0.847058832645416, 0.847058832645416, 1.0 ]
 				}
 
@@ -1055,8 +1074,8 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 93.0, 138.0, 77.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 67.5, 68.0, 77.0, 18.0 ],
-					"text" : "transpose",
+					"presentation_rect" : [ 67.5, 65.0, 77.0, 18.0 ],
+					"text" : "shift",
 					"textcolor" : [ 0.847058832645416, 0.847058832645416, 0.847058832645416, 1.0 ]
 				}
 
@@ -1215,8 +1234,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 85.0, 168.0, 249.5, 67.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 61.0, 103.0, 234.0, 67.0 ],
 					"proportion" : 0.5
 				}
 
@@ -1306,8 +1323,16 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-20", 0 ],
-					"order" : 0,
-					"source" : [ "obj-31", 0 ]
+					"order" : 1,
+					"source" : [ "obj-31", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-27", 0 ],
+					"order" : 2,
+					"source" : [ "obj-31", 1 ]
 				}
 
 			}
@@ -1322,7 +1347,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-36", 0 ],
-					"order" : 1,
+					"order" : 3,
 					"source" : [ "obj-31", 1 ]
 				}
 
@@ -1330,8 +1355,8 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-37", 0 ],
-					"order" : 1,
-					"source" : [ "obj-31", 0 ]
+					"order" : 4,
+					"source" : [ "obj-31", 1 ]
 				}
 
 			}
@@ -1360,7 +1385,7 @@
 		"parameters" : 		{
 			"obj-12" : [ "lowFreq", "low", 0 ],
 			"obj-13" : [ "mod_depth", "mod_depth", 0 ],
-			"obj-2" : [ "pitchTrackEnable", "pitchTrackEnable", 0 ],
+			"obj-2" : [ "freqShiftEnable", "freqShiftEnable", 0 ],
 			"obj-4" : [ "highFreq", "high", 0 ],
 			"obj-16" : [ "gain", "gain", 0 ],
 			"obj-60" : [ "env_1", "live.text", 0 ],
@@ -1371,7 +1396,7 @@
 		}
 ,
 		"dependency_cache" : [ 			{
-				"name" : "preset-sine.json",
+				"name" : "preset-mix.json",
 				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hap_V001",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",

@@ -5,8 +5,8 @@
 			"1" : 			{
 				"id" : 1,
 				"data" : 				{
-					"globalTranspose" : [ 24 ],
-					"hapSelection" : [ 0 ],
+					"globalTranspose" : [ 0 ],
+					"hapSelection" : [ 2 ],
 					"mainEnable" : [ 1 ]
 				}
 

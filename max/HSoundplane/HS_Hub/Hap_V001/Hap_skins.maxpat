@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 111.0, 153.0, 1210.0, 692.0 ],
+		"rect" : [ 165.0, 141.0, 810.0, 692.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -37,7 +37,7 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
-		"globalpatchername" : "skin[1][1][1][1][1]",
+		"globalpatchername" : "skin[1][1][1][1][1][1][1]",
 		"boxes" : [ 			{
 				"box" : 				{
 					"bgmode" : 0,
@@ -48,13 +48,14 @@
 					"id" : "obj-5",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"numinlets" : 0,
+					"name" : "skin_mix.maxpat",
+					"numinlets" : 1,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
 					"patching_rect" : [ 607.0, 153.0, 295.0, 450.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 600.0, 0.0, 295.0, 450.0 ],
-					"varname" : "skin_off[2]",
+					"varname" : "skin_mix",
 					"viewvisibility" : 1
 				}
 
@@ -69,13 +70,14 @@
 					"id" : "obj-4",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"numinlets" : 0,
+					"name" : "skin_noise.maxpat",
+					"numinlets" : 1,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
 					"patching_rect" : [ 307.0, 153.0, 295.0, 450.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 300.0, 0.0, 295.0, 450.0 ],
-					"varname" : "skin_off[1]",
+					"varname" : "hap-noise",
 					"viewvisibility" : 1
 				}
 
@@ -162,6 +164,23 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
+					"order" : 2,
+					"source" : [ "obj-17", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4", 0 ],
+					"order" : 1,
+					"source" : [ "obj-17", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"order" : 0,
 					"source" : [ "obj-17", 0 ]
 				}
 
@@ -175,12 +194,23 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-2::obj-13" : [ "mod_depth", "mod_depth", 0 ],
-			"obj-2::obj-4" : [ "highFreq", "high", 0 ],
-			"obj-2::obj-60" : [ "env_1", "live.text", 0 ],
+			"obj-4::obj-12" : [ "lowFreq[1]", "low", 0 ],
 			"obj-2::obj-12" : [ "lowFreq", "low", 0 ],
+			"obj-2::obj-13" : [ "mod_depth", "mod_depth", 0 ],
+			"obj-4::obj-13" : [ "mod_depth[1]", "mod_depth", 0 ],
+			"obj-5::obj-13" : [ "mod_depth[2]", "mod_depth", 0 ],
+			"obj-5::obj-16" : [ "gain[2]", "gain", 0 ],
+			"obj-5::obj-2" : [ "freqShiftEnable", "freqShiftEnable", 0 ],
+			"obj-5::obj-60" : [ "env_1[2]", "live.text", 0 ],
 			"obj-2::obj-2" : [ "pitchTrackEnable", "pitchTrackEnable", 0 ],
+			"obj-4::obj-4" : [ "highFreq[1]", "high", 0 ],
+			"obj-5::obj-12" : [ "lowFreq[2]", "low", 0 ],
+			"obj-4::obj-16" : [ "gain[1]", "gain", 0 ],
+			"obj-2::obj-4" : [ "highFreq", "high", 0 ],
+			"obj-5::obj-4" : [ "highFreq[2]", "high", 0 ],
 			"obj-2::obj-16" : [ "gain", "gain", 0 ],
+			"obj-4::obj-60" : [ "env_1[1]", "live.text", 0 ],
+			"obj-2::obj-60" : [ "env_1", "live.text", 0 ],
 			"parameterbanks" : 			{
 
 			}
@@ -196,6 +226,34 @@
 			}
 , 			{
 				"name" : "preset-sine.json",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hap_V001",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "skin_noise.maxpat",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hap_V001",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "preset-noise.json",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hap_V001",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "skin_mix.maxpat",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hap_V001",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "preset-mix.json",
 				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hap_V001",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
