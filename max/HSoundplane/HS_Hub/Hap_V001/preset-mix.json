@@ -5,15 +5,15 @@
 			"1" : 			{
 				"id" : 1,
 				"data" : 				{
-					"bandPassEnable" : [ 1.0 ],
-					"freqShift" : [ -100 ],
-					"freqShiftEnable" : [ 1.0 ],
-					"gain" : [ 0.155905511811024 ],
-					"highFreq" : [ 500.0 ],
-					"lowFreq" : [ 50.0 ],
+					"bandPassEnable" : [ 0.0 ],
+					"freqShift" : [ 0 ],
+					"freqShiftEnable" : [ 0.0 ],
+					"gain" : [ 0.192913385826772 ],
+					"highFreq" : [ 400.0 ],
+					"lowFreq" : [ 40.0 ],
 					"mod_depth" : [ 0.503937005996704 ],
 					"moddepth_func" : [ 1000.0, 0.0, 1.0, 0.0, 0.0, 0, 271.551724137931046, 0.5, 0, 603.448275999999964, 0.82, 0, 1000.0, 1.0, 0, "linear" ],
-					"pitchSpread" : [ -10 ]
+					"pitchSpread" : [ 20 ]
 				}
 
 			}

@@ -6,7 +6,7 @@
 				"id" : 1,
 				"data" : 				{
 					"globalTranspose" : [ 0 ],
-					"hapSelection" : [ 2 ],
+					"hapSelection" : [ 0 ],
 					"mainEnable" : [ 1 ]
 				}
 
