@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 455.0, 79.0, 517.0, 738.0 ],
+		"rect" : [ 455.0, 79.0, 907.0, 738.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -94,11 +94,11 @@
 					"presentation_rect" : [ 240.5, 8.0, 48.0, 20.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_enum" : [ "store", "store" ],
+							"parameter_type" : 2,
 							"parameter_longname" : "env_1[1]",
 							"parameter_mmax" : 1.0,
-							"parameter_shortname" : "live.text",
-							"parameter_enum" : [ "store", "store" ],
-							"parameter_type" : 2
+							"parameter_shortname" : "live.text"
 						}
 
 					}
@@ -437,13 +437,13 @@
 					"presentation_rect" : [ 5.0, 246.5, 50.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_type" : 0,
+							"parameter_unitstyle" : 1,
+							"parameter_linknames" : 1,
 							"parameter_longname" : "gain",
 							"parameter_mmax" : 1.0,
 							"parameter_steps" : 1,
-							"parameter_shortname" : "gain",
-							"parameter_type" : 0,
-							"parameter_unitstyle" : 1,
-							"parameter_linknames" : 1
+							"parameter_shortname" : "gain"
 						}
 
 					}
@@ -590,7 +590,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u514015422"
+					"varname" : "u563000445"
 				}
 
 			}
@@ -610,7 +610,7 @@
 						"storage_rect" : [ 583, 69, 1034, 197 ]
 					}
 ,
-					"text" : "pattrstorage preset-noise @savemode 3 @greedy 1",
+					"text" : "pattrstorage preset-noise @savemode 0 @greedy 1",
 					"varname" : "preset-noise"
 				}
 
@@ -683,11 +683,11 @@
 					"presentation_rect" : [ 7.0, 333.0, 48.0, 20.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_enum" : [ "val1", "val2" ],
+							"parameter_type" : 2,
 							"parameter_longname" : "env_1",
 							"parameter_mmax" : 1.0,
-							"parameter_shortname" : "live.text",
-							"parameter_enum" : [ "val1", "val2" ],
-							"parameter_type" : 2
+							"parameter_shortname" : "live.text"
 						}
 
 					}
@@ -714,13 +714,13 @@
 					"presentation_rect" : [ 62.5, 311.0, 40.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_type" : 0,
+							"parameter_unitstyle" : 3,
+							"parameter_linknames" : 1,
 							"parameter_mmin" : 40.0,
 							"parameter_longname" : "lowFreq",
 							"parameter_mmax" : 500.0,
-							"parameter_shortname" : "low",
-							"parameter_type" : 0,
-							"parameter_unitstyle" : 3,
-							"parameter_linknames" : 1
+							"parameter_shortname" : "low"
 						}
 
 					}
@@ -746,13 +746,13 @@
 					"presentation_rect" : [ 108.0, 311.0, 41.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_type" : 0,
+							"parameter_unitstyle" : 3,
+							"parameter_linknames" : 1,
 							"parameter_mmin" : 10.0,
 							"parameter_longname" : "highFreq",
 							"parameter_mmax" : 300.0,
-							"parameter_shortname" : "high",
-							"parameter_type" : 0,
-							"parameter_unitstyle" : 3,
-							"parameter_linknames" : 1
+							"parameter_shortname" : "high"
 						}
 
 					}
@@ -776,12 +776,12 @@
 					"patching_rect" : [ 332.0, 570.0, 50.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_longname" : "mod_depth",
-							"parameter_mmax" : 1.0,
-							"parameter_shortname" : "mod_depth",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 1,
-							"parameter_linknames" : 1
+							"parameter_linknames" : 1,
+							"parameter_longname" : "mod_depth",
+							"parameter_mmax" : 1.0,
+							"parameter_shortname" : "mod_depth"
 						}
 
 					}
@@ -1118,11 +1118,11 @@
  ],
 		"parameters" : 		{
 			"obj-16" : [ "gain", "gain", 0 ],
-			"obj-12" : [ "lowFreq", "low", 0 ],
-			"obj-4" : [ "highFreq", "high", 0 ],
-			"obj-13" : [ "mod_depth", "mod_depth", 0 ],
-			"obj-34" : [ "env_1[1]", "live.text", 0 ],
 			"obj-60" : [ "env_1", "live.text", 0 ],
+			"obj-12" : [ "lowFreq", "low", 0 ],
+			"obj-34" : [ "env_1[1]", "live.text", 0 ],
+			"obj-13" : [ "mod_depth", "mod_depth", 0 ],
+			"obj-4" : [ "highFreq", "high", 0 ],
 			"parameterbanks" : 			{
 
 			}

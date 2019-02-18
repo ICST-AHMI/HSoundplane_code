@@ -7,7 +7,7 @@
 				"data" : 				{
 					"bandPassEnable" : [ 0.0 ],
 					"fixedFreq" : [ 100 ],
-					"gain" : [ 0.543307086614172 ],
+					"gain" : [ 1.0 ],
 					"highFreq" : [ 300.0 ],
 					"live.text" : [ 0.0 ],
 					"lowFreq" : [ 40.0 ],
