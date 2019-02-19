@@ -1,0 +1,19 @@
+{
+	"pattrstorage" : 	{
+		"name" : "preset-main",
+		"slots" : 		{
+			"1" : 			{
+				"id" : 1,
+				"data" : 				{
+					"globalTranspose" : [ 0 ],
+					"hapSelection" : [ 2 ],
+					"mainEnable" : [ 1 ]
+				}
+
+			}
+
+		}
+
+	}
+
+}
