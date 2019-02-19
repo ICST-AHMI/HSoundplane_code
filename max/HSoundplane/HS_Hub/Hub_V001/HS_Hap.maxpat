@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 0,
-			"revision" : 3,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 382.0, 45.0, 432.0, 464.0 ],
+		"rect" : [ 382.0, 45.0, 432.0, 451.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -74,7 +74,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 0,
-							"revision" : 3,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -416,7 +416,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 0,
-							"revision" : 3,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -607,7 +607,7 @@
 					"outlettype" : [ "float" ],
 					"patching_rect" : [ 57.0, 518.0, 56.0, 87.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 317.5, 142.0, 98.5, 300.0 ]
+					"presentation_rect" : [ 317.5, 142.0, 98.5, 288.0 ]
 				}
 
 			}
@@ -623,7 +623,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 0,
-							"revision" : 3,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1146,12 +1146,12 @@
 					"patching_rect" : [ 672.0, 38.0, 56.0, 22.0 ],
 					"restore" : 					{
 						"globalTranspose" : [ 0 ],
-						"hapSelection" : [ 2 ],
-						"mainEnable" : [ 1 ]
+						"hapSelection" : [ 0 ],
+						"mainEnable" : [ 0 ]
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u092014663"
+					"varname" : "u736004645"
 				}
 
 			}
@@ -1216,7 +1216,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 0,
-							"revision" : 3,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1894,10 +1894,10 @@
 					"name" : "Hap_skins.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"offset" : [ -600.0, 0.0 ],
+					"offset" : [ 0.0, 0.0 ],
 					"patching_rect" : [ 470.0, 115.0, 304.0, 430.5 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 11.0, 34.0, 298.0, 413.281036376953125 ],
+					"presentation_rect" : [ 11.0, 34.0, 298.0, 402.281036376953125 ],
 					"varname" : "functions",
 					"viewvisibility" : 1
 				}
@@ -1917,7 +1917,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 121.5, 495.0, 52.5, 67.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 312.0, 82.0, 111.0, 365.281036376953125 ],
+					"presentation_rect" : [ 312.0, 82.0, 111.0, 354.281036376953125 ],
 					"proportion" : 0.5
 				}
 
@@ -2155,25 +2155,25 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-40::obj-5::obj-16" : [ "gain[4]", "gain", 0 ],
+			"obj-40::obj-5::obj-13" : [ "mod_depth[4]", "mod_depth", 0 ],
+			"obj-40::obj-2::obj-13" : [ "mod_depth[2]", "mod_depth", 0 ],
 			"obj-40::obj-5::obj-4" : [ "highFreq[4]", "high", 0 ],
+			"obj-40::obj-4::obj-12" : [ "lowFreq", "low", 0 ],
+			"obj-40::obj-5::obj-34" : [ "env_1[5]", "live.text", 0 ],
+			"obj-40::obj-2::obj-4" : [ "highFreq[2]", "high", 0 ],
+			"obj-40::obj-4::obj-60" : [ "env_1", "live.text", 0 ],
+			"obj-40::obj-5::obj-2" : [ "freqShiftEnable", "freqShiftEnable", 0 ],
+			"obj-40::obj-5::obj-16" : [ "gain[4]", "gain", 0 ],
+			"obj-40::obj-2::obj-60" : [ "env_1[2]", "live.text", 0 ],
+			"obj-40::obj-4::obj-16" : [ "gain", "gain", 0 ],
+			"obj-40::obj-4::obj-13" : [ "mod_depth", "mod_depth", 0 ],
+			"obj-40::obj-2::obj-16" : [ "gain[2]", "gain", 0 ],
+			"obj-40::obj-5::obj-12" : [ "lowFreq[4]", "low", 0 ],
+			"obj-40::obj-4::obj-4" : [ "highFreq", "high", 0 ],
+			"obj-40::obj-2::obj-34" : [ "env_1[1]", "live.text", 0 ],
 			"obj-40::obj-2::obj-2" : [ "pitchTrackEnable[1]", "pitchTrackEnable", 0 ],
 			"obj-40::obj-5::obj-60" : [ "env_1[4]", "live.text", 0 ],
-			"obj-40::obj-4::obj-16" : [ "gain", "gain", 0 ],
-			"obj-40::obj-2::obj-16" : [ "gain[2]", "gain", 0 ],
-			"obj-40::obj-5::obj-13" : [ "mod_depth[4]", "mod_depth", 0 ],
 			"obj-40::obj-2::obj-12" : [ "lowFreq[2]", "low", 0 ],
-			"obj-40::obj-4::obj-12" : [ "lowFreq", "low", 0 ],
-			"obj-40::obj-5::obj-2" : [ "freqShiftEnable", "freqShiftEnable", 0 ],
-			"obj-40::obj-2::obj-60" : [ "env_1[2]", "live.text", 0 ],
-			"obj-40::obj-5::obj-12" : [ "lowFreq[4]", "low", 0 ],
-			"obj-40::obj-5::obj-34" : [ "env_1[5]", "live.text", 0 ],
-			"obj-40::obj-2::obj-13" : [ "mod_depth[2]", "mod_depth", 0 ],
-			"obj-40::obj-4::obj-4" : [ "highFreq", "high", 0 ],
-			"obj-40::obj-2::obj-4" : [ "highFreq[2]", "high", 0 ],
-			"obj-40::obj-4::obj-13" : [ "mod_depth", "mod_depth", 0 ],
-			"obj-40::obj-2::obj-34" : [ "env_1[1]", "live.text", 0 ],
-			"obj-40::obj-4::obj-60" : [ "env_1", "live.text", 0 ],
 			"obj-40::obj-4::obj-34" : [ "env_1[6]", "live.text", 0 ],
 			"parameterbanks" : 			{
 
@@ -2183,91 +2183,91 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "Hap_skins.maxpat",
-				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
+				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "skin_sine.maxpat",
-				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
+				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "preset-sine.json",
-				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
+				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "skin_noise.maxpat",
-				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
+				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "preset-noise.json",
-				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
+				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "skin_mix.maxpat",
-				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
+				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "preset-mix.json",
-				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
+				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "model_sine.maxpat",
-				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
+				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "bp10~.maxpat",
-				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/_package/HSoundPlane/patchers",
+				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/_package/HSoundPlane/patchers",
 				"patcherrelativepath" : "../../_package/HSoundPlane/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "lowboost~.maxpat",
-				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/_package/HSoundPlane/patchers",
+				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/_package/HSoundPlane/patchers",
 				"patcherrelativepath" : "../../_package/HSoundPlane/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "model_noise.maxpat",
-				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
+				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "model_mix.maxpat",
-				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
+				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "preset-main.json",
-				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
+				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
