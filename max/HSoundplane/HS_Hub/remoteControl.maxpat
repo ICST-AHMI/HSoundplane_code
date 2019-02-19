@@ -39,6 +39,43 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-13",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 587.0, 186.0, 108.0, 22.0 ],
+					"presentation_linecount" : 2,
+					"text" : "/HS_Hub/log/close"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-7",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 488.0, 186.0, 97.0, 22.0 ],
+					"text" : "/HS_Hub/log/rec"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 227.0, 186.0, 255.0, 22.0 ],
+					"text" : "/HS_Hub/log/write /Users/ahmi/Desktop/log.txt"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-15",
 					"items" : [ "sine", ",", "noise", ",", "audio" ],
 					"maxclass" : "umenu",
@@ -110,7 +147,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 410.0, 91.0, 143.0, 22.0 ],
-					"presentation_linecount" : 2,
 					"text" : "/HS_Hap/noise/preset $1"
 				}
 
@@ -137,7 +173,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 262.0, 91.0, 136.0, 22.0 ],
-					"presentation_linecount" : 2,
 					"text" : "/HS_Hap/sine/preset $1"
 				}
 
@@ -172,7 +207,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 25.0, 184.0, 138.0, 22.0 ],
+					"patching_rect" : [ 25.0, 219.0, 138.0, 22.0 ],
 					"text" : "udpsend 127.0.0.1 5123"
 				}
 
@@ -202,6 +237,13 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-13", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
 					"source" : [ "obj-14", 0 ]
 				}
 
@@ -222,6 +264,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-3", 0 ],
 					"source" : [ "obj-5", 0 ]
 				}
@@ -231,6 +280,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
 					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-7", 0 ]
 				}
 
 			}
