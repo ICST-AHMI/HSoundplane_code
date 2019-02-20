@@ -29,13 +29,15 @@ function list()
 	
 	if(channelIn[chOut] == chIn){
 		channelMix[chOut] = chMix;
-		outlet(0, channelIn[chOut], chOut, channelMix[chOut]);	
+		outlet(0, channelIn[chOut], chOut, (channelMix[chOut] > 0.)?1.:0.);	
+//		outlet(0, channelIn[chOut], chOut, channelMix[chOut]);	
 //		if(chMix == 0.)
 //			channelIn[chOut] = -1;
 	} else if(channelMix[chOut] < chMix){
 		outlet(0, channelIn[chOut], chOut, 0.);	
 		channelMix[chOut] = chMix;
 		channelIn[chOut] = chIn;
-		outlet(0, channelIn[chOut], chOut, channelMix[chOut]);	
+		outlet(0, channelIn[chOut], chOut, (channelMix[chOut] > 0.)?1.:0.);	
+//		outlet(0, channelIn[chOut], chOut, channelMix[chOut]);	
 	}
 }

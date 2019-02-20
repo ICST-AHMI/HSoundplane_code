@@ -7,7 +7,7 @@
 				"data" : 				{
 					"globalTranspose" : [ 0 ],
 					"hapSelection" : [ 0 ],
-					"mainEnable" : [ 0 ]
+					"mainEnable" : [ 1 ]
 				}
 
 			}

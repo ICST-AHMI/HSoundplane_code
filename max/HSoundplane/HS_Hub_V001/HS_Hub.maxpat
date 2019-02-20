@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 0,
-			"revision" : 0,
+			"revision" : 3,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 49.0, 45.0, 329.0, 486.0 ],
+		"rect" : [ 49.0, 45.0, 327.0, 482.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -38,6 +38,30 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-8",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 81.718162536621094, 39.20001220703125, 46.0, 22.0 ],
+					"text" : "port 10"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 81.718162536621094, 11.0, 63.0, 22.0 ],
+					"text" : "closebang"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"bgcolor" : [ 0.2, 0.2, 0.2, 0.0 ],
 					"hint" : "recording indicator",
@@ -110,7 +134,7 @@
 					"patching_rect" : [ 67.183258056640625, 677.0, 482.0833740234375, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 5.0, 452.70001220703125, 316.718170166015625, 22.0 ],
-					"text" : "test.txt"
+					"text" : "/Users/ahmi/Desktop/log.txt"
 				}
 
 			}
@@ -153,7 +177,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 0,
-							"revision" : 0,
+							"revision" : 3,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1044,7 +1068,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 0,
-							"revision" : 0,
+							"revision" : 3,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1454,13 +1478,13 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 0,
-							"revision" : 0,
+							"revision" : 3,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 57.0, 212.0, 628.0, 617.0 ],
+						"rect" : [ 71.0, 487.0, 628.0, 617.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1489,6 +1513,18 @@
 						"subpatcher_template" : "",
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-30",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 394.0, 19.0, 73.0, 22.0 ],
+									"text" : "r framebang"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"comment" : "",
 									"id" : "obj-24",
 									"index" : 3,
@@ -1509,7 +1545,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 1,
 									"outlettype" : [ "multichannelsignal" ],
-									"patching_rect" : [ 217.888946533203125, 274.5, 279.93536376953125, 23.0 ],
+									"patching_rect" : [ 217.888946533203125, 363.5, 279.93536376953125, 23.0 ],
 									"text" : "mc.combine~ 3"
 								}
 
@@ -1520,7 +1556,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 217.888946533203125, 358.0, 54.0, 22.0 ],
+									"patching_rect" : [ 217.888946533203125, 447.0, 54.0, 22.0 ],
 									"text" : "mc.dac~"
 								}
 
@@ -1532,7 +1568,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "multichannelsignal", "list" ],
-									"patching_rect" : [ 348.35662841796875, 190.0, 120.0, 22.0 ],
+									"patching_rect" : [ 348.35662841796875, 279.0, 120.0, 22.0 ],
 									"text" : "mcs.matrix~ 10 30 1."
 								}
 
@@ -1545,7 +1581,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 304.833404541015625, 358.0, 30.0, 30.0 ]
+									"patching_rect" : [ 304.833404541015625, 447.0, 30.0, 30.0 ]
 								}
 
 							}
@@ -1556,7 +1592,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "signal" ],
-									"patching_rect" : [ 478.7086181640625, 190.0, 117.0, 22.0 ],
+									"patching_rect" : [ 478.7086181640625, 279.0, 117.0, 22.0 ],
 									"text" : "receive~ audioRight"
 								}
 
@@ -1568,7 +1604,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "signal" ],
-									"patching_rect" : [ 218.0, 190.0, 109.0, 22.0 ],
+									"patching_rect" : [ 218.0, 279.0, 109.0, 22.0 ],
 									"text" : "receive~ audioLeft"
 								}
 
@@ -1580,7 +1616,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 348.35662841796875, 46.0, 115.0, 22.0 ],
+									"patching_rect" : [ 348.35662841796875, 49.0, 115.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"filename" : "uniqueChannel.js",
 										"parameter_enable" : 0
@@ -1602,7 +1638,7 @@
 										"appversion" : 										{
 											"major" : 8,
 											"minor" : 0,
-											"revision" : 0,
+											"revision" : 3,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -1767,9 +1803,9 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "list", "list" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 10.833344459533691, 118.0, 160.0, 480.0 ],
+									"patching_rect" : [ 10.833344459533691, 118.0, 162.0, 482.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 39.833343505859375, 124.0, 160.0, 480.0 ],
+									"presentation_rect" : [ 39.833343505859375, 124.0, 162.0, 482.0 ],
 									"range" : 11,
 									"rows" : 30
 								}
@@ -1960,7 +1996,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 0,
-							"revision" : 0,
+							"revision" : 3,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -2012,7 +2048,7 @@
 										"appversion" : 										{
 											"major" : 8,
 											"minor" : 0,
-											"revision" : 0,
+											"revision" : 3,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -2595,7 +2631,7 @@
 										"appversion" : 										{
 											"major" : 8,
 											"minor" : 0,
-											"revision" : 0,
+											"revision" : 3,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -2828,7 +2864,7 @@
 										"appversion" : 										{
 											"major" : 8,
 											"minor" : 0,
-											"revision" : 0,
+											"revision" : 3,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -3595,6 +3631,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-8", 0 ],
+					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-25", 1 ],
 					"order" : 0,
 					"source" : [ "obj-30", 0 ]
@@ -3686,39 +3729,46 @@
 				}
 
 			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-8", 0 ]
+				}
+
+			}
  ],
 		"dependency_cache" : [ 			{
 				"name" : "weight.mapper.js",
-				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub_V001",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mapper.maxpat",
-				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub_V001",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mapper.js",
-				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub_V001",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "uniqueChannel.js",
-				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub_V001",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "HSoundPlane_serial.maxpat",
-				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/_package/HSoundPlane/patchers",
-				"patcherrelativepath" : "../../_package/HSoundPlane/patchers",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/_package/HSoundPlane/patchers",
+				"patcherrelativepath" : "../_package/HSoundPlane/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
