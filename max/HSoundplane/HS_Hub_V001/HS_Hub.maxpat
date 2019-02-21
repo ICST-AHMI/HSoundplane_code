@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 49.0, 45.0, 327.0, 482.0 ],
+		"rect" : [ 49.0, 45.0, 329.0, 482.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -38,6 +38,66 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-26",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 379.0, 495.0, 79.0, 22.0 ],
+					"text" : "prepend load"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-13",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 379.0, 466.0, 403.0, 22.0 ],
+					"text" : "getRelativePath ../../Thomas/synths/soundplane_synthplayer.maxpat"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-11",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 90.0, 495.0, 79.0, 22.0 ],
+					"text" : "prepend load"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-9",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 90.0, 522.0, 51.0, 22.0 ],
+					"text" : "pcontrol"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 90.0, 466.0, 278.0, 22.0 ],
+					"text" : "getRelativePath ../HS_Hap_V001/HS_Hap.maxpat"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-8",
 					"maxclass" : "message",
@@ -85,7 +145,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 242.7249755859375, 572.0, 285.0, 20.0 ],
+					"patching_rect" : [ 243.144668579101562, 577.29998779296875, 285.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 5.0, 404.0, 147.0, 20.0 ],
 					"text" : "Logging soundplane data:"
@@ -101,7 +161,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 216.436325073242188, 530.70001220703125, 24.0, 24.0 ],
+					"patching_rect" : [ 216.85601806640625, 543.0, 24.0, 24.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 100.436325073242188, 428.70001220703125, 20.0, 20.0 ]
 				}
@@ -116,7 +176,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 142.266632080078125, 533.70001220703125, 67.0, 21.0 ],
+					"patching_rect" : [ 142.686325073242188, 546.0, 67.0, 21.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 5.0, 428.70001220703125, 90.0, 20.0 ],
 					"text" : "write"
@@ -846,7 +906,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 166.266632080078125, 565.0, 57.0, 22.0 ],
+					"patching_rect" : [ 166.686325073242188, 577.29998779296875, 57.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -865,20 +925,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 396.0, 455.0, 51.0, 22.0 ],
+					"patching_rect" : [ 379.0, 522.0, 51.0, 22.0 ],
 					"text" : "pcontrol"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-26",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 396.0, 424.0, 165.0, 22.0 ],
-					"text" : "load soundplane_synthplayer"
 				}
 
 			}
@@ -890,7 +938,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 396.0, 395.70001220703125, 100.0, 20.0 ],
+					"patching_rect" : [ 379.0, 438.70001220703125, 100.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 163.0, 331.70001220703125, 157.0, 20.0 ],
 					"text" : "open AUDIO"
@@ -908,7 +956,7 @@
 					"offcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 336.0, 520.0, 24.0, 24.0 ],
+					"patching_rect" : [ 290.0, 396.70001220703125, 24.0, 24.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 5.0, 378.0, 21.0, 21.0 ]
 				}
@@ -925,7 +973,7 @@
 					"offcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ],
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 336.0, 494.0, 24.0, 24.0 ],
+					"patching_rect" : [ 290.0, 370.70001220703125, 24.0, 24.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 5.0, 355.0, 21.0, 21.0 ]
 				}
@@ -937,7 +985,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 369.7249755859375, 525.0, 285.0, 20.0 ],
+					"patching_rect" : [ 323.7249755859375, 401.70001220703125, 285.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 30.0, 379.0, 290.0, 20.0 ],
 					"text" : "listening to port 5123 to receive remote control OSC"
@@ -950,7 +998,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 365.0, 498.0, 285.0, 20.0 ],
+					"patching_rect" : [ 319.0, 374.70001220703125, 285.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 30.0, 356.0, 290.0, 20.0 ],
 					"text" : "listening to port 3123 to receive Soundplane OSC"
@@ -963,7 +1011,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 580.7181396484375, 439.0, 73.0, 22.0 ],
+					"patching_rect" : [ 373.0, 47.0, 73.0, 22.0 ],
 					"text" : "s osccontrol"
 				}
 
@@ -977,20 +1025,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 580.7181396484375, 410.0, 97.0, 22.0 ],
+					"patching_rect" : [ 373.0, 18.0, 97.0, 22.0 ],
 					"text" : "udpreceive 5123"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-6",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 287.0, 424.0, 80.0, 22.0 ],
-					"text" : "load HS_Hap"
 				}
 
 			}
@@ -1002,22 +1038,10 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 287.0, 395.70001220703125, 100.0, 20.0 ],
+					"patching_rect" : [ 90.0, 438.70001220703125, 100.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 5.0, 331.70001220703125, 157.0, 20.0 ],
 					"text" : "open HAPTICS"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-1",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 287.0, 455.0, 51.0, 22.0 ],
-					"text" : "pcontrol"
 				}
 
 			}
@@ -3571,6 +3595,20 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
+					"destination" : [ "obj-9", 0 ],
+					"source" : [ "obj-11", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-26", 0 ],
+					"source" : [ "obj-13", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-33", 0 ],
 					"order" : 1,
 					"source" : [ "obj-2", 0 ]
@@ -3594,7 +3632,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-26", 0 ],
+					"destination" : [ "obj-13", 0 ],
 					"source" : [ "obj-24", 0 ]
 				}
 
@@ -3717,7 +3755,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
+					"destination" : [ "obj-11", 0 ],
 					"source" : [ "obj-6", 0 ]
 				}
 
@@ -3769,6 +3807,13 @@
 				"name" : "HSoundPlane_serial.maxpat",
 				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/_package/HSoundPlane/patchers",
 				"patcherrelativepath" : "../_package/HSoundPlane/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "getRelativePath.maxpat",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hap_V001",
+				"patcherrelativepath" : "../HS_Hap_V001",
 				"type" : "JSON",
 				"implicit" : 1
 			}

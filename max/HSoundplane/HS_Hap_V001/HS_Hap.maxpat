@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 0,
-			"revision" : 4,
+			"revision" : 3,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -74,7 +74,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 0,
-							"revision" : 4,
+							"revision" : 3,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -393,7 +393,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 481.0, 82.0, 282.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"client_rect" : [ 4, 44, 358, 172 ],
+						"client_rect" : [ 4, 45, 828, 313 ],
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0,
 						"storage_rect" : [ 583, 69, 1034, 197 ]
@@ -416,7 +416,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 0,
-							"revision" : 4,
+							"revision" : 3,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -623,7 +623,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 0,
-							"revision" : 4,
+							"revision" : 3,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1147,11 +1147,11 @@
 					"restore" : 					{
 						"globalTranspose" : [ 0 ],
 						"hapSelection" : [ 0 ],
-						"mainEnable" : [ 0 ]
+						"mainEnable" : [ 1 ]
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u736004645"
+					"varname" : "u656013637"
 				}
 
 			}
@@ -1216,7 +1216,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 0,
-							"revision" : 4,
+							"revision" : 3,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1250,6 +1250,18 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-7",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 251.708404541015625, 243.0, 39.0, 22.0 ],
+									"text" : "round"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"comment" : "",
 									"id" : "obj-5",
@@ -1417,7 +1429,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 301.208412170410156, 243.0, 50.0, 22.0 ]
+									"patching_rect" : [ 251.708404541015625, 275.0, 50.0, 22.0 ]
 								}
 
 							}
@@ -1677,26 +1689,9 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-3", 0 ],
-									"midpoints" : [ 208.843849182128906, 232.5, 291.208412170410156, 232.5 ],
-									"order" : 1,
-									"source" : [ "obj-44", 3 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
 									"destination" : [ "obj-46", 0 ],
 									"order" : 0,
 									"source" : [ "obj-44", 7 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-47", 0 ],
-									"order" : 0,
-									"source" : [ "obj-44", 3 ]
 								}
 
 							}
@@ -1726,9 +1721,24 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-7", 0 ],
+									"midpoints" : [ 208.843849182128906, 232.5, 261.208404541015625, 232.5 ],
+									"source" : [ "obj-44", 3 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-9", 0 ],
 									"order" : 0,
 									"source" : [ "obj-44", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-3", 0 ],
+									"source" : [ "obj-47", 0 ]
 								}
 
 							}
@@ -1759,6 +1769,13 @@
 								"patchline" : 								{
 									"destination" : [ "obj-1", 0 ],
 									"source" : [ "obj-6", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-47", 0 ],
+									"source" : [ "obj-7", 0 ]
 								}
 
 							}
@@ -2124,8 +2141,8 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-17", 0 ],
-					"midpoints" : [ 22.0, 391.0, 341.166656494140625, 391.0 ],
+					"destination" : [ "obj-1", 0 ],
+					"midpoints" : [ 22.0, 391.0, 45.5, 391.0 ],
 					"source" : [ "obj-80", 0 ]
 				}
 
@@ -2155,26 +2172,22 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-40::obj-5::obj-13" : [ "mod_depth[4]", "mod_depth", 0 ],
-			"obj-40::obj-2::obj-13" : [ "mod_depth[2]", "mod_depth", 0 ],
+			"obj-40::obj-5::obj-12" : [ "lowFreq[4]", "low", 0 ],
+			"obj-40::obj-4::obj-16" : [ "gain", "gain", 0 ],
+			"obj-40::obj-2::obj-2" : [ "pitchTrackEnable[1]", "pitchTrackEnable", 0 ],
+			"obj-40::obj-4::obj-4" : [ "highFreq", "high", 0 ],
 			"obj-40::obj-5::obj-4" : [ "highFreq[4]", "high", 0 ],
+			"obj-40::obj-2::obj-34" : [ "env_1[1]", "live.text", 0 ],
+			"obj-40::obj-2::obj-60" : [ "env_1[2]", "live.text", 0 ],
+			"obj-40::obj-4::obj-34" : [ "env_1[6]", "live.text", 0 ],
+			"obj-40::obj-5::obj-60" : [ "env_1[4]", "live.text", 0 ],
+			"obj-40::obj-2::obj-12" : [ "lowFreq[2]", "low", 0 ],
 			"obj-40::obj-4::obj-12" : [ "lowFreq", "low", 0 ],
 			"obj-40::obj-5::obj-34" : [ "env_1[5]", "live.text", 0 ],
 			"obj-40::obj-2::obj-4" : [ "highFreq[2]", "high", 0 ],
-			"obj-40::obj-4::obj-60" : [ "env_1", "live.text", 0 ],
 			"obj-40::obj-5::obj-2" : [ "freqShiftEnable", "freqShiftEnable", 0 ],
 			"obj-40::obj-5::obj-16" : [ "gain[4]", "gain", 0 ],
-			"obj-40::obj-2::obj-60" : [ "env_1[2]", "live.text", 0 ],
-			"obj-40::obj-4::obj-16" : [ "gain", "gain", 0 ],
-			"obj-40::obj-4::obj-13" : [ "mod_depth", "mod_depth", 0 ],
 			"obj-40::obj-2::obj-16" : [ "gain[2]", "gain", 0 ],
-			"obj-40::obj-5::obj-12" : [ "lowFreq[4]", "low", 0 ],
-			"obj-40::obj-4::obj-4" : [ "highFreq", "high", 0 ],
-			"obj-40::obj-2::obj-34" : [ "env_1[1]", "live.text", 0 ],
-			"obj-40::obj-2::obj-2" : [ "pitchTrackEnable[1]", "pitchTrackEnable", 0 ],
-			"obj-40::obj-5::obj-60" : [ "env_1[4]", "live.text", 0 ],
-			"obj-40::obj-2::obj-12" : [ "lowFreq[2]", "low", 0 ],
-			"obj-40::obj-4::obj-34" : [ "env_1[6]", "live.text", 0 ],
 			"parameterbanks" : 			{
 
 			}
@@ -2183,91 +2196,77 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "Hap_skins.maxpat",
-				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hap_V001",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "skin_sine.maxpat",
-				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hap_V001",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "preset-sine.json",
-				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hap_V001",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "skin_noise.maxpat",
-				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hap_V001",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "preset-noise.json",
-				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hap_V001",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "skin_mix.maxpat",
-				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "preset-mix.json",
-				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hap_V001",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "model_sine.maxpat",
-				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hap_V001",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "bp10~.maxpat",
-				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/_package/HSoundPlane/patchers",
-				"patcherrelativepath" : "../../_package/HSoundPlane/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "lowboost~.maxpat",
-				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/_package/HSoundPlane/patchers",
-				"patcherrelativepath" : "../../_package/HSoundPlane/patchers",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/_package/HSoundPlane/patchers",
+				"patcherrelativepath" : "../_package/HSoundPlane/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "model_noise.maxpat",
-				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hap_V001",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "model_mix.maxpat",
-				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hap_V001",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "preset-main.json",
-				"bootpath" : "~/Arbeiten/01_projekte/150914_ICST/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub/Hub_V001",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hap_V001",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
