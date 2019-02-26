@@ -45,14 +45,14 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 156.0, 640.0, 185.0, 22.0 ],
-					"restore" : [ 0 ],
+					"restore" : [ 0.0 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
 					}
 ,
 					"text" : "pattr @bindto ::skin_filtAmp::gain",
-					"varname" : "u112006644"
+					"varname" : "u920013870"
 				}
 
 			}
@@ -111,14 +111,14 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 93.5, 148.0, 230.0, 22.0 ],
-					"restore" : [ 0 ],
+					"restore" : [ 0.0 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
 					}
 ,
 					"text" : "pattr @bindto ::skin_filtAmp::transposition",
-					"varname" : "u379006646"
+					"varname" : "u986013872"
 				}
 
 			}
@@ -153,8 +153,8 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 682.0, 483.0, 80.0, 22.0 ],
-					"text" : "slide~ 10 441"
+					"patching_rect" : [ 682.0, 483.0, 87.0, 22.0 ],
+					"text" : "slide~ 250 441"
 				}
 
 			}
@@ -178,14 +178,14 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 111.0, 217.0, 195.0, 22.0 ],
-					"restore" : [ 0 ],
+					"restore" : [ 0.0 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
 					}
 ,
 					"text" : "pattr @bindto ::skin_filtAmp::env_2",
-					"varname" : "u636006648"
+					"varname" : "u126013874"
 				}
 
 			}
@@ -197,14 +197,14 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 405.0, 217.0, 227.0, 22.0 ],
-					"restore" : [ 0 ],
+					"restore" : [ 50.0 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
 					}
 ,
 					"text" : "pattr @bindto ::skin_filtAmp::FilterFreq_2",
-					"varname" : "u063006650"
+					"varname" : "u601013876"
 				}
 
 			}
@@ -216,14 +216,14 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 246.0, 378.0, 215.0, 22.0 ],
-					"restore" : [ 0 ],
+					"restore" : [ 5.0 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
 					}
 ,
 					"text" : "pattr @bindto ::skin_filtAmp::release_2",
-					"varname" : "u385006652"
+					"varname" : "u868013878"
 				}
 
 			}
@@ -235,14 +235,14 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 219.666656494140625, 353.0, 207.0, 22.0 ],
-					"restore" : [ 0 ],
+					"restore" : [ 5.0 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
 					}
 ,
 					"text" : "pattr @bindto ::skin_filtAmp::attack_2",
-					"varname" : "u705006654"
+					"varname" : "u127013880"
 				}
 
 			}
@@ -760,10 +760,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 96.0, 757.0, 42.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"attr_comment" : ""
-					}
-,
 					"text" : "out~ 1"
 				}
 
@@ -812,10 +808,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 96.0, 23.0, 28.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"attr_comment" : ""
-					}
-,
 					"text" : "in 1"
 				}
 

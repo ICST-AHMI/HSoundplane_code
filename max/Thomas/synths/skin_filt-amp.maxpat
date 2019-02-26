@@ -37,7 +37,7 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
-		"globalpatchername" : "skin_filtAmp",
+		"globalpatchername" : "skin_filtAmp[1]",
 		"boxes" : [ 			{
 				"box" : 				{
 					"format" : 6,
@@ -99,37 +99,6 @@
 ,
 					"text" : "pattr fa_revDryWet @bindto ::main::rev_dryWet",
 					"varname" : "fa_revDryWet"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-25",
-					"maxclass" : "number",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 512.0, 455.0, 50.0, 22.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-23",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 512.0, 428.0, 261.0, 22.0 ],
-					"restore" : [ 1 ],
-					"saved_object_attributes" : 					{
-						"parameter_enable" : 0,
-						"parameter_mappable" : 0
-					}
-,
-					"text" : "pattr fa_revOnOff @bindto ::main::rev_onOff",
-					"varname" : "fa_revOnOff"
 				}
 
 			}
@@ -285,16 +254,16 @@
 					"restore" : 					{
 						"FilterFreq_2" : [ 50.0 ],
 						"amp_func_2" : [ 1000.0, 0.0, 1.0, 0.0, 0.0, 0, 215.51724200000001, 0.54, 0, 642.241394000000014, 0.68, 0, 1000.0, 1.0, 0, "linear" ],
-						"attack_2" : [ 0.0 ],
+						"attack_2" : [ 5.0 ],
 						"env_2" : [ 0.0 ],
 						"filterfreq_func_2" : [ 1000.0, 0.0, 1.0, 0.0, 0.0, 0, 224.137923999999998, 0.42, 0, 383.620697000000007, 0.48, 0, 655.172423999999978, 0.86, 0, 1000.0, 1.0, 0, "linear" ],
 						"gain" : [ 0.0 ],
-						"release_2" : [ 0.0 ],
+						"release_2" : [ 5.0 ],
 						"transposition" : [ 0.0 ]
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u741002798"
+					"varname" : "u758009551"
 				}
 
 			}
@@ -447,11 +416,11 @@
 					"presentation_rect" : [ 24.75, 215.0, 44.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_enum" : [ "val1", "val2" ],
 							"parameter_type" : 2,
 							"parameter_longname" : "env_3[1]",
 							"parameter_mmax" : 1.0,
-							"parameter_shortname" : "live.text",
-							"parameter_enum" : [ "val1", "val2" ]
+							"parameter_shortname" : "live.text"
 						}
 
 					}
@@ -479,6 +448,7 @@
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 2,
 							"parameter_linknames" : 1,
+							"parameter_mmin" : 5.0,
 							"parameter_longname" : "release_2",
 							"parameter_mmax" : 2000.0,
 							"parameter_shortname" : "release"
@@ -508,6 +478,7 @@
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 2,
 							"parameter_linknames" : 1,
+							"parameter_mmin" : 5.0,
 							"parameter_longname" : "attack_2",
 							"parameter_mmax" : 1000.0,
 							"parameter_shortname" : "attack"
@@ -761,13 +732,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-25", 0 ],
-					"source" : [ "obj-23", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-11", 0 ],
 					"source" : [ "obj-27", 0 ]
 				}
@@ -835,12 +799,12 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-26" : [ "FilterFreq_2", "FilterFreq", 0 ],
 			"obj-65" : [ "env_3[1]", "live.text", 0 ],
 			"obj-18" : [ "attack_2", "attack", 0 ],
 			"obj-12" : [ "live.gain~", "gain", 0 ],
 			"obj-15" : [ "live.numbox", "live.numbox", 0 ],
 			"obj-16" : [ "release_2", "release", 0 ],
+			"obj-26" : [ "FilterFreq_2", "FilterFreq", 0 ],
 			"parameterbanks" : 			{
 
 			}
@@ -849,7 +813,7 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "synth_filt-amp.json",
-				"bootpath" : "~/Documents/00_DOCUMENTE/02-PROJEKTE/ICST/Soundplane/HSoundplane_code/max/Thomas/synths",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/Thomas/synths",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1

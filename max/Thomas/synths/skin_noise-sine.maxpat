@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 269.0, 79.0, 998.0, 787.0 ],
+		"rect" : [ 269.0, 79.0, 978.0, 787.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -37,7 +37,7 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
-		"globalpatchername" : "skin_noise",
+		"globalpatchername" : "skin_noise[1]",
 		"boxes" : [ 			{
 				"box" : 				{
 					"format" : 6,
@@ -99,37 +99,6 @@
 ,
 					"text" : "pattr ns_revDryWet @bindto ::main::rev_dryWet",
 					"varname" : "ns_revDryWet"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-16",
-					"maxclass" : "number",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 625.0, 362.0, 50.0, 22.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-23",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 625.0, 335.0, 247.0, 22.0 ],
-					"restore" : [ 1 ],
-					"saved_object_attributes" : 					{
-						"parameter_enable" : 0,
-						"parameter_mappable" : 0
-					}
-,
-					"text" : "pattr ns_revOnOff @bindto ::main::rev_onOff",
-					"varname" : "ns_revOnOff"
 				}
 
 			}
@@ -304,16 +273,16 @@
 					"restore" : 					{
 						"NoiseAmount" : [ 0.0 ],
 						"amp_func_3" : [ 1000.0, 0.0, 1.0, 0.0, 0.0, 0, 215.51724200000001, 0.54, 0, 620.68963599999995, 0.7, 0, 1000.0, 1.0, 0, "linear" ],
-						"attack_3" : [ 0.0 ],
+						"attack_3" : [ 5.0 ],
 						"env_3" : [ 0.0 ],
 						"gain" : [ -0.000000000000014 ],
 						"noise_func" : [ 1000.0, 0.0, 1.0, 0.0, 0.0, 0, 293.103454999999997, 0.32, 0, 629.31036400000005, 0.64, 0, 1000.0, 1.0, 0, "linear" ],
-						"release_3" : [ 0.0 ],
+						"release_3" : [ 5.0 ],
 						"transposition" : [ 0.0 ]
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u235006254"
+					"varname" : "u788010295"
 				}
 
 			}
@@ -466,11 +435,11 @@
 					"presentation_rect" : [ 23.0, 212.0, 44.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_enum" : [ "val1", "val2" ],
 							"parameter_type" : 2,
 							"parameter_longname" : "env_3",
 							"parameter_mmax" : 1.0,
-							"parameter_shortname" : "live.text",
-							"parameter_enum" : [ "val1", "val2" ]
+							"parameter_shortname" : "live.text"
 						}
 
 					}
@@ -498,6 +467,7 @@
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 2,
 							"parameter_linknames" : 1,
+							"parameter_mmin" : 5.0,
 							"parameter_longname" : "release_3",
 							"parameter_mmax" : 2000.0,
 							"parameter_shortname" : "release"
@@ -527,6 +497,7 @@
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 2,
 							"parameter_linknames" : 1,
+							"parameter_mmin" : 5.0,
 							"parameter_longname" : "attack_3",
 							"parameter_mmax" : 1000.0,
 							"parameter_shortname" : "attack"
@@ -760,13 +731,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-16", 0 ],
-					"source" : [ "obj-23", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-58", 0 ],
 					"source" : [ "obj-25", 3 ]
 				}
@@ -834,12 +798,12 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-29" : [ "NoiseAmount", "NoiseAmount", 0 ],
-			"obj-46" : [ "release_3", "release", 0 ],
 			"obj-56" : [ "attack_3", "attack", 0 ],
 			"obj-10" : [ "live.gain~", "gain", 0 ],
 			"obj-15" : [ "live.numbox", "live.numbox", 0 ],
 			"obj-68" : [ "env_3", "live.text", 0 ],
+			"obj-29" : [ "NoiseAmount", "NoiseAmount", 0 ],
+			"obj-46" : [ "release_3", "release", 0 ],
 			"parameterbanks" : 			{
 
 			}
@@ -848,7 +812,7 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "synth_noise-tone.json",
-				"bootpath" : "~/Documents/00_DOCUMENTE/02-PROJEKTE/ICST/Soundplane/HSoundplane_code/max/Thomas/synths",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/Thomas/synths",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1

@@ -64,7 +64,7 @@
 					}
 ,
 					"text" : "pattr @bindto ::skin_noise::gain",
-					"varname" : "u786003842"
+					"varname" : "u503014388"
 				}
 
 			}
@@ -118,7 +118,7 @@
 					}
 ,
 					"text" : "pattr @bindto ::skin_noise::transposition",
-					"varname" : "u418003844"
+					"varname" : "u764014390"
 				}
 
 			}
@@ -153,8 +153,8 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 682.0, 499.0, 80.0, 22.0 ],
-					"text" : "slide~ 10 441"
+					"patching_rect" : [ 682.0, 499.0, 87.0, 22.0 ],
+					"text" : "slide~ 250 441"
 				}
 
 			}
@@ -185,7 +185,7 @@
 					}
 ,
 					"text" : "pattr @bindto ::skin_noise::env_3",
-					"varname" : "u054003846"
+					"varname" : "u071014392"
 				}
 
 			}
@@ -204,7 +204,7 @@
 					}
 ,
 					"text" : "pattr @bindto ::skin_noise::NoiseAmount",
-					"varname" : "u779003848"
+					"varname" : "u102014394"
 				}
 
 			}
@@ -223,7 +223,7 @@
 					}
 ,
 					"text" : "pattr @bindto ::skin_noise::release_3",
-					"varname" : "u814003850"
+					"varname" : "u952014396"
 				}
 
 			}
@@ -242,7 +242,7 @@
 					}
 ,
 					"text" : "pattr @bindto ::skin_noise::attack_3",
-					"varname" : "u291003852"
+					"varname" : "u740014398"
 				}
 
 			}
@@ -831,6 +831,10 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 96.0, 737.0, 42.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"attr_comment" : ""
+					}
+,
 					"text" : "out~ 1"
 				}
 
@@ -855,6 +859,10 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 96.0, 23.0, 28.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"attr_comment" : ""
+					}
+,
 					"text" : "in 1"
 				}
 
