@@ -13,7 +13,7 @@
 			<val e="SoloGroup 2" v="0.00,"/>
 			<val e="SoloGroup 3" v="0.00,"/>
 			<val e="SoloGroup 4" v="0.00,"/>
-			<val e="FaderGroup 1" v="0.00,"/>
+			<val e="FaderGroup 1" v="1.00,"/>
 			<val e="FaderGroup 2" v="0.00,"/>
 			<val e="FaderGroup 3" v="0.00,"/>
 			<val e="FaderGroup 4" v="0.00,"/>
@@ -7895,9 +7895,7 @@
 			<val e="Slider 00 140" v="0.00,"/>
 			<val e="Slider 00 141" v="0.00,"/>
 			<val e="Slider 00 142" v="0.00,"/>
-			<val e="Pan 00 142" v="-0.50,"/>
 			<val e="Slider 00 143" v="0.00,"/>
-			<val e="Pan 00 143" v="-0.50,"/>
 			<val e="Slider 00 144" v="0.00,"/>
 			<val e="Slider 00 145" v="0.00,"/>
 			<val e="Slider 00 146" v="0.00,"/>
@@ -7913,7 +7911,7 @@
 			<val e="Slider 00 156" v="0.00,"/>
 			<val e="Slider 00 157" v="0.00,"/>
 			<val e="Slider 00 158" v="0.00,"/>
-			<val e="Slider 00 159" v="0.00,"/>
+			<val e="Slider 00 159" v="-7.08,"/>
 			<val e="Slider 00 160" v="0.00,"/>
 			<val e="Slider 00 161" v="0.00,"/>
 			<val e="Slider 00 162" v="0.00,"/>
@@ -8269,7 +8267,7 @@
 			<val e="Pan 02 127" v="-1.00,"/>
 			<val e="Slider 02 128" v="0.00,"/>
 			<val e="Pan 02 128" v="-1.00,"/>
-			<val e="Group Flags 02 128" v="2.00,"/>
+			<val e="Group Flags 02 128" v="4098.00,"/>
 			<val e="Pan 02 129" v="1.00,"/>
 			<val e="Slider 02 130" v="-293.98,"/>
 			<val e="Slider 02 131" v="-293.98,"/>
@@ -8289,9 +8287,9 @@
 			<val e="Pan 02 140" v="-1.00,"/>
 			<val e="Slider 02 141" v="-293.98,"/>
 			<val e="Pan 02 141" v="-1.00,"/>
-			<val e="Slider 02 142" v="-53.78,"/>
+			<val e="Slider 02 142" v="-528.98,"/>
 			<val e="Pan 02 142" v="-1.00,"/>
-			<val e="Slider 02 143" v="-53.78,"/>
+			<val e="Slider 02 143" v="-528.98,"/>
 			<val e="Pan 02 143" v="-1.00,"/>
 			<val e="Slider 02 144" v="-293.98,"/>
 			<val e="Pan 02 144" v="-1.00,"/>
@@ -8322,7 +8320,6 @@
 			<val e="Slider 02 157" v="-293.98,"/>
 			<val e="Pan 02 157" v="-1.00,"/>
 			<val e="Pan 02 159" v="1.00,"/>
-			<val e="Group Flags 02 159" v="2.00,"/>
 			<val e="Slider 02 160" v="-293.98,"/>
 			<val e="Pan 02 160" v="-1.00,"/>
 			<val e="Slider 02 161" v="-293.98,"/>
@@ -9774,7 +9771,8 @@
 			<val e="Pan 33 156" v="1.00,"/>
 			<val e="Slider 33 157" v="-293.98,"/>
 			<val e="Pan 33 157" v="1.00,"/>
-			<val e="Slider 33 159" v="0.00,"/>
+			<val e="Slider 33 159" v="-7.08,"/>
+			<val e="Group Flags 33 159" v="4098.00,"/>
 			<val e="Slider 33 160" v="-293.98,"/>
 			<val e="Pan 33 160" v="1.00,"/>
 			<val e="Slider 33 161" v="-293.98,"/>
