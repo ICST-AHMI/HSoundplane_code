@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 28.0, 61.0, 326.0, 507.0 ],
+		"rect" : [ 30.0, 45.0, 329.0, 509.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -38,6 +38,107 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-61",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 608.266632080078125, 516.0, 107.0, 22.0 ],
+					"text" : "store 1, writeagain"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-55",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 608.266632080078125, 490.0, 56.0, 22.0 ],
+					"text" : "freebang"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-60",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 661.0, 540.0, 70.0, 22.0 ],
+					"text" : "loadmess 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-59",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 608.266632080078125, 540.0, 45.0, 22.0 ],
+					"text" : "store 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-57",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 565.0, 540.0, 34.0, 22.0 ],
+					"text" : "write"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-51",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 736.0, 27.0, 56.0, 22.0 ],
+					"restore" : 					{
+						"triggerMaxThresh" : [ 0.05 ],
+						"triggerMinThresh" : [ 0.01 ],
+						"triggerThreshTime" : [ 10 ],
+						"triggerTimeout" : [ 30 ]
+					}
+,
+					"text" : "autopattr",
+					"varname" : "u015001110"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"autorestore" : "hubstore.json",
+					"id" : "obj-40",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 565.89324951171875, 570.0, 203.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"client_rect" : [ 4, 45, 828, 313 ],
+						"parameter_enable" : 0,
+						"parameter_mappable" : 0,
+						"storage_rect" : [ 583, 69, 1034, 197 ]
+					}
+,
+					"text" : "pattrstorage hubstore @savemode 3",
+					"varname" : "hubstore"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"bgcolor" : [ 0.847058823529412, 0.847058823529412, 0.847058823529412, 1.0 ],
 					"id" : "obj-49",
@@ -202,6 +303,7 @@
 			}
 , 			{
 				"box" : 				{
+					"hint" : "Setting the trigger point for pressing. First the minimum threshold value has to be reached to trigger the threshold timer (set via threshold time). If the value after that time reaches the maximum threshold, the trigger is executed. In that case a new trigger evaluation happens only after the timeout period AND the value drops below the minimum threshold. Otherwise a new evaluation starts once the value drops below the minimum threshold.",
 					"id" : "obj-42",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -283,7 +385,7 @@
 			}
 , 			{
 				"box" : 				{
-					"hint" : "trigger timeout",
+					"hint" : "trigger timeout [ms]",
 					"id" : "obj-56",
 					"maxclass" : "number",
 					"numinlets" : 1,
@@ -292,13 +394,14 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 922.5, 97.0, 50.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 268.5, 244.0, 50.0, 22.0 ]
+					"presentation_rect" : [ 268.5, 244.0, 50.0, 22.0 ],
+					"varname" : "triggerTimeout"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"hint" : "trigger threshold time",
+					"hint" : "trigger threshold time [ms]",
 					"id" : "obj-38",
 					"maxclass" : "number",
 					"minimum" : 1,
@@ -308,7 +411,8 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 803.5, 97.0, 50.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 151.166666666666657, 244.0, 50.0, 22.0 ]
+					"presentation_rect" : [ 151.166666666666657, 244.0, 50.0, 22.0 ],
+					"varname" : "triggerThreshTime"
 				}
 
 			}
@@ -319,14 +423,15 @@
 					"id" : "obj-37",
 					"maxclass" : "flonum",
 					"maximum" : 1.0,
-					"minimum" : 0.023,
+					"minimum" : 0.01,
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 860.5, 97.0, 50.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 209.833333333333314, 244.0, 50.0, 22.0 ]
+					"presentation_rect" : [ 209.833333333333314, 244.0, 50.0, 22.0 ],
+					"varname" : "triggerMaxThresh"
 				}
 
 			}
@@ -336,7 +441,7 @@
 					"hint" : "trigger minimum threshold",
 					"id" : "obj-39",
 					"maxclass" : "flonum",
-					"maximum" : 0.047,
+					"maximum" : 0.05,
 					"minimum" : 0.0,
 					"numinlets" : 1,
 					"numoutlets" : 2,
@@ -344,7 +449,8 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 746.5, 97.0, 50.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 92.5, 244.0, 50.0, 22.0 ]
+					"presentation_rect" : [ 92.5, 244.0, 50.0, 22.0 ],
+					"varname" : "triggerMinThresh"
 				}
 
 			}
@@ -1298,7 +1404,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 323.7249755859375, 401.70001220703125, 179.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 29.718163013458252, 405.0, 178.0, 20.0 ],
+					"presentation_rect" : [ 29.718163013458252, 405.0, 179.0, 20.0 ],
 					"text" : "listening to port 5123 to receive "
 				}
 
@@ -4127,6 +4233,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-61", 0 ],
+					"source" : [ "obj-55", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
 					"source" : [ "obj-56", 0 ]
 				}
@@ -4134,8 +4247,36 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-40", 0 ],
+					"source" : [ "obj-57", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-40", 0 ],
+					"source" : [ "obj-59", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-11", 0 ],
 					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-40", 0 ],
+					"source" : [ "obj-60", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-40", 0 ],
+					"source" : [ "obj-61", 0 ]
 				}
 
 			}
@@ -4205,6 +4346,13 @@
 			}
 , 			{
 				"name" : "getRelativePath.maxpat",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub_V001",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "hubstore.json",
 				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/HSoundplane/HS_Hub_V001",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
