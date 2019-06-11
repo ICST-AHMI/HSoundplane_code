@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 0,
-			"revision" : 3,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 79.0, 1372.0, 787.0 ],
+		"rect" : [ 353.0, 105.0, 1372.0, 787.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -37,8 +37,32 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
-		"globalpatchername" : "skin_vibFilt[1]",
+		"globalpatchername" : "skin_vibFilt[1][1]",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-38",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 665.5, 630.0, 173.0, 22.0 ],
+					"text" : "route /HS_Audio/vibrato/preset"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-34",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 665.5, 598.0, 71.0, 22.0 ],
+					"text" : "r osccontrol"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"format" : 6,
 					"id" : "obj-28",
@@ -358,7 +382,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "preset", "int", "preset", "int" ],
-					"patching_rect" : [ 188.5, 646.0, 90.0, 16.0 ],
+					"patching_rect" : [ 665.5, 676.0, 90.0, 16.0 ],
 					"pattrstorage" : "synth_vib-filt",
 					"presentation" : 1,
 					"presentation_rect" : [ 67.5, 377.33984375, 90.0, 16.0 ]
@@ -389,7 +413,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u988009774"
+					"varname" : "u578012352"
 				}
 
 			}
@@ -493,7 +517,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 263.0, 592.0, 44.0, 15.0 ],
+					"patching_rect" : [ 668.0, 601.0, 44.0, 15.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 13.0, 346.0, 44.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
@@ -501,7 +525,7 @@
 							"parameter_enum" : [ "val1", "val2" ],
 							"parameter_type" : 2,
 							"parameter_longname" : "env_1",
-							"parameter_mmax" : 1.0,
+							"parameter_mmax" : 1,
 							"parameter_shortname" : "live.text"
 						}
 
@@ -1010,8 +1034,22 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-38", 0 ],
+					"source" : [ "obj-34", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-27", 0 ],
 					"source" : [ "obj-35", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-6", 0 ],
+					"source" : [ "obj-38", 0 ]
 				}
 
 			}
@@ -1045,14 +1083,14 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-27" : [ "live.gain~", "gain", 0 ],
-			"obj-12" : [ "attack_1", "attack", 0 ],
-			"obj-20" : [ "live.numbox", "live.numbox", 0 ],
 			"obj-19" : [ "FilterFreq_1", "FilterFreq", 0 ],
-			"obj-60" : [ "env_1", "live.text", 0 ],
-			"obj-4" : [ "release_1", "release", 0 ],
-			"obj-15" : [ "LFOfreq", "LFOfreq", 0 ],
 			"obj-13" : [ "mod_depth", "mod_depth", 0 ],
+			"obj-27" : [ "live.gain~", "gain", 0 ],
+			"obj-20" : [ "live.numbox", "live.numbox", 0 ],
+			"obj-15" : [ "LFOfreq", "LFOfreq", 0 ],
+			"obj-60" : [ "env_1", "live.text", 0 ],
+			"obj-12" : [ "attack_1", "attack", 0 ],
+			"obj-4" : [ "release_1", "release", 0 ],
 			"parameterbanks" : 			{
 
 			}
@@ -1093,6 +1131,15 @@
 			}
 , 			{
 				"name" : "jpatcher001",
+				"parentstyle" : "",
+				"multi" : 0
+			}
+, 			{
+				"name" : "tap",
+				"default" : 				{
+					"fontname" : [ "Lato Light" ]
+				}
+,
 				"parentstyle" : "",
 				"multi" : 0
 			}

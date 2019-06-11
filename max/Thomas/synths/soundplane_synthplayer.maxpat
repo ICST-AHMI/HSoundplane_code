@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 142.0, 79.0, 421.0, 470.0 ],
+		"rect" : [ 825.0, 49.0, 421.0, 470.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -40,6 +40,30 @@
 		"showontab" : 0,
 		"globalpatchername" : "main",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-9",
+					"maxclass" : "newobj",
+					"numinlets" : 3,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 555.0, 66.0, 223.0, 22.0 ],
+					"text" : "route /HS_Audio/enable /HS_Audio/type"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-35",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 555.0, 34.0, 71.0, 22.0 ],
+					"text" : "r osccontrol"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-48",
 					"maxclass" : "live.dial",
@@ -196,12 +220,12 @@
 					"patching_rect" : [ 869.0, 105.0, 56.0, 22.0 ],
 					"restore" : 					{
 						"live.gain~[1]" : [ 0.015748031496045 ],
-						"rev_decay" : [ 0.220472440944882 ],
-						"rev_dryWet" : [ 1.0 ]
+						"rev_decay" : [ 0.125984251968504 ],
+						"rev_dryWet" : [ 0.322834645669291 ]
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u977017787"
+					"varname" : "u048010043"
 				}
 
 			}
@@ -6251,6 +6275,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-9", 0 ],
+					"source" : [ "obj-35", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-39", 0 ],
 					"source" : [ "obj-37", 0 ]
 				}
@@ -6428,54 +6459,75 @@
 				}
 
 			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-49", 0 ],
+					"source" : [ "obj-9", 1 ]
+				}
+
+			}
  ],
 		"parameters" : 		{
+			"obj-40::obj-5::obj-15" : [ "live.numbox[3]", "live.numbox", 0 ],
 			"obj-40::obj-2::obj-19" : [ "FilterFreq_1", "FilterFreq", 0 ],
-			"obj-48" : [ "decay", "decay", 0 ],
-			"obj-40::obj-5::obj-29" : [ "NoiseAmount", "NoiseAmount", 0 ],
-			"obj-40::obj-5::obj-68" : [ "env_3[3]", "live.text", 0 ],
-			"obj-40::obj-4::obj-12" : [ "live.gain~[8]", "gain", 0 ],
-			"obj-40::obj-2::obj-60" : [ "env_1", "live.text", 0 ],
-			"obj-40::obj-2::obj-4" : [ "release_1", "release", 0 ],
-			"obj-40::obj-2::obj-20" : [ "live.numbox[4]", "live.numbox", 0 ],
-			"obj-40::obj-4::obj-26" : [ "FilterFreq_2", "FilterFreq", 0 ],
+			"obj-40::obj-2::obj-13" : [ "mod_depth", "mod_depth", 0 ],
+			"obj-40::obj-2::obj-15" : [ "LFOfreq[1]", "LFOfreq", 0 ],
 			"obj-40::obj-5::obj-10" : [ "live.gain~", "gain", 0 ],
 			"obj-47" : [ "dry/wet", "dry/wet", 0 ],
+			"obj-40::obj-4::obj-26" : [ "FilterFreq_2", "FilterFreq", 0 ],
 			"obj-40::obj-4::obj-15" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-40::obj-2::obj-13" : [ "mod_depth", "mod_depth", 0 ],
+			"obj-40::obj-5::obj-68" : [ "env_3[3]", "live.text", 0 ],
+			"obj-48" : [ "decay", "decay", 0 ],
+			"obj-40::obj-5::obj-60" : [ "env_1[2]", "live.text", 0 ],
+			"obj-40::obj-4::obj-60" : [ "env_1[1]", "live.text", 0 ],
+			"obj-40::obj-4::obj-12" : [ "live.gain~[8]", "gain", 0 ],
 			"obj-40::obj-5::obj-56" : [ "attack_3[1]", "attack", 0 ],
-			"obj-40::obj-2::obj-15" : [ "LFOfreq[1]", "LFOfreq", 0 ],
-			"obj-40::obj-5::obj-46" : [ "release_3[1]", "release", 0 ],
-			"obj-40::obj-4::obj-18" : [ "attack_2", "attack", 0 ],
-			"obj-40::obj-4::obj-65" : [ "env_3[2]", "live.text", 0 ],
-			"obj-40::obj-2::obj-12" : [ "attack_1", "attack", 0 ],
-			"obj-13" : [ "live.gain~[6]", "volume", 0 ],
-			"obj-40::obj-5::obj-15" : [ "live.numbox[3]", "live.numbox", 0 ],
 			"obj-40::obj-2::obj-27" : [ "live.gain~[9]", "gain", 0 ],
+			"obj-40::obj-4::obj-18" : [ "attack_2", "attack", 0 ],
+			"obj-40::obj-5::obj-46" : [ "release_3[1]", "release", 0 ],
+			"obj-13" : [ "live.gain~[6]", "volume", 0 ],
+			"obj-40::obj-4::obj-65" : [ "env_3[2]", "live.text", 0 ],
+			"obj-40::obj-2::obj-60" : [ "env_1", "live.text", 0 ],
 			"obj-40::obj-4::obj-16" : [ "release_2", "release", 0 ],
+			"obj-40::obj-5::obj-29" : [ "NoiseAmount", "NoiseAmount", 0 ],
+			"obj-40::obj-2::obj-12" : [ "attack_1", "attack", 0 ],
+			"obj-40::obj-2::obj-4" : [ "release_1", "release", 0 ],
+			"obj-40::obj-2::obj-20" : [ "live.numbox[4]", "live.numbox", 0 ],
 			"parameterbanks" : 			{
 
 			}
 ,
 			"parameter_overrides" : 			{
+				"obj-40::obj-5::obj-15" : 				{
+					"parameter_longname" : "live.numbox[3]"
+				}
+,
+				"obj-40::obj-2::obj-15" : 				{
+					"parameter_longname" : "LFOfreq[1]"
+				}
+,
 				"obj-40::obj-5::obj-68" : 				{
 					"parameter_longname" : "env_3[3]"
+				}
+,
+				"obj-40::obj-5::obj-60" : 				{
+					"parameter_longname" : "env_1[2]"
+				}
+,
+				"obj-40::obj-4::obj-60" : 				{
+					"parameter_longname" : "env_1[1]"
 				}
 ,
 				"obj-40::obj-4::obj-12" : 				{
 					"parameter_longname" : "live.gain~[8]"
 				}
 ,
-				"obj-40::obj-2::obj-20" : 				{
-					"parameter_longname" : "live.numbox[4]"
-				}
-,
 				"obj-40::obj-5::obj-56" : 				{
 					"parameter_longname" : "attack_3[1]"
 				}
 ,
-				"obj-40::obj-2::obj-15" : 				{
-					"parameter_longname" : "LFOfreq[1]"
+				"obj-40::obj-2::obj-27" : 				{
+					"parameter_longname" : "live.gain~[9]"
 				}
 ,
 				"obj-40::obj-5::obj-46" : 				{
@@ -6486,12 +6538,8 @@
 					"parameter_longname" : "env_3[2]"
 				}
 ,
-				"obj-40::obj-5::obj-15" : 				{
-					"parameter_longname" : "live.numbox[3]"
-				}
-,
-				"obj-40::obj-2::obj-27" : 				{
-					"parameter_longname" : "live.gain~[9]"
+				"obj-40::obj-2::obj-20" : 				{
+					"parameter_longname" : "live.numbox[4]"
 				}
 
 			}
@@ -6595,6 +6643,15 @@
 			}
 , 			{
 				"name" : "jpatcher001",
+				"parentstyle" : "",
+				"multi" : 0
+			}
+, 			{
+				"name" : "tap",
+				"default" : 				{
+					"fontname" : [ "Lato Light" ]
+				}
+,
 				"parentstyle" : "",
 				"multi" : 0
 			}

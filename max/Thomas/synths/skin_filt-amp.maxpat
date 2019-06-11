@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 0,
-			"revision" : 3,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -37,8 +37,61 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
-		"globalpatchername" : "skin_filtAmp[1]",
+		"globalpatchername" : "skin_filtAmp[1][1]",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-38",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 545.0, 373.0, 159.0, 22.0 ],
+					"text" : "route /HS_Audio/filter/preset"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-14",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 545.0, 341.0, 71.0, 22.0 ],
+					"text" : "r osccontrol"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"activebgoncolor" : [ 0.647058823529412, 0.647058823529412, 0.647058823529412, 1.0 ],
+					"id" : "obj-60",
+					"maxclass" : "live.text",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 547.5, 344.0, 44.0, 15.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 13.0, 346.0, 44.0, 15.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_enum" : [ "val1", "val2" ],
+							"parameter_type" : 2,
+							"parameter_longname" : "env_1",
+							"parameter_mmax" : 1,
+							"parameter_shortname" : "live.text"
+						}
+
+					}
+,
+					"text" : "sustain",
+					"texton" : "trigger",
+					"varname" : "env_1"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"format" : 6,
 					"id" : "obj-33",
@@ -255,6 +308,7 @@
 						"FilterFreq_2" : [ 50.0 ],
 						"amp_func_2" : [ 1000.0, 0.0, 1.0, 0.0, 0.0, 0, 215.51724200000001, 0.54, 0, 642.241394000000014, 0.68, 0, 1000.0, 1.0, 0, "linear" ],
 						"attack_2" : [ 5.0 ],
+						"env_1" : [ 0.0 ],
 						"env_2" : [ 0.0 ],
 						"filterfreq_func_2" : [ 1000.0, 0.0, 1.0, 0.0, 0.0, 0, 224.137923999999998, 0.42, 0, 383.620697000000007, 0.48, 0, 655.172423999999978, 0.86, 0, 1000.0, 1.0, 0, "linear" ],
 						"gain" : [ 0.0 ],
@@ -263,7 +317,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u758009551"
+					"varname" : "u800014185"
 				}
 
 			}
@@ -339,7 +393,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "preset", "int", "preset", "int" ],
-					"patching_rect" : [ 153.5, 465.0, 91.0, 16.0 ],
+					"patching_rect" : [ 545.0, 415.0, 91.0, 16.0 ],
 					"pattrstorage" : "synth_filt-amp",
 					"presentation" : 1,
 					"presentation_rect" : [ 78.75, 246.0, 91.0, 16.0 ]
@@ -419,7 +473,7 @@
 							"parameter_enum" : [ "val1", "val2" ],
 							"parameter_type" : 2,
 							"parameter_longname" : "env_3[1]",
-							"parameter_mmax" : 1.0,
+							"parameter_mmax" : 1,
 							"parameter_shortname" : "live.text"
 						}
 
@@ -725,6 +779,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-38", 0 ],
+					"source" : [ "obj-14", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-12", 0 ],
 					"source" : [ "obj-21", 0 ]
 				}
@@ -755,6 +816,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-33", 0 ],
 					"source" : [ "obj-32", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-38", 0 ]
 				}
 
 			}
@@ -799,12 +867,13 @@
 			}
  ],
 		"parameters" : 		{
+			"obj-12" : [ "live.gain~", "gain", 0 ],
+			"obj-26" : [ "FilterFreq_2", "FilterFreq", 0 ],
+			"obj-15" : [ "live.numbox", "live.numbox", 0 ],
 			"obj-65" : [ "env_3[1]", "live.text", 0 ],
 			"obj-18" : [ "attack_2", "attack", 0 ],
-			"obj-12" : [ "live.gain~", "gain", 0 ],
-			"obj-15" : [ "live.numbox", "live.numbox", 0 ],
 			"obj-16" : [ "release_2", "release", 0 ],
-			"obj-26" : [ "FilterFreq_2", "FilterFreq", 0 ],
+			"obj-60" : [ "env_1", "live.text", 0 ],
 			"parameterbanks" : 			{
 
 			}
@@ -845,6 +914,15 @@
 			}
 , 			{
 				"name" : "jpatcher001",
+				"parentstyle" : "",
+				"multi" : 0
+			}
+, 			{
+				"name" : "tap",
+				"default" : 				{
+					"fontname" : [ "Lato Light" ]
+				}
+,
 				"parentstyle" : "",
 				"multi" : 0
 			}

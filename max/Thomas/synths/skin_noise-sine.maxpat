@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 0,
-			"revision" : 3,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -37,8 +37,61 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
-		"globalpatchername" : "skin_noise[1]",
+		"globalpatchername" : "skin_noise[1][1]",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-16",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 584.0, 302.0, 165.0, 22.0 ],
+					"text" : "route /HS_Audio/noise/preset"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-18",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 584.0, 270.0, 71.0, 22.0 ],
+					"text" : "r osccontrol"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"activebgoncolor" : [ 0.647058823529412, 0.647058823529412, 0.647058823529412, 1.0 ],
+					"id" : "obj-60",
+					"maxclass" : "live.text",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 586.5, 273.0, 44.0, 15.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 13.0, 346.0, 44.0, 15.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_enum" : [ "val1", "val2" ],
+							"parameter_type" : 2,
+							"parameter_longname" : "env_1",
+							"parameter_mmax" : 1,
+							"parameter_shortname" : "live.text"
+						}
+
+					}
+,
+					"text" : "sustain",
+					"texton" : "trigger",
+					"varname" : "env_1"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"format" : 6,
 					"id" : "obj-33",
@@ -274,6 +327,7 @@
 						"NoiseAmount" : [ 0.0 ],
 						"amp_func_3" : [ 1000.0, 0.0, 1.0, 0.0, 0.0, 0, 215.51724200000001, 0.54, 0, 620.68963599999995, 0.7, 0, 1000.0, 1.0, 0, "linear" ],
 						"attack_3" : [ 5.0 ],
+						"env_1" : [ 0.0 ],
 						"env_3" : [ 0.0 ],
 						"gain" : [ -0.000000000000014 ],
 						"noise_func" : [ 1000.0, 0.0, 1.0, 0.0, 0.0, 0, 293.103454999999997, 0.32, 0, 629.31036400000005, 0.64, 0, 1000.0, 1.0, 0, "linear" ],
@@ -282,7 +336,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u788010295"
+					"varname" : "u055014669"
 				}
 
 			}
@@ -358,7 +412,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "preset", "int", "preset", "int" ],
-					"patching_rect" : [ 132.0, 432.0, 79.0, 15.0 ],
+					"patching_rect" : [ 584.0, 337.0, 79.0, 15.0 ],
 					"pattrstorage" : "synth_noise-tone",
 					"presentation" : 1,
 					"presentation_rect" : [ 94.0, 243.5, 79.0, 15.0 ]
@@ -438,7 +492,7 @@
 							"parameter_enum" : [ "val1", "val2" ],
 							"parameter_type" : 2,
 							"parameter_longname" : "env_3",
-							"parameter_mmax" : 1.0,
+							"parameter_mmax" : 1,
 							"parameter_shortname" : "live.text"
 						}
 
@@ -731,6 +785,20 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"source" : [ "obj-16", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-16", 0 ],
+					"source" : [ "obj-18", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-58", 0 ],
 					"source" : [ "obj-25", 3 ]
 				}
@@ -798,12 +866,13 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-56" : [ "attack_3", "attack", 0 ],
+			"obj-46" : [ "release_3", "release", 0 ],
 			"obj-10" : [ "live.gain~", "gain", 0 ],
 			"obj-15" : [ "live.numbox", "live.numbox", 0 ],
+			"obj-56" : [ "attack_3", "attack", 0 ],
 			"obj-68" : [ "env_3", "live.text", 0 ],
 			"obj-29" : [ "NoiseAmount", "NoiseAmount", 0 ],
-			"obj-46" : [ "release_3", "release", 0 ],
+			"obj-60" : [ "env_1", "live.text", 0 ],
 			"parameterbanks" : 			{
 
 			}
@@ -844,6 +913,15 @@
 			}
 , 			{
 				"name" : "jpatcher001",
+				"parentstyle" : "",
+				"multi" : 0
+			}
+, 			{
+				"name" : "tap",
+				"default" : 				{
+					"fontname" : [ "Lato Light" ]
+				}
+,
 				"parentstyle" : "",
 				"multi" : 0
 			}
