@@ -7,4 +7,16 @@ z curve 0.5
 lopass ?
 rotate ON
 
+v1.5b
+thresh 0.020
+z scale 0.99
+z curve 0.5
+lopass 15
+rotate ON
+
 v1.7
+thresh 0.08
+z scale 1.03
+z curve 0.5
+lopass ?
+rotate ON

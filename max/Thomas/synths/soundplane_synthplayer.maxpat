@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 0,
-			"revision" : 3,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 626.0, 45.0, 421.0, 468.0 ],
+		"rect" : [ 142.0, 79.0, 421.0, 470.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -197,11 +197,11 @@
 					"restore" : 					{
 						"live.gain~[1]" : [ 0.015748031496045 ],
 						"rev_decay" : [ 0.220472440944882 ],
-						"rev_dryWet" : [ 0.0 ]
+						"rev_dryWet" : [ 1.0 ]
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u043012119"
+					"varname" : "u977017787"
 				}
 
 			}
@@ -238,7 +238,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 0,
-							"revision" : 3,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1101,7 +1101,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 0,
-							"revision" : 3,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1488,7 +1488,7 @@
 										"appversion" : 										{
 											"major" : 8,
 											"minor" : 0,
-											"revision" : 3,
+											"revision" : 5,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -6430,30 +6430,69 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-40::obj-4::obj-18" : [ "attack_2", "attack", 0 ],
-			"obj-40::obj-2::obj-12" : [ "attack_1", "attack", 0 ],
-			"obj-40::obj-5::obj-10" : [ "live.gain~", "gain", 0 ],
-			"obj-40::obj-4::obj-15" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-40::obj-5::obj-68" : [ "env_3[3]", "live.text", 0 ],
-			"obj-40::obj-4::obj-65" : [ "env_3[2]", "live.text", 0 ],
-			"obj-40::obj-5::obj-56" : [ "attack_3[1]", "attack", 0 ],
 			"obj-40::obj-2::obj-19" : [ "FilterFreq_1", "FilterFreq", 0 ],
-			"obj-40::obj-4::obj-16" : [ "release_2", "release", 0 ],
-			"obj-40::obj-2::obj-15" : [ "LFOfreq[1]", "LFOfreq", 0 ],
-			"obj-47" : [ "dry/wet", "dry/wet", 0 ],
 			"obj-48" : [ "decay", "decay", 0 ],
-			"obj-40::obj-2::obj-27" : [ "live.gain~[9]", "gain", 0 ],
-			"obj-40::obj-2::obj-20" : [ "live.numbox[4]", "live.numbox", 0 ],
+			"obj-40::obj-5::obj-29" : [ "NoiseAmount", "NoiseAmount", 0 ],
+			"obj-40::obj-5::obj-68" : [ "env_3[3]", "live.text", 0 ],
+			"obj-40::obj-4::obj-12" : [ "live.gain~[8]", "gain", 0 ],
 			"obj-40::obj-2::obj-60" : [ "env_1", "live.text", 0 ],
 			"obj-40::obj-2::obj-4" : [ "release_1", "release", 0 ],
-			"obj-40::obj-5::obj-29" : [ "NoiseAmount", "NoiseAmount", 0 ],
+			"obj-40::obj-2::obj-20" : [ "live.numbox[4]", "live.numbox", 0 ],
 			"obj-40::obj-4::obj-26" : [ "FilterFreq_2", "FilterFreq", 0 ],
+			"obj-40::obj-5::obj-10" : [ "live.gain~", "gain", 0 ],
+			"obj-47" : [ "dry/wet", "dry/wet", 0 ],
+			"obj-40::obj-4::obj-15" : [ "live.numbox", "live.numbox", 0 ],
 			"obj-40::obj-2::obj-13" : [ "mod_depth", "mod_depth", 0 ],
-			"obj-13" : [ "live.gain~[6]", "volume", 0 ],
-			"obj-40::obj-4::obj-12" : [ "live.gain~[8]", "gain", 0 ],
-			"obj-40::obj-5::obj-15" : [ "live.numbox[3]", "live.numbox", 0 ],
+			"obj-40::obj-5::obj-56" : [ "attack_3[1]", "attack", 0 ],
+			"obj-40::obj-2::obj-15" : [ "LFOfreq[1]", "LFOfreq", 0 ],
 			"obj-40::obj-5::obj-46" : [ "release_3[1]", "release", 0 ],
+			"obj-40::obj-4::obj-18" : [ "attack_2", "attack", 0 ],
+			"obj-40::obj-4::obj-65" : [ "env_3[2]", "live.text", 0 ],
+			"obj-40::obj-2::obj-12" : [ "attack_1", "attack", 0 ],
+			"obj-13" : [ "live.gain~[6]", "volume", 0 ],
+			"obj-40::obj-5::obj-15" : [ "live.numbox[3]", "live.numbox", 0 ],
+			"obj-40::obj-2::obj-27" : [ "live.gain~[9]", "gain", 0 ],
+			"obj-40::obj-4::obj-16" : [ "release_2", "release", 0 ],
 			"parameterbanks" : 			{
+
+			}
+,
+			"parameter_overrides" : 			{
+				"obj-40::obj-5::obj-68" : 				{
+					"parameter_longname" : "env_3[3]"
+				}
+,
+				"obj-40::obj-4::obj-12" : 				{
+					"parameter_longname" : "live.gain~[8]"
+				}
+,
+				"obj-40::obj-2::obj-20" : 				{
+					"parameter_longname" : "live.numbox[4]"
+				}
+,
+				"obj-40::obj-5::obj-56" : 				{
+					"parameter_longname" : "attack_3[1]"
+				}
+,
+				"obj-40::obj-2::obj-15" : 				{
+					"parameter_longname" : "LFOfreq[1]"
+				}
+,
+				"obj-40::obj-5::obj-46" : 				{
+					"parameter_longname" : "release_3[1]"
+				}
+,
+				"obj-40::obj-4::obj-65" : 				{
+					"parameter_longname" : "env_3[2]"
+				}
+,
+				"obj-40::obj-5::obj-15" : 				{
+					"parameter_longname" : "live.numbox[3]"
+				}
+,
+				"obj-40::obj-2::obj-27" : 				{
+					"parameter_longname" : "live.gain~[9]"
+				}
 
 			}
 
