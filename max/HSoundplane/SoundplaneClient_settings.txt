@@ -18,5 +18,5 @@ v1.7
 thresh 0.08
 z scale 1.03
 z curve 0.5
-lopass ?
+lopass 100
 rotate ON
