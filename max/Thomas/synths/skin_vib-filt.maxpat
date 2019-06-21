@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 0,
-			"revision" : 5,
+			"revision" : 6,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 353.0, 105.0, 1372.0, 787.0 ],
+		"rect" : [ 34.0, 79.0, 1372.0, 787.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -37,8 +37,35 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
-		"globalpatchername" : "skin_vibFilt[1][1]",
+		"globalpatchername" : "skin_vibFilt",
 		"boxes" : [ 			{
+				"box" : 				{
+					"activebgcolor" : [ 0.647058823529412, 0.647058823529412, 0.647058823529412, 1.0 ],
+					"id" : "obj-39",
+					"maxclass" : "live.menu",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "float" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 227.0, 329.0, 100.0, 15.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 13.0, 347.0, 52.0, 15.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_mmax" : 2,
+							"parameter_shortname" : "live.menu",
+							"parameter_enum" : [ "sustain", "trigger", "trig_no_latency" ],
+							"parameter_type" : 2,
+							"parameter_longname" : "live.menu"
+						}
+
+					}
+,
+					"varname" : "env_1"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-38",
 					"maxclass" : "newobj",
@@ -153,13 +180,13 @@
 					"presentation_rect" : [ 13.0, 244.0, 41.0, 63.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_mmax" : 6.0,
+							"parameter_initial" : [ 0.0 ],
+							"parameter_shortname" : "gain",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 4,
 							"parameter_mmin" : -70.0,
-							"parameter_longname" : "live.gain~",
-							"parameter_mmax" : 6.0,
-							"parameter_initial" : [ 0.0 ],
-							"parameter_shortname" : "gain"
+							"parameter_longname" : "live.gain~"
 						}
 
 					}
@@ -217,12 +244,12 @@
 					"presentation_rect" : [ 170.75, 346.0, 44.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_mmax" : 36.0,
+							"parameter_shortname" : "live.numbox",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 0,
 							"parameter_mmin" : -36.0,
-							"parameter_longname" : "live.numbox",
-							"parameter_mmax" : 36.0,
-							"parameter_shortname" : "live.numbox"
+							"parameter_longname" : "live.numbox"
 						}
 
 					}
@@ -413,7 +440,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u578012352"
+					"varname" : "u745008546"
 				}
 
 			}
@@ -510,35 +537,6 @@
 			}
 , 			{
 				"box" : 				{
-					"activebgoncolor" : [ 0.647058823529412, 0.647058823529412, 0.647058823529412, 1.0 ],
-					"id" : "obj-60",
-					"maxclass" : "live.text",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"parameter_enable" : 1,
-					"patching_rect" : [ 668.0, 601.0, 44.0, 15.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 13.0, 346.0, 44.0, 15.0 ],
-					"saved_attribute_attributes" : 					{
-						"valueof" : 						{
-							"parameter_enum" : [ "val1", "val2" ],
-							"parameter_type" : 2,
-							"parameter_longname" : "env_1",
-							"parameter_mmax" : 1,
-							"parameter_shortname" : "live.text"
-						}
-
-					}
-,
-					"text" : "sustain",
-					"texton" : "trigger",
-					"varname" : "env_1"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"activefgdialcolor" : [ 0.847058823529412, 0.847058823529412, 0.847058823529412, 1.0 ],
 					"activeneedlecolor" : [ 0.847058823529412, 0.847058823529412, 0.847058823529412, 1.0 ],
 					"id" : "obj-12",
@@ -552,13 +550,13 @@
 					"presentation_rect" : [ 67.5, 315.0, 40.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_mmax" : 2000.0,
+							"parameter_shortname" : "attack",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 2,
 							"parameter_linknames" : 1,
 							"parameter_mmin" : 5.0,
-							"parameter_longname" : "attack_1",
-							"parameter_mmax" : 2000.0,
-							"parameter_shortname" : "attack"
+							"parameter_longname" : "attack_1"
 						}
 
 					}
@@ -583,13 +581,13 @@
 					"presentation_rect" : [ 113.0, 315.0, 41.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_mmax" : 2000.0,
+							"parameter_shortname" : "release",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 2,
 							"parameter_linknames" : 1,
 							"parameter_mmin" : 5.0,
-							"parameter_longname" : "release_1",
-							"parameter_mmax" : 2000.0,
-							"parameter_shortname" : "release"
+							"parameter_longname" : "release_1"
 						}
 
 					}
@@ -615,13 +613,13 @@
 					"presentation_rect" : [ 11.0, 184.0, 50.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_mmax" : 6000.0,
+							"parameter_shortname" : "FilterFreq",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 3,
 							"parameter_linknames" : 1,
 							"parameter_mmin" : 50.0,
-							"parameter_longname" : "FilterFreq_1",
-							"parameter_mmax" : 6000.0,
-							"parameter_shortname" : "FilterFreq"
+							"parameter_longname" : "FilterFreq_1"
 						}
 
 					}
@@ -647,12 +645,12 @@
 					"presentation_rect" : [ 11.0, 118.0, 50.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_mmax" : 24.0,
+							"parameter_shortname" : "LFOfreq",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 3,
 							"parameter_linknames" : 1,
-							"parameter_longname" : "LFOfreq",
-							"parameter_mmax" : 24.0,
-							"parameter_shortname" : "LFOfreq"
+							"parameter_longname" : "LFOfreq"
 						}
 
 					}
@@ -678,12 +676,12 @@
 					"presentation_rect" : [ 11.0, 47.0, 50.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_mmax" : 1.0,
+							"parameter_shortname" : "mod_depth",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 1,
 							"parameter_linknames" : 1,
-							"parameter_longname" : "mod_depth",
-							"parameter_mmax" : 1.0,
-							"parameter_shortname" : "mod_depth"
+							"parameter_longname" : "mod_depth"
 						}
 
 					}
@@ -1083,14 +1081,14 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-19" : [ "FilterFreq_1", "FilterFreq", 0 ],
-			"obj-13" : [ "mod_depth", "mod_depth", 0 ],
-			"obj-27" : [ "live.gain~", "gain", 0 ],
-			"obj-20" : [ "live.numbox", "live.numbox", 0 ],
 			"obj-15" : [ "LFOfreq", "LFOfreq", 0 ],
-			"obj-60" : [ "env_1", "live.text", 0 ],
-			"obj-12" : [ "attack_1", "attack", 0 ],
+			"obj-19" : [ "FilterFreq_1", "FilterFreq", 0 ],
 			"obj-4" : [ "release_1", "release", 0 ],
+			"obj-27" : [ "live.gain~", "gain", 0 ],
+			"obj-12" : [ "attack_1", "attack", 0 ],
+			"obj-20" : [ "live.numbox", "live.numbox", 0 ],
+			"obj-13" : [ "mod_depth", "mod_depth", 0 ],
+			"obj-39" : [ "live.menu", "live.menu", 0 ],
 			"parameterbanks" : 			{
 
 			}
@@ -1099,7 +1097,7 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "synth_vib-filt.json",
-				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/Thomas/synths",
+				"bootpath" : "~/Documents/00_DOCUMENTE/02-PROJEKTE/ICST/Soundplane/HSoundplane_code/max/Thomas/synths",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1

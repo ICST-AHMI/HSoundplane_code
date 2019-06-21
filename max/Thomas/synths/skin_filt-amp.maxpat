@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 0,
-			"revision" : 5,
+			"revision" : 6,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -37,8 +37,35 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
-		"globalpatchername" : "skin_filtAmp[1][1]",
+		"globalpatchername" : "skin_filtAmp",
 		"boxes" : [ 			{
+				"box" : 				{
+					"activebgcolor" : [ 0.647058823529412, 0.647058823529412, 0.647058823529412, 1.0 ],
+					"id" : "obj-24",
+					"maxclass" : "live.menu",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "float" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 227.0, 329.0, 100.0, 15.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 19.75, 215.0, 52.0, 15.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_mmax" : 2,
+							"parameter_shortname" : "live.menu",
+							"parameter_enum" : [ "sustain", "trigger", "trig_no_latency" ],
+							"parameter_type" : 2,
+							"parameter_longname" : "live.menu"
+						}
+
+					}
+,
+					"varname" : "env_2"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-38",
 					"maxclass" : "newobj",
@@ -59,35 +86,6 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 545.0, 341.0, 71.0, 22.0 ],
 					"text" : "r osccontrol"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"activebgoncolor" : [ 0.647058823529412, 0.647058823529412, 0.647058823529412, 1.0 ],
-					"id" : "obj-60",
-					"maxclass" : "live.text",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"parameter_enable" : 1,
-					"patching_rect" : [ 547.5, 344.0, 44.0, 15.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 13.0, 346.0, 44.0, 15.0 ],
-					"saved_attribute_attributes" : 					{
-						"valueof" : 						{
-							"parameter_enum" : [ "val1", "val2" ],
-							"parameter_type" : 2,
-							"parameter_longname" : "env_1",
-							"parameter_mmax" : 1,
-							"parameter_shortname" : "live.text"
-						}
-
-					}
-,
-					"text" : "sustain",
-					"texton" : "trigger",
-					"varname" : "env_1"
 				}
 
 			}
@@ -182,13 +180,13 @@
 					"presentation_rect" : [ 23.0, 113.0, 41.0, 63.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_mmax" : 6.0,
+							"parameter_initial" : [ 0.0 ],
+							"parameter_shortname" : "gain",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 4,
 							"parameter_mmin" : -70.0,
-							"parameter_longname" : "live.gain~",
-							"parameter_mmax" : 6.0,
-							"parameter_initial" : [ 0.0 ],
-							"parameter_shortname" : "gain"
+							"parameter_longname" : "live.gain~"
 						}
 
 					}
@@ -246,12 +244,12 @@
 					"presentation_rect" : [ 189.0, 215.0, 44.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_mmax" : 36.0,
+							"parameter_shortname" : "live.numbox",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 0,
 							"parameter_mmin" : -36.0,
-							"parameter_longname" : "live.numbox",
-							"parameter_mmax" : 36.0,
-							"parameter_shortname" : "live.numbox"
+							"parameter_longname" : "live.numbox"
 						}
 
 					}
@@ -308,7 +306,6 @@
 						"FilterFreq_2" : [ 50.0 ],
 						"amp_func_2" : [ 1000.0, 0.0, 1.0, 0.0, 0.0, 0, 215.51724200000001, 0.54, 0, 642.241394000000014, 0.68, 0, 1000.0, 1.0, 0, "linear" ],
 						"attack_2" : [ 5.0 ],
-						"env_1" : [ 0.0 ],
 						"env_2" : [ 0.0 ],
 						"filterfreq_func_2" : [ 1000.0, 0.0, 1.0, 0.0, 0.0, 0, 224.137923999999998, 0.42, 0, 383.620697000000007, 0.48, 0, 655.172423999999978, 0.86, 0, 1000.0, 1.0, 0, "linear" ],
 						"gain" : [ 0.0 ],
@@ -317,7 +314,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u800014185"
+					"varname" : "u095005872"
 				}
 
 			}
@@ -458,35 +455,6 @@
 			}
 , 			{
 				"box" : 				{
-					"activebgoncolor" : [ 0.647059, 0.647059, 0.647059, 1.0 ],
-					"id" : "obj-65",
-					"maxclass" : "live.text",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"parameter_enable" : 1,
-					"patching_rect" : [ 127.0, 367.0, 44.0, 15.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 24.75, 215.0, 44.0, 15.0 ],
-					"saved_attribute_attributes" : 					{
-						"valueof" : 						{
-							"parameter_enum" : [ "val1", "val2" ],
-							"parameter_type" : 2,
-							"parameter_longname" : "env_3[1]",
-							"parameter_mmax" : 1,
-							"parameter_shortname" : "live.text"
-						}
-
-					}
-,
-					"text" : "sustain",
-					"texton" : "trigger",
-					"varname" : "env_2"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"activeneedlecolor" : [ 0.847059, 0.847059, 0.847059, 1.0 ],
 					"id" : "obj-16",
 					"maxclass" : "live.dial",
@@ -499,13 +467,13 @@
 					"presentation_rect" : [ 121.25, 184.0, 44.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_mmax" : 2000.0,
+							"parameter_shortname" : "release",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 2,
 							"parameter_linknames" : 1,
 							"parameter_mmin" : 5.0,
-							"parameter_longname" : "release_2",
-							"parameter_mmax" : 2000.0,
-							"parameter_shortname" : "release"
+							"parameter_longname" : "release_2"
 						}
 
 					}
@@ -529,13 +497,13 @@
 					"presentation_rect" : [ 78.75, 184.0, 44.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_mmax" : 1000.0,
+							"parameter_shortname" : "attack",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 2,
 							"parameter_linknames" : 1,
 							"parameter_mmin" : 5.0,
-							"parameter_longname" : "attack_2",
-							"parameter_mmax" : 1000.0,
-							"parameter_shortname" : "attack"
+							"parameter_longname" : "attack_2"
 						}
 
 					}
@@ -578,13 +546,13 @@
 					"presentation_rect" : [ 16.0, 51.0, 50.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_mmax" : 6000.0,
+							"parameter_shortname" : "FilterFreq",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 3,
 							"parameter_linknames" : 1,
 							"parameter_mmin" : 50.0,
-							"parameter_longname" : "FilterFreq_2",
-							"parameter_mmax" : 6000.0,
-							"parameter_shortname" : "FilterFreq"
+							"parameter_longname" : "FilterFreq_2"
 						}
 
 					}
@@ -867,13 +835,12 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-12" : [ "live.gain~", "gain", 0 ],
 			"obj-26" : [ "FilterFreq_2", "FilterFreq", 0 ],
-			"obj-15" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-65" : [ "env_3[1]", "live.text", 0 ],
-			"obj-18" : [ "attack_2", "attack", 0 ],
 			"obj-16" : [ "release_2", "release", 0 ],
-			"obj-60" : [ "env_1", "live.text", 0 ],
+			"obj-18" : [ "attack_2", "attack", 0 ],
+			"obj-12" : [ "live.gain~", "gain", 0 ],
+			"obj-15" : [ "live.numbox", "live.numbox", 0 ],
+			"obj-24" : [ "live.menu", "live.menu", 0 ],
 			"parameterbanks" : 			{
 
 			}
@@ -882,7 +849,7 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "synth_filt-amp.json",
-				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/Thomas/synths",
+				"bootpath" : "~/Documents/00_DOCUMENTE/02-PROJEKTE/ICST/Soundplane/HSoundplane_code/max/Thomas/synths",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
