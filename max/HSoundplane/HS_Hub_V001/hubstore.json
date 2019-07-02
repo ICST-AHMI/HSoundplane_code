@@ -5,10 +5,10 @@
 			"1" : 			{
 				"id" : 1,
 				"data" : 				{
-					"triggerMaxThresh" : [ 0.05 ],
-					"triggerMinThresh" : [ 0.01 ],
-					"triggerThreshTime" : [ 10 ],
-					"triggerTimeout" : [ 30 ]
+					"triggerMaxThresh" : [ 0.003 ],
+					"triggerMinThresh" : [ 0.001 ],
+					"triggerThreshTime" : [ 1 ],
+					"triggerTimeout" : [ 0 ]
 				}
 
 			}

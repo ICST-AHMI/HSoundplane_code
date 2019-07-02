@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 0,
-			"revision" : 3,
+			"revision" : 6,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -37,7 +37,7 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
-		"globalpatchername" : "skin_sine",
+		"globalpatchername" : "skin_sine[2]",
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-44",
@@ -146,11 +146,11 @@
 					"presentation_rect" : [ 240.5, 8.0, 48.0, 20.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_longname" : "env_1[1]",
-							"parameter_mmax" : 1.0,
+							"parameter_mmax" : 1,
 							"parameter_shortname" : "live.text",
 							"parameter_enum" : [ "store", "store" ],
-							"parameter_type" : 2
+							"parameter_type" : 2,
+							"parameter_longname" : "env_1[1]"
 						}
 
 					}
@@ -197,7 +197,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 0,
-							"revision" : 3,
+							"revision" : 6,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -451,11 +451,11 @@
 					"presentation_rect" : [ 7.0, 68.0, 48.0, 20.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_longname" : "pitchTrackEnable",
-							"parameter_mmax" : 1.0,
+							"parameter_mmax" : 1,
 							"parameter_shortname" : "pitchTrackEnable",
 							"parameter_enum" : [ "val1", "val2" ],
-							"parameter_type" : 2
+							"parameter_type" : 2,
+							"parameter_longname" : "pitchTrackEnable"
 						}
 
 					}
@@ -478,7 +478,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 0,
-							"revision" : 3,
+							"revision" : 6,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -740,7 +740,7 @@
 					"bgcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
 					"id" : "obj-20",
 					"maxclass" : "number",
-					"maximum" : 1000,
+					"maximum" : 10000,
 					"minimum" : 0,
 					"numinlets" : 1,
 					"numoutlets" : 2,
@@ -770,13 +770,13 @@
 					"presentation_rect" : [ 5.0, 246.5, 50.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_longname" : "gain",
 							"parameter_mmax" : 0.2,
 							"parameter_steps" : 1,
 							"parameter_shortname" : "gain",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 1,
-							"parameter_linknames" : 1
+							"parameter_linknames" : 1,
+							"parameter_longname" : "gain"
 						}
 
 					}
@@ -901,7 +901,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u991013548"
+					"varname" : "u777013649"
 				}
 
 			}
@@ -994,11 +994,11 @@
 					"presentation_rect" : [ 7.0, 333.0, 48.0, 20.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_longname" : "env_1",
-							"parameter_mmax" : 1.0,
+							"parameter_mmax" : 1,
 							"parameter_shortname" : "live.text",
 							"parameter_enum" : [ "val1", "val2" ],
-							"parameter_type" : 2
+							"parameter_type" : 2,
+							"parameter_longname" : "env_1"
 						}
 
 					}
@@ -1024,13 +1024,13 @@
 					"presentation_rect" : [ 62.5, 311.0, 40.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_longname" : "lowFreq",
 							"parameter_mmax" : 300.0,
 							"parameter_shortname" : "low",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 3,
 							"parameter_linknames" : 1,
-							"parameter_mmin" : 10.0
+							"parameter_mmin" : 10.0,
+							"parameter_longname" : "lowFreq"
 						}
 
 					}
@@ -1055,13 +1055,13 @@
 					"presentation_rect" : [ 108.0, 311.0, 41.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_longname" : "highFreq",
 							"parameter_mmax" : 500.0,
 							"parameter_shortname" : "high",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 3,
 							"parameter_linknames" : 1,
-							"parameter_mmin" : 40.0
+							"parameter_mmin" : 40.0,
+							"parameter_longname" : "highFreq"
 						}
 
 					}
@@ -1475,12 +1475,12 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-12" : [ "lowFreq", "low", 0 ],
-			"obj-4" : [ "highFreq", "high", 0 ],
 			"obj-34" : [ "env_1[1]", "live.text", 0 ],
-			"obj-60" : [ "env_1", "live.text", 0 ],
-			"obj-16" : [ "gain", "gain", 0 ],
+			"obj-4" : [ "highFreq", "high", 0 ],
 			"obj-2" : [ "pitchTrackEnable", "pitchTrackEnable", 0 ],
+			"obj-12" : [ "lowFreq", "low", 0 ],
+			"obj-16" : [ "gain", "gain", 0 ],
+			"obj-60" : [ "env_1", "live.text", 0 ],
 			"parameterbanks" : 			{
 
 			}

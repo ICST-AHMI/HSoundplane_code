@@ -6,13 +6,13 @@
 				"id" : 1,
 				"data" : 				{
 					"bandPassEnable" : [ 1.0 ],
-					"fixedFreq" : [ 128 ],
-					"gain" : [ 0.075590551181103 ],
-					"highFreq" : [ 400.0 ],
+					"fixedFreq" : [ 230 ],
+					"gain" : [ 0.125984251968505 ],
+					"highFreq" : [ 500.0 ],
 					"live.text" : [ 0.0 ],
 					"lowFreq" : [ 10.0 ],
-					"pitchTrackEnable" : [ 0.0 ],
-					"transpose" : [ 0 ],
+					"pitchTrackEnable" : [ 1.0 ],
+					"transpose" : [ -12 ],
 					"zToAmp_func" : [ 1000.0, 0.0, 1.0, 0.0, 0.0, 0, 0.0, 1000.0, 1.0, 0, 0.0, "curve" ]
 				}
 
@@ -22,14 +22,14 @@
 				"id" : 2,
 				"data" : 				{
 					"bandPassEnable" : [ 1.0 ],
-					"fixedFreq" : [ 128 ],
-					"gain" : [ 0.075590551181103 ],
-					"highFreq" : [ 400.0 ],
+					"fixedFreq" : [ 230 ],
+					"gain" : [ 0.125984251968505 ],
+					"highFreq" : [ 500.0 ],
 					"live.text" : [ 0.0 ],
 					"lowFreq" : [ 10.0 ],
 					"pitchTrackEnable" : [ 1.0 ],
-					"transpose" : [ -20 ],
-					"zToAmp_func" : [ 1000.0, 0.0, 1.0, 0.0, 0.0, 0, 0.0, 524.443420632448237, 0.178317946304714, 0, 0.0, 1000.0, 1.0, 0, 0.4, "curve" ]
+					"transpose" : [ -12 ],
+					"zToAmp_func" : [ 1000.0, 0.0, 1.0, 0.0, 0.0, 0, 0.0, 1000.0, 1.0, 0, 0.0, "curve" ]
 				}
 
 			}
@@ -46,6 +46,22 @@
 					"pitchTrackEnable" : [ 0.0 ],
 					"transpose" : [ -23 ],
 					"zToAmp_func" : [ 1000.0, 0.0, 1.0, 0.0, 1.0, 0, 0.75, 1000.0, 1.0, 0, 0.4, "curve" ]
+				}
+
+			}
+,
+			"4" : 			{
+				"id" : 4,
+				"data" : 				{
+					"bandPassEnable" : [ 1.0 ],
+					"fixedFreq" : [ 128 ],
+					"gain" : [ 0.075590551181103 ],
+					"highFreq" : [ 400.0 ],
+					"live.text" : [ 0.0 ],
+					"lowFreq" : [ 10.0 ],
+					"pitchTrackEnable" : [ 0.0 ],
+					"transpose" : [ 0 ],
+					"zToAmp_func" : [ 1000.0, 0.0, 1.0, 0.0, 0.0, 0, 0.0, 1000.0, 1.0, 0, 0.0, "curve" ]
 				}
 
 			}

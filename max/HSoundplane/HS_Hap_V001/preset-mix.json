@@ -1,0 +1,39 @@
+{
+	"pattrstorage" : 	{
+		"name" : "preset-mix",
+		"slots" : 		{
+			"1" : 			{
+				"id" : 1,
+				"data" : 				{
+					"bandPassEnable" : [ 1.0 ],
+					"freqShift" : [ 0 ],
+					"freqShiftEnable" : [ 0.0 ],
+					"gain" : [ 0.15748031496063 ],
+					"highFreq" : [ 500.0 ],
+					"live.text" : [ 0.0 ],
+					"lowFreq" : [ 10.0 ],
+					"zToAmp_func" : [ 1000.0, 0.0, 1.0, 0.0, 0.0, 0, 0.0, 1000.0, 1.0, 0, 0.0, 1000.0, 1.0, 0, 0.0, "curve" ]
+				}
+
+			}
+,
+			"2" : 			{
+				"id" : 2,
+				"data" : 				{
+					"bandPassEnable" : [ 1.0 ],
+					"freqShift" : [ 0 ],
+					"freqShiftEnable" : [ 0.0 ],
+					"gain" : [ 0.15748031496063 ],
+					"highFreq" : [ 500.0 ],
+					"live.text" : [ 0.0 ],
+					"lowFreq" : [ 10.0 ],
+					"zToAmp_func" : [ 1000.0, 0.0, 1.0, 0.0, 0.0, 0, 0.0, 1000.0, 1.0, 0, 0.0, 1000.0, 1.0, 0, 0.0, "curve" ]
+				}
+
+			}
+
+		}
+
+	}
+
+}
