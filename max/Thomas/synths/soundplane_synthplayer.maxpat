@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 674.0, 45.0, 386.0, 452.0 ],
+		"rect" : [ 408.0, 45.0, 387.0, 451.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -40,6 +40,30 @@
 		"showontab" : 0,
 		"globalpatchername" : "main",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-14",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"patching_rect" : [ 26.0, 321.0, 29.5, 22.0 ],
+					"text" : "+ 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-10",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 26.0, 394.0, 52.0, 22.0 ],
+					"text" : "gate 3 0"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-9",
 					"maxclass" : "newobj",
@@ -76,11 +100,11 @@
 					"presentation_rect" : [ 324.0, 383.0, 41.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_longname" : "decay",
-							"parameter_mmax" : 1.0,
 							"parameter_shortname" : "decay",
 							"parameter_type" : 0,
-							"parameter_unitstyle" : 1
+							"parameter_unitstyle" : 1,
+							"parameter_longname" : "decay",
+							"parameter_mmax" : 1.0
 						}
 
 					}
@@ -102,11 +126,11 @@
 					"presentation_rect" : [ 320.0, 321.281036376953125, 49.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_longname" : "dry/wet",
-							"parameter_mmax" : 1.0,
 							"parameter_shortname" : "dry/wet",
 							"parameter_type" : 0,
-							"parameter_unitstyle" : 1
+							"parameter_unitstyle" : 1,
+							"parameter_longname" : "dry/wet",
+							"parameter_mmax" : 1.0
 						}
 
 					}
@@ -191,13 +215,13 @@
 					"presentation_rect" : [ 317.0, 49.0, 50.0, 202.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_longname" : "live.gain~[6]",
-							"parameter_mmax" : 6.0,
-							"parameter_initial" : [ 0.0 ],
 							"parameter_shortname" : "volume",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 4,
-							"parameter_mmin" : -70.0
+							"parameter_mmin" : -70.0,
+							"parameter_longname" : "live.gain~[6]",
+							"parameter_mmax" : 6.0,
+							"parameter_initial" : [ 0.0 ]
 						}
 
 					}
@@ -220,12 +244,12 @@
 					"patching_rect" : [ 869.0, 105.0, 56.0, 22.0 ],
 					"restore" : 					{
 						"live.gain~[1]" : [ 0.015748031496045 ],
-						"rev_decay" : [ 0.125984251968504 ],
-						"rev_dryWet" : [ 0.322834645669291 ]
+						"rev_decay" : [ 0.141732283464567 ],
+						"rev_dryWet" : [ 1.0 ]
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u907011894"
+					"varname" : "u518002632"
 				}
 
 			}
@@ -5998,32 +6022,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 22.5, 276.0, 55.0, 22.0 ],
+					"patching_rect" : [ 59.0, 321.0, 55.0, 22.0 ],
 					"text" : "r to_poly"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-82",
-					"maxclass" : "number",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 48.0, 317.0, 50.0, 22.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-80",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 48.0, 349.0, 52.0, 22.0 ],
-					"text" : "open $1"
 				}
 
 			}
@@ -6110,6 +6110,27 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-10", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-16", 0 ],
+					"source" : [ "obj-10", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-17", 0 ],
+					"source" : [ "obj-10", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
 					"source" : [ "obj-11", 0 ]
 				}
@@ -6133,6 +6154,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-8", 0 ],
 					"source" : [ "obj-13", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-10", 0 ],
+					"source" : [ "obj-14", 0 ]
 				}
 
 			}
@@ -6241,26 +6269,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"order" : 2,
-					"source" : [ "obj-3", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-16", 0 ],
-					"midpoints" : [ 32.0, 423.5, 157.5, 423.5 ],
-					"order" : 1,
-					"source" : [ "obj-3", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-17", 0 ],
-					"midpoints" : [ 32.0, 424.5, 288.666656494140625, 424.5 ],
-					"order" : 0,
+					"destination" : [ "obj-10", 1 ],
 					"source" : [ "obj-3", 0 ]
 				}
 
@@ -6338,8 +6347,18 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-14", 0 ],
+					"midpoints" : [ 597.0, 254.75, 35.5, 254.75 ],
+					"order" : 1,
+					"source" : [ "obj-49", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-50", 0 ],
 					"midpoints" : [ 597.0, 207.0, 515.5, 207.0, 515.5, 57.0, 177.5, 57.0 ],
+					"order" : 0,
 					"source" : [ "obj-49", 0 ]
 				}
 
@@ -6439,21 +6458,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"midpoints" : [ 57.5, 407.0, 35.5, 407.0 ],
-					"source" : [ "obj-80", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-80", 0 ],
-					"source" : [ "obj-82", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-49", 0 ],
 					"midpoints" : [ 666.5, 98.25, 597.0, 98.25 ],
 					"source" : [ "obj-9", 1 ]
@@ -6462,52 +6466,48 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-40::obj-2::obj-20" : [ "live.numbox[4]", "live.numbox", 0 ],
-			"obj-40::obj-2::obj-39" : [ "live.menu", "live.menu", 0 ],
-			"obj-40::obj-2::obj-19" : [ "FilterFreq_1", "FilterFreq", 0 ],
-			"obj-40::obj-4::obj-26" : [ "FilterFreq_2", "FilterFreq", 0 ],
-			"obj-40::obj-5::obj-15" : [ "live.numbox[3]", "live.numbox", 0 ],
-			"obj-40::obj-4::obj-12" : [ "live.gain~[8]", "gain", 0 ],
-			"obj-40::obj-2::obj-4" : [ "release_1", "release", 0 ],
-			"obj-40::obj-5::obj-56" : [ "attack_3[1]", "attack", 0 ],
-			"obj-40::obj-5::obj-29" : [ "NoiseAmount", "NoiseAmount", 0 ],
 			"obj-40::obj-2::obj-15" : [ "LFOfreq[1]", "LFOfreq", 0 ],
-			"obj-40::obj-4::obj-18" : [ "attack_2", "attack", 0 ],
-			"obj-40::obj-2::obj-13" : [ "mod_depth", "mod_depth", 0 ],
-			"obj-40::obj-5::obj-46" : [ "release_3[1]", "release", 0 ],
-			"obj-13" : [ "live.gain~[6]", "volume", 0 ],
-			"obj-40::obj-2::obj-27" : [ "live.gain~[9]", "gain", 0 ],
-			"obj-40::obj-4::obj-24" : [ "live.menu[1]", "live.menu", 0 ],
+			"obj-40::obj-4::obj-26" : [ "FilterFreq_2", "FilterFreq", 0 ],
 			"obj-40::obj-4::obj-16" : [ "release_2", "release", 0 ],
+			"obj-40::obj-5::obj-15" : [ "live.numbox[3]", "live.numbox", 0 ],
+			"obj-40::obj-2::obj-12" : [ "attack_1", "attack", 0 ],
 			"obj-47" : [ "dry/wet", "dry/wet", 0 ],
+			"obj-40::obj-4::obj-24" : [ "live.menu[1]", "live.menu", 0 ],
+			"obj-13" : [ "live.gain~[6]", "volume", 0 ],
+			"obj-40::obj-2::obj-20" : [ "live.numbox[4]", "live.numbox", 0 ],
+			"obj-40::obj-5::obj-46" : [ "release_3[1]", "release", 0 ],
 			"obj-48" : [ "decay", "decay", 0 ],
+			"obj-40::obj-2::obj-4" : [ "release_1", "release", 0 ],
+			"obj-40::obj-2::obj-27" : [ "live.gain~[9]", "gain", 0 ],
 			"obj-40::obj-5::obj-10" : [ "live.gain~", "gain", 0 ],
 			"obj-40::obj-4::obj-15" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-40::obj-2::obj-12" : [ "attack_1", "attack", 0 ],
+			"obj-40::obj-5::obj-29" : [ "NoiseAmount", "NoiseAmount", 0 ],
+			"obj-40::obj-5::obj-56" : [ "attack_3[1]", "attack", 0 ],
+			"obj-40::obj-2::obj-13" : [ "mod_depth", "mod_depth", 0 ],
+			"obj-40::obj-2::obj-39" : [ "live.menu", "live.menu", 0 ],
+			"obj-40::obj-4::obj-18" : [ "attack_2", "attack", 0 ],
+			"obj-40::obj-4::obj-12" : [ "live.gain~[8]", "gain", 0 ],
 			"obj-40::obj-5::obj-24" : [ "live.menu[2]", "live.menu", 0 ],
+			"obj-40::obj-2::obj-19" : [ "FilterFreq_1", "FilterFreq", 0 ],
 			"parameterbanks" : 			{
 
 			}
 ,
 			"parameter_overrides" : 			{
-				"obj-40::obj-2::obj-20" : 				{
-					"parameter_longname" : "live.numbox[4]"
+				"obj-40::obj-2::obj-15" : 				{
+					"parameter_longname" : "LFOfreq[1]"
 				}
 ,
 				"obj-40::obj-5::obj-15" : 				{
 					"parameter_longname" : "live.numbox[3]"
 				}
 ,
-				"obj-40::obj-4::obj-12" : 				{
-					"parameter_longname" : "live.gain~[8]"
+				"obj-40::obj-4::obj-24" : 				{
+					"parameter_longname" : "live.menu[1]"
 				}
 ,
-				"obj-40::obj-5::obj-56" : 				{
-					"parameter_longname" : "attack_3[1]"
-				}
-,
-				"obj-40::obj-2::obj-15" : 				{
-					"parameter_longname" : "LFOfreq[1]"
+				"obj-40::obj-2::obj-20" : 				{
+					"parameter_longname" : "live.numbox[4]"
 				}
 ,
 				"obj-40::obj-5::obj-46" : 				{
@@ -6518,8 +6518,12 @@
 					"parameter_longname" : "live.gain~[9]"
 				}
 ,
-				"obj-40::obj-4::obj-24" : 				{
-					"parameter_longname" : "live.menu[1]"
+				"obj-40::obj-5::obj-56" : 				{
+					"parameter_longname" : "attack_3[1]"
+				}
+,
+				"obj-40::obj-4::obj-12" : 				{
+					"parameter_longname" : "live.gain~[8]"
 				}
 ,
 				"obj-40::obj-5::obj-24" : 				{
@@ -6532,70 +6536,70 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "skin_instruments.maxpat",
-				"bootpath" : "~/Documents/00_DOCUMENTE/02-PROJEKTE/ICST/Soundplane/HSoundplane_code/max/Thomas/synths",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/Thomas/synths",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "skin_vib-filt.maxpat",
-				"bootpath" : "~/Documents/00_DOCUMENTE/02-PROJEKTE/ICST/Soundplane/HSoundplane_code/max/Thomas/synths",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/Thomas/synths",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "synth_vib-filt.json",
-				"bootpath" : "~/Documents/00_DOCUMENTE/02-PROJEKTE/ICST/Soundplane/HSoundplane_code/max/Thomas/synths",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/Thomas/synths",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "skin_filt-amp.maxpat",
-				"bootpath" : "~/Documents/00_DOCUMENTE/02-PROJEKTE/ICST/Soundplane/HSoundplane_code/max/Thomas/synths",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/Thomas/synths",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "synth_filt-amp.json",
-				"bootpath" : "~/Documents/00_DOCUMENTE/02-PROJEKTE/ICST/Soundplane/HSoundplane_code/max/Thomas/synths",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/Thomas/synths",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "skin_noise-sine.maxpat",
-				"bootpath" : "~/Documents/00_DOCUMENTE/02-PROJEKTE/ICST/Soundplane/HSoundplane_code/max/Thomas/synths",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/Thomas/synths",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "synth_noise-tone.json",
-				"bootpath" : "~/Documents/00_DOCUMENTE/02-PROJEKTE/ICST/Soundplane/HSoundplane_code/max/Thomas/synths",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/Thomas/synths",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "poly_vibFilt.maxpat",
-				"bootpath" : "~/Documents/00_DOCUMENTE/02-PROJEKTE/ICST/Soundplane/HSoundplane_code/max/Thomas/synths",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/Thomas/synths",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "poly_filtAmp.maxpat",
-				"bootpath" : "~/Documents/00_DOCUMENTE/02-PROJEKTE/ICST/Soundplane/HSoundplane_code/max/Thomas/synths",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/Thomas/synths",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "poly_noiseSine.maxpat",
-				"bootpath" : "~/Documents/00_DOCUMENTE/02-PROJEKTE/ICST/Soundplane/HSoundplane_code/max/Thomas/synths",
+				"bootpath" : "~/Documents/01_projects/HSoundPlane/code/max/Thomas/synths",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
