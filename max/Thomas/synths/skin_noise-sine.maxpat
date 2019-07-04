@@ -37,8 +37,20 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
-		"globalpatchername" : "skin_noise",
+		"globalpatchername" : "skin_noise[1]",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-20",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 604.0, 364.0, 22.0, 22.0 ],
+					"text" : "t b"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"activebgcolor" : [ 0.647058823529412, 0.647058823529412, 0.647058823529412, 1.0 ],
 					"id" : "obj-24",
@@ -52,11 +64,11 @@
 					"presentation_rect" : [ 18.0, 212.0, 66.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_longname" : "live.menu",
 							"parameter_mmax" : 2,
 							"parameter_shortname" : "live.menu",
 							"parameter_enum" : [ "sustain", "trigger", "trig_no_latency" ],
-							"parameter_type" : 2,
-							"parameter_longname" : "live.menu"
+							"parameter_type" : 2
 						}
 
 					}
@@ -180,13 +192,13 @@
 					"presentation_rect" : [ 23.0, 108.0, 41.0, 63.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_longname" : "live.gain~",
 							"parameter_mmax" : 6.0,
 							"parameter_initial" : [ 0.0 ],
 							"parameter_shortname" : "gain",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 4,
-							"parameter_mmin" : -70.0,
-							"parameter_longname" : "live.gain~"
+							"parameter_mmin" : -70.0
 						}
 
 					}
@@ -244,12 +256,12 @@
 					"presentation_rect" : [ 200.0, 212.0, 44.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_longname" : "live.numbox",
 							"parameter_mmax" : 36.0,
 							"parameter_shortname" : "live.numbox",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 0,
-							"parameter_mmin" : -36.0,
-							"parameter_longname" : "live.numbox"
+							"parameter_mmin" : -36.0
 						}
 
 					}
@@ -333,7 +345,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u503007917"
+					"varname" : "u610002779"
 				}
 
 			}
@@ -486,13 +498,13 @@
 					"presentation_rect" : [ 136.5, 181.0, 44.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_longname" : "release_3",
 							"parameter_mmax" : 2000.0,
 							"parameter_shortname" : "release",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 2,
 							"parameter_linknames" : 1,
-							"parameter_mmin" : 5.0,
-							"parameter_longname" : "release_3"
+							"parameter_mmin" : 5.0
 						}
 
 					}
@@ -516,13 +528,13 @@
 					"presentation_rect" : [ 94.0, 181.0, 44.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_longname" : "attack_3",
 							"parameter_mmax" : 1000.0,
 							"parameter_shortname" : "attack",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 2,
 							"parameter_linknames" : 1,
-							"parameter_mmin" : 5.0,
-							"parameter_longname" : "attack_3"
+							"parameter_mmin" : 5.0
 						}
 
 					}
@@ -565,12 +577,12 @@
 					"presentation_rect" : [ 18.0, 47.0, 58.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_longname" : "NoiseAmount",
 							"parameter_mmax" : 1.0,
 							"parameter_shortname" : "NoiseAmount",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 1,
-							"parameter_linknames" : 1,
-							"parameter_longname" : "NoiseAmount"
+							"parameter_linknames" : 1
 						}
 
 					}
@@ -767,6 +779,29 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-20", 0 ],
+					"source" : [ "obj-2", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-30", 0 ],
+					"order" : 0,
+					"source" : [ "obj-20", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-58", 0 ],
+					"order" : 1,
+					"source" : [ "obj-20", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-58", 0 ],
 					"source" : [ "obj-25", 3 ]
 				}
@@ -834,12 +869,12 @@
 			}
  ],
 		"parameters" : 		{
+			"obj-24" : [ "live.menu", "live.menu", 0 ],
 			"obj-29" : [ "NoiseAmount", "NoiseAmount", 0 ],
 			"obj-46" : [ "release_3", "release", 0 ],
 			"obj-56" : [ "attack_3", "attack", 0 ],
 			"obj-10" : [ "live.gain~", "gain", 0 ],
 			"obj-15" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-24" : [ "live.menu", "live.menu", 0 ],
 			"parameterbanks" : 			{
 
 			}

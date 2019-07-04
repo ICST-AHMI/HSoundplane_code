@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 433.0, 122.0, 907.0, 707.0 ],
+		"rect" : [ 103.0, 79.0, 907.0, 707.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -37,8 +37,20 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
-		"globalpatchername" : "skin_filtAmp",
+		"globalpatchername" : "skin_filtAmp[1]",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-23",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 569.0, 445.0, 22.0, 22.0 ],
+					"text" : "t b"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"activebgcolor" : [ 0.647058823529412, 0.647058823529412, 0.647058823529412, 1.0 ],
 					"id" : "obj-24",
@@ -52,11 +64,11 @@
 					"presentation_rect" : [ 19.75, 215.0, 52.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_longname" : "live.menu",
 							"parameter_mmax" : 2,
 							"parameter_shortname" : "live.menu",
 							"parameter_enum" : [ "sustain", "trigger", "trig_no_latency" ],
-							"parameter_type" : 2,
-							"parameter_longname" : "live.menu"
+							"parameter_type" : 2
 						}
 
 					}
@@ -142,7 +154,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 512.0, 494.0, 261.0, 22.0 ],
-					"restore" : [ 0.322834645669291 ],
+					"restore" : [ 1.0 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
@@ -180,13 +192,13 @@
 					"presentation_rect" : [ 23.0, 113.0, 41.0, 63.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_longname" : "live.gain~",
 							"parameter_mmax" : 6.0,
 							"parameter_initial" : [ 0.0 ],
 							"parameter_shortname" : "gain",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 4,
-							"parameter_mmin" : -70.0,
-							"parameter_longname" : "live.gain~"
+							"parameter_mmin" : -70.0
 						}
 
 					}
@@ -244,12 +256,12 @@
 					"presentation_rect" : [ 189.0, 215.0, 44.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_longname" : "live.numbox",
 							"parameter_mmax" : 36.0,
 							"parameter_shortname" : "live.numbox",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 0,
-							"parameter_mmin" : -36.0,
-							"parameter_longname" : "live.numbox"
+							"parameter_mmin" : -36.0
 						}
 
 					}
@@ -314,7 +326,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u095005872"
+					"varname" : "u952011942"
 				}
 
 			}
@@ -407,7 +419,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 93.5, 494.0, 231.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"client_rect" : [ 4, 45, 828, 313 ],
+						"client_rect" : [ 4, 44, 358, 172 ],
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0,
 						"storage_rect" : [ 583, 69, 1034, 197 ]
@@ -467,13 +479,13 @@
 					"presentation_rect" : [ 121.25, 184.0, 44.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_longname" : "release_2",
 							"parameter_mmax" : 2000.0,
 							"parameter_shortname" : "release",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 2,
 							"parameter_linknames" : 1,
-							"parameter_mmin" : 5.0,
-							"parameter_longname" : "release_2"
+							"parameter_mmin" : 5.0
 						}
 
 					}
@@ -497,13 +509,13 @@
 					"presentation_rect" : [ 78.75, 184.0, 44.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_longname" : "attack_2",
 							"parameter_mmax" : 1000.0,
 							"parameter_shortname" : "attack",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 2,
 							"parameter_linknames" : 1,
-							"parameter_mmin" : 5.0,
-							"parameter_longname" : "attack_2"
+							"parameter_mmin" : 5.0
 						}
 
 					}
@@ -546,13 +558,13 @@
 					"presentation_rect" : [ 16.0, 51.0, 50.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_longname" : "FilterFreq_2",
 							"parameter_mmax" : 6000.0,
 							"parameter_shortname" : "FilterFreq",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 3,
 							"parameter_linknames" : 1,
-							"parameter_mmin" : 50.0,
-							"parameter_longname" : "FilterFreq_2"
+							"parameter_mmin" : 50.0
 						}
 
 					}
@@ -754,8 +766,31 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-23", 0 ],
+					"source" : [ "obj-2", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-12", 0 ],
 					"source" : [ "obj-21", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-27", 0 ],
+					"order" : 0,
+					"source" : [ "obj-23", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-28", 0 ],
+					"order" : 1,
+					"source" : [ "obj-23", 0 ]
 				}
 
 			}
@@ -835,12 +870,12 @@
 			}
  ],
 		"parameters" : 		{
+			"obj-24" : [ "live.menu", "live.menu", 0 ],
 			"obj-26" : [ "FilterFreq_2", "FilterFreq", 0 ],
-			"obj-16" : [ "release_2", "release", 0 ],
 			"obj-18" : [ "attack_2", "attack", 0 ],
+			"obj-16" : [ "release_2", "release", 0 ],
 			"obj-12" : [ "live.gain~", "gain", 0 ],
 			"obj-15" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-24" : [ "live.menu", "live.menu", 0 ],
 			"parameterbanks" : 			{
 
 			}
