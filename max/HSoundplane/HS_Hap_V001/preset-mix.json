@@ -8,7 +8,7 @@
 					"bandPassEnable" : [ 1.0 ],
 					"freqShift" : [ 0 ],
 					"freqShiftEnable" : [ 0.0 ],
-					"gain" : [ 0.15748031496063 ],
+					"gain" : [ 0.204724409448819 ],
 					"highFreq" : [ 500.0 ],
 					"live.text" : [ 0.0 ],
 					"lowFreq" : [ 10.0 ],
