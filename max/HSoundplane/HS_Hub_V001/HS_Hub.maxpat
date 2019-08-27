@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 30.0, 45.0, 326.0, 508.0 ],
+		"rect" : [ 30.0, 45.0, 326.0, 512.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -700,7 +700,7 @@
 					}
 ,
 					"text" : "autopattr",
-					"varname" : "u392007744"
+					"varname" : "u660004882"
 				}
 
 			}
@@ -1830,6 +1830,13 @@
 								"patchline" : 								{
 									"destination" : [ "obj-43", 0 ],
 									"source" : [ "obj-31", 2 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-52", 0 ],
+									"source" : [ "obj-31", 3 ]
 								}
 
 							}
